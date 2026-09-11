@@ -1,0 +1,91 @@
+{
+  "checked_at": "2026-09-11T08:19:47.547077+08:00",
+  "binary_sha256": {
+    "LLC_Combined.dll": "20420d32ea3709f32a203cd5e85ea329ab5ff1b2cebdca6501503ebb3c4bc21b",
+    "LLC_Fast.dll": "9d07e8936c7f5e8882162c10237ce9a24db17076b6ce7376bc33ad5d072ece32",
+    "LLC_Probe.dll": "501bdab0b63e4fc5c7fff942d0b76ef710385c296e13980fc2b68b569643c14a",
+    "LLC_Slow.dll": "e69af1cee5f1cc386cd6b6ba9e9771b0407778db469f89793dca03fa300d0840"
+  },
+  "all_passed": true,
+  "checks": [
+    {
+      "command": [
+        "D:\\Work\\1600W\\代码分析\\LLC_Plecs_Port\\bin\\x64\\test_timer.exe"
+      ],
+      "exit_code": 0,
+      "output": "timer: PASS (PWM windows, PFM deadtime, rounding, invalid input)\r\n"
+    },
+    {
+      "command": [
+        "D:\\Work\\1600W\\代码分析\\LLC_Plecs_Port\\bin\\x64\\test_gate.exe"
+      ],
+      "exit_code": 0,
+      "output": "gate: PASS (exact edges, pure evaluation, pending commit, mask, stop, NaN, reset edges)\r\n"
+    },
+    {
+      "command": [
+        "D:\\Work\\1600W\\代码分析\\LLC_Plecs_Port\\bin\\x64\\test_core.exe"
+      ],
+      "exit_code": 0,
+      "output": "core tests passed\r\n"
+    },
+    {
+      "command": [
+        "D:\\Work\\1600W\\代码分析\\LLC_Plecs_Port\\bin\\x64\\test_slow.exe"
+      ],
+      "exit_code": 0,
+      "output": "slow tests passed\r\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\zhizh\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\Work\\1600W\\代码分析\\LLC_Plecs_Port\\tests\\test_dll.py"
+      ],
+      "exit_code": 0,
+      "output": "DLL probe: PASS (exports, pack4 ABI, 101 callbacks, two instances, restart, bad ABI)\r\nDLL fast: PASS (t0, 1000 ticks, duplicate callbacks, instances, fault, PFM/profile rejection)\r\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\zhizh\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\Work\\1600W\\代码分析\\LLC_Plecs_Port\\tests\\test_multirate.py"
+      ],
+      "exit_code": 0,
+      "output": "multirate: PASS (80000 actual DLL ticks / 2 seconds; all 45 outputs exactly equal)\r\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\zhizh\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\Work\\1600W\\代码分析\\LLC_Plecs_Port\\tests\\test_run_plecs.py"
+      ],
+      "exit_code": 0,
+      "output": "....\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.000s\r\n\r\nOK\r\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\zhizh\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\Work\\1600W\\代码分析\\LLC_Plecs_Port\\tools\\validate_models.py"
+      ],
+      "exit_code": 0,
+      "output": "STRUCTURE PASS: LLC1600_Combined_DLL_Port.plecs: 78 components, 78 nets\r\nSTRUCTURE PASS: LLC1600_PWM_DLL_Port.plecs: 76 components, 76 nets\r\nSTRUCTURE PASS: LLC1600_Split_DLL_Port.plecs: 83 components, 82 nets\r\nSTRUCTURE PASS: 01_DLL_IO.plecs: 3 components, 2 nets\r\nSTRUCTURE PASS: 03_Gate_PFM_Windows.plecs: 3 components, 2 nets\r\nSTRUCTURE PASS: 03_Gate_PWM.plecs: 3 components, 2 nets\r\nSTRUCTURE PASS: 04_PWM_CC_Replay.plecs: 3 components, 2 nets\r\nSTRUCTURE PASS: 05_Startup_BMS.plecs: 76 components, 76 nets\r\n"
+    },
+    {
+      "command": [
+        "cmd.exe",
+        "/d",
+        "/c",
+        "D:\\Work\\1600W\\代码分析\\LLC_Plecs_Port\\tools\\check_cscripts.cmd"
+      ],
+      "exit_code": 0,
+      "output": "03_Gate_PFM_Windows_LLC_Gate.c\r\n03_Gate_PWM_LLC_Gate.c\r\n05_Startup_BMS_Gate_frame_adapter.c\r\n05_Startup_BMS_LLC_Gate.c\r\nLLC1600_Combined_DLL_Port_Gate_frame_adapter.c\r\nLLC1600_Combined_DLL_Port_Hardware_fault_latch.c\r\nLLC1600_Combined_DLL_Port_Immediate_gate_inhibit.c\r\nLLC1600_Combined_DLL_Port_LLC_Gate.c\r\nLLC1600_PWM_DLL_Port_Gate_frame_adapter.c\r\nLLC1600_PWM_DLL_Port_LLC_Gate.c\r\nLLC1600_Split_DLL_Port_Fast_assemble.c\r\nLLC1600_Split_DLL_Port_Fast_snapshot_z1.c\r\nLLC1600_Split_DLL_Port_Gate_frame_adapter.c\r\nLLC1600_Split_DLL_Port_Hardware_fault_latch.c\r\nLLC1600_Split_DLL_Port_Immediate_gate_inhibit.c\r\nLLC1600_Split_DLL_Port_LLC_Gate.c\r\nLLC1600_Split_DLL_Port_Slow_assemble.c\r\n正在生成代码...\r\n"
+    }
+  ],
+  "scope": "Native tests, loaded DLL replay and structural/C-Script compilation only. Electrical simulation evidence is separate."
+}

@@ -1,0 +1,118 @@
+{
+  "checked_at": "2026-09-11T08:11:08.578502+08:00",
+  "sources": [
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\R02_LLC_APP_V1.1.1_0824\\AppUser\\mathR02.c",
+      "bytes": 19383,
+      "sha256": "d58e614148b1a17c637561fe98cc171ae78bcc23db7ff320657830b162c22d45",
+      "current_sha256": "36482e092018a440e914de56fd3f02382c7804d4b7379b9fe50944b0df83308a",
+      "status": "changed"
+    },
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\R02_LLC_APP_V1.1.1_0824\\AppUser\\mathR02.h",
+      "bytes": 5755,
+      "sha256": "cd61d63a2a8ec67238477eba85eab8e1c71ab7f56672de2f04dc077c66301db8",
+      "current_sha256": "cd61d63a2a8ec67238477eba85eab8e1c71ab7f56672de2f04dc077c66301db8",
+      "status": "match"
+    },
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleFast.c",
+      "bytes": 2693,
+      "sha256": "b9c3be34c71edbc193eab508a27a6d8c42286fb774aaf691ef66d8378dcca607",
+      "current_sha256": "b9c3be34c71edbc193eab508a27a6d8c42286fb774aaf691ef66d8378dcca607",
+      "status": "match"
+    },
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleSlow.c",
+      "bytes": 18907,
+      "sha256": "d198b74287b3f7a322396fc33fe5007ff0d151602685a3b6e9ee57db696bdb8e",
+      "current_sha256": "d198b74287b3f7a322396fc33fe5007ff0d151602685a3b6e9ee57db696bdb8e",
+      "status": "match"
+    },
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\R02_LLC_APP_V1.1.1_0824\\AppUser\\operateStatus.c",
+      "bytes": 13525,
+      "sha256": "8335a99f5b78adc5449db460d02c60b6b526777f3da1d70d4a806f44eaf7f593",
+      "current_sha256": "8335a99f5b78adc5449db460d02c60b6b526777f3da1d70d4a806f44eaf7f593",
+      "status": "match"
+    },
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\R02_LLC_APP_V1.1.1_0824\\AppUser\\user_sample.c",
+      "bytes": 5944,
+      "sha256": "3615c4c6adbb8fefdbb3ae5ad7274ac0d6bdc958229e661a9d64e4719fe50a88",
+      "current_sha256": "b21418b054e0ad61bc55c4558949d958ce35450989f58fffc4b92d5bb78936f5",
+      "status": "changed"
+    },
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ProtectionLLC.c",
+      "bytes": 11867,
+      "sha256": "689801e997fe264df1ec862d4732be0e1fea300fee5bf214b71d1e9d9d0365b7",
+      "current_sha256": "689801e997fe264df1ec862d4732be0e1fea300fee5bf214b71d1e9d9d0365b7",
+      "status": "match"
+    },
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\R02_LLC_APP_V1.1.1_0824\\AppUser\\HwConfig.h",
+      "bytes": 7568,
+      "sha256": "fc85a847c30a44eb2e5358e45c369becf2810ecff682bfcd789a746c41927a48",
+      "current_sha256": "6afa68a48e6b0ba18b4fa2a7e93e6b56f1eadbbe10a528eb3fc76426ccd1c546",
+      "status": "changed"
+    },
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\R02_LLC_APP_V1.1.1_0824\\AppUser\\R02_LLC_APP_V1.lib",
+      "bytes": 1473384,
+      "sha256": "1e7642456b9924f30278e3e90cb5ad780f5aa6245d6ca92bbe63799e11e5239a",
+      "current_sha256": "1e7642456b9924f30278e3e90cb5ad780f5aa6245d6ca92bbe63799e11e5239a",
+      "status": "match"
+    },
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\dll_block\\LLC1600_PWM - DLL.plecs",
+      "bytes": 54465,
+      "sha256": "08041b34a7d3459332dc13344a9efed628fde1bf21b8c4bcc7cb475ee8a79af5",
+      "current_sha256": null,
+      "status": "missing"
+    },
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\dll_block\\DllHeader.h",
+      "bytes": 2359,
+      "sha256": "0658088b2d1a9009d4769d52f777ec2968b91575ceb5d9a62377991be1019654",
+      "current_sha256": "0658088b2d1a9009d4769d52f777ec2968b91575ceb5d9a62377991be1019654",
+      "status": "match"
+    }
+  ],
+  "frozen_model": {
+    "path": "D:\\Work\\1600W\\代码分析\\LLC_Plecs_Port\\model\\baseline\\LLC1600_PWM - DLL.plecs",
+    "sha256": "96435b3ea4f92f1dd6f7b7d6ff2bccca602129646eb3026aaf3292b466a4a37e"
+  },
+  "current_models": [
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\Visual studio projects\\pi_controller\\x64\\Debug\\LLC1600_PWM - DLL.plecs",
+      "sha256": "1a7b16334d6c75b4dd2d46f5b34a176a7d23d0f4c7e08ce0a83ddfad6d2f9582",
+      "added": [
+        "Constant",
+        "From",
+        "From1",
+        "From2",
+        "From3",
+        "From4",
+        "From5",
+        "From6",
+        "From7",
+        "From8",
+        "Goto",
+        "Goto1",
+        "Goto2",
+        "Goto3",
+        "Goto4",
+        "Subsystem"
+      ],
+      "removed": [
+        "Constant2",
+        "PI voltage\ncontroller",
+        "Sum",
+        "Vref"
+      ],
+      "changed_common_components": {}
+    }
+  ],
+  "note": "Historical source snapshots were hashes only; changed-file history cannot be reconstructed. Generated models continue to use the frozen model."
+}

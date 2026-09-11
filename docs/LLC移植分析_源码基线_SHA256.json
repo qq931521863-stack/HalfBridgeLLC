@@ -1,0 +1,61 @@
+{
+  "recorded_on": "2026-09-09",
+  "purpose": "本次移植分析基线，仅记录文件，不表示已构建或仿真验证",
+  "files": [
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\R02_LLC_APP_V1.1.1_0824\\AppUser\\mathR02.c",
+      "bytes": 19383,
+      "sha256": "d58e614148b1a17c637561fe98cc171ae78bcc23db7ff320657830b162c22d45"
+    },
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\R02_LLC_APP_V1.1.1_0824\\AppUser\\mathR02.h",
+      "bytes": 5755,
+      "sha256": "cd61d63a2a8ec67238477eba85eab8e1c71ab7f56672de2f04dc077c66301db8"
+    },
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleFast.c",
+      "bytes": 2693,
+      "sha256": "b9c3be34c71edbc193eab508a27a6d8c42286fb774aaf691ef66d8378dcca607"
+    },
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleSlow.c",
+      "bytes": 18907,
+      "sha256": "d198b74287b3f7a322396fc33fe5007ff0d151602685a3b6e9ee57db696bdb8e"
+    },
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\R02_LLC_APP_V1.1.1_0824\\AppUser\\operateStatus.c",
+      "bytes": 13525,
+      "sha256": "8335a99f5b78adc5449db460d02c60b6b526777f3da1d70d4a806f44eaf7f593"
+    },
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\R02_LLC_APP_V1.1.1_0824\\AppUser\\user_sample.c",
+      "bytes": 5944,
+      "sha256": "3615c4c6adbb8fefdbb3ae5ad7274ac0d6bdc958229e661a9d64e4719fe50a88"
+    },
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ProtectionLLC.c",
+      "bytes": 11867,
+      "sha256": "689801e997fe264df1ec862d4732be0e1fea300fee5bf214b71d1e9d9d0365b7"
+    },
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\R02_LLC_APP_V1.1.1_0824\\AppUser\\HwConfig.h",
+      "bytes": 7568,
+      "sha256": "fc85a847c30a44eb2e5358e45c369becf2810ecff682bfcd789a746c41927a48"
+    },
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\R02_LLC_APP_V1.1.1_0824\\AppUser\\R02_LLC_APP_V1.lib",
+      "bytes": 1473384,
+      "sha256": "1e7642456b9924f30278e3e90cb5ad780f5aa6245d6ca92bbe63799e11e5239a"
+    },
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\dll_block\\LLC1600_PWM - DLL.plecs",
+      "bytes": 54465,
+      "sha256": "08041b34a7d3459332dc13344a9efed628fde1bf21b8c4bcc7cb475ee8a79af5"
+    },
+    {
+      "path": "D:\\Work\\1600W\\代码分析\\dll_block\\DllHeader.h",
+      "bytes": 2359,
+      "sha256": "0658088b2d1a9009d4769d52f777ec2968b91575ceb5d9a62377991be1019654"
+    }
+  ]
+}

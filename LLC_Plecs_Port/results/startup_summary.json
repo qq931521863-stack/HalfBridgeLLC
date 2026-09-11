@@ -1,0 +1,129 @@
+{
+  "Combined": {
+    "last_time": 2.0,
+    "mode_events_sampled": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1.096,
+        2.0
+      ],
+      [
+        1.7550000000000001,
+        5.0
+      ]
+    ],
+    "precharge_events_sampled": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1.244,
+        1.0
+      ],
+      [
+        1.2550000000000001,
+        2.0
+      ]
+    ],
+    "relay_events_sampled": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1.2550000000000001,
+        1.0
+      ]
+    ],
+    "final_Iref_A": 1.966701626777649,
+    "final_Ibat_FIR_A": 1.7644182443618774,
+    "final_Vbat_FIR_V": 32.10614776611328,
+    "final_frequency_Hz": 80000.0,
+    "final_duty_parameter": 0.10137096047401428,
+    "max_fast_fault": 0.0,
+    "max_diagnostics": 0.0
+  },
+  "Split": {
+    "last_time": 2.0,
+    "mode_events_sampled": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1.096,
+        2.0
+      ],
+      [
+        1.7550000000000001,
+        5.0
+      ]
+    ],
+    "precharge_events_sampled": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1.244,
+        1.0
+      ],
+      [
+        1.2550000000000001,
+        2.0
+      ]
+    ],
+    "relay_events_sampled": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1.2550000000000001,
+        1.0
+      ]
+    ],
+    "final_Iref_A": 1.966701626777649,
+    "final_Ibat_FIR_A": 1.7644325494766235,
+    "final_Vbat_FIR_V": 32.10618209838867,
+    "final_frequency_Hz": 80000.0,
+    "final_duty_parameter": 0.10137622803449631,
+    "max_fast_fault": 0.0,
+    "max_diagnostics": 0.0
+  },
+  "max_fast_output_difference": {
+    "0": 0.0,
+    "1": 1.0,
+    "2": 1.0,
+    "3": 1.0,
+    "4": 1.0,
+    "5": 0.0,
+    "6": 0.0,
+    "7": 0.0,
+    "8": 0.0,
+    "9": 0.0,
+    "10": 0.0,
+    "11": 0.0,
+    "12": 0.0,
+    "13": 0.0,
+    "14": 0.0,
+    "15": 0.0,
+    "16": 0.0,
+    "17": 0.0,
+    "18": 0.0,
+    "19": 0.0,
+    "20": 7.490813732147217e-05,
+    "21": 3.4332275390625e-05,
+    "22": 7.450580596923828e-05,
+    "23": 0.0,
+    "24": 0.0,
+    "25": 0.0,
+    "26": 0.0,
+    "27": 0.0
+  },
+  "observation": "1 ms output grid; transition timestamps have up to 1 ms observation quantization. This is startup, not steady-state/1600 W acceptance."
+}

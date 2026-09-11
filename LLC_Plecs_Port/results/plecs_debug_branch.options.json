@@ -1,0 +1,10 @@
+{
+  "SolverOpts": {
+    "TimeSpan": 0.001,
+    "OutputTimes": [
+      0.0,
+      0.001
+    ],
+    "OutputTimesOption": "specified"
+  }
+}

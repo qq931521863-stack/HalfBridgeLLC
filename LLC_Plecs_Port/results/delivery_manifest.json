@@ -1,0 +1,506 @@
+{
+  "packaged_at": "2026-09-11T08:21:14.084249+08:00",
+  "configuration": "x64 Debug / PWM development",
+  "files": [
+    {
+      "path": "adapters/plecs_combined.c",
+      "bytes": 2602,
+      "sha256": "b6a2363a20c53b9c8376772d7916068a6312e518a802b7239f1224355ff46713"
+    },
+    {
+      "path": "adapters/plecs_fast.c",
+      "bytes": 1555,
+      "sha256": "d1d65d4e95507155e2d21a48e06ad55e1006a7b85b6feddb1f01882e8cbe8872"
+    },
+    {
+      "path": "adapters/plecs_probe.c",
+      "bytes": 781,
+      "sha256": "834efdc16b7b848c73a6ee2c7569051e6cdbfabd3462af41d9cf80c838533835"
+    },
+    {
+      "path": "adapters/plecs_slow.c",
+      "bytes": 1461,
+      "sha256": "6416be9f33670029115cbec62b0f1bbc42ff76d6f6fc8f94982af3a117b2f289"
+    },
+    {
+      "path": "bin/x64/LLC_Combined.dll",
+      "bytes": 93184,
+      "sha256": "20420d32ea3709f32a203cd5e85ea329ab5ff1b2cebdca6501503ebb3c4bc21b"
+    },
+    {
+      "path": "bin/x64/LLC_Fast.dll",
+      "bytes": 79360,
+      "sha256": "9d07e8936c7f5e8882162c10237ce9a24db17076b6ce7376bc33ad5d072ece32"
+    },
+    {
+      "path": "bin/x64/LLC_Probe.dll",
+      "bytes": 54272,
+      "sha256": "501bdab0b63e4fc5c7fff942d0b76ef710385c296e13980fc2b68b569643c14a"
+    },
+    {
+      "path": "bin/x64/LLC_Slow.dll",
+      "bytes": 66560,
+      "sha256": "e69af1cee5f1cc386cd6b6ba9e9771b0407778db469f89793dca03fa300d0840"
+    },
+    {
+      "path": "bin/x64/test_core.exe",
+      "bytes": 102400,
+      "sha256": "fcc3265f02f1baaad437ad6b0a35915a20131602f5b8440bd12c458d05535eda"
+    },
+    {
+      "path": "bin/x64/test_gate.exe",
+      "bytes": 69632,
+      "sha256": "3bfb5882812bb79c5a97ac3cc8f75c2eed6ec6abb6ea1a9cfa8ae87568525435"
+    },
+    {
+      "path": "bin/x64/test_slow.exe",
+      "bytes": 79872,
+      "sha256": "b8aad504f3560e382358025b6f15a3a3d0d85dacabf766d46319a8b44a7dffef"
+    },
+    {
+      "path": "bin/x64/test_timer.exe",
+      "bytes": 59904,
+      "sha256": "77d52d8c163c066eeb44c1eee8bc026865ff2845211e6f9f973abc71c329b6a6"
+    },
+    {
+      "path": "build.ps1",
+      "bytes": 818,
+      "sha256": "d4c8a697939da5792eb2653f8713e065d0de9aca62e4b956aeadeb1bec68c6a4"
+    },
+    {
+      "path": "config/port_map.md",
+      "bytes": 4350,
+      "sha256": "8abc433f027f633d8290a7981668c35f6f4d149c65cd267a1c85ecf844382be3"
+    },
+    {
+      "path": "config/scenario_matrix.md",
+      "bytes": 2496,
+      "sha256": "7e9f561201cea9aaedf47202d4f9642bfa25c1805d17c10d9efb2e45394c0332"
+    },
+    {
+      "path": "config/source_map.md",
+      "bytes": 3181,
+      "sha256": "cdeca5040981e94a7f62252ad6bdcf17b6b7e812e66ab136402bccdec35540d1"
+    },
+    {
+      "path": "core/llc_control.c",
+      "bytes": 19193,
+      "sha256": "1bbc93ea642d6e4635dbbd6ada5d4a93be3bfd6b94476fa8af504c72c8b5d62c"
+    },
+    {
+      "path": "core/llc_fast_task.c",
+      "bytes": 9224,
+      "sha256": "db368cdf0c350fce696954c64115dc96afe23a2cf57a59baf8e46607d83c66cc"
+    },
+    {
+      "path": "core/llc_timer_image.c",
+      "bytes": 1129,
+      "sha256": "17ad6486c7e474b66bdf466d2145474f8691e78825621dcd5b152de6c5b115f1"
+    },
+    {
+      "path": "include/llc_api.h",
+      "bytes": 1570,
+      "sha256": "a034feafb88768b45069e2db1a76a3ca7563eff1e5c885d170c91da5d0ed8c08"
+    },
+    {
+      "path": "include/llc_context.h",
+      "bytes": 947,
+      "sha256": "7780a4e50c01f2cafe3d22c5a3ca307527dbb26530653b9d84be2c0b3c080de3"
+    },
+    {
+      "path": "include/llc_slow.h",
+      "bytes": 342,
+      "sha256": "6367641031bf045824c5a4d3578a03cf5385bda6bd8d38a4bb10205836a3289f"
+    },
+    {
+      "path": "include/llc_timer.h",
+      "bytes": 255,
+      "sha256": "c44d557e84791813b8ea4bb6e45302c44ccef01a2251066cfc47d626bc4c0bb4"
+    },
+    {
+      "path": "include/llc_types.h",
+      "bytes": 3637,
+      "sha256": "273371e939ce6d72b6ab272e3211bf582e82d329c3e4158599004a2f7601f3e9"
+    },
+    {
+      "path": "LLC_Combined.vcxproj",
+      "bytes": 2325,
+      "sha256": "dca7619926785391a4ae5ada3624a58aaba0a16c8d1e2159eceee1aa532e8a61"
+    },
+    {
+      "path": "LLC_Fast.vcxproj",
+      "bytes": 2263,
+      "sha256": "b877bfdb55b1301422e455ba999985ed50d1eaaa19456c473d74c3e397983321"
+    },
+    {
+      "path": "LLC_Plecs_Port.sln",
+      "bytes": 3848,
+      "sha256": "6f6a74db66e3a8870ca9ada498da97fd6a9aa920ef2198fd38ffc43a28c7422e"
+    },
+    {
+      "path": "LLC_Probe.vcxproj",
+      "bytes": 2134,
+      "sha256": "d0fab59b19b0826b481307985e98d7c6254ebd1bcfc0c5aeae779f89a440b4ee"
+    },
+    {
+      "path": "LLC_Slow.vcxproj",
+      "bytes": 2181,
+      "sha256": "edafbcb9dcbd9c383e95ac27fcde09c919306e0427edff04e029707e5147d087"
+    },
+    {
+      "path": "model/baseline/LLC1600_PWM - DLL.plecs",
+      "bytes": 69779,
+      "sha256": "96435b3ea4f92f1dd6f7b7d6ff2bccca602129646eb3026aaf3292b466a4a37e"
+    },
+    {
+      "path": "model/benches/01_DLL_IO.plecs",
+      "bytes": 2860,
+      "sha256": "2242d3c123f9a733ba4e4cbd08c8f15fecf06aa4b7c223dea7ea7abdaf33d649"
+    },
+    {
+      "path": "model/benches/03_Gate_PFM_Windows.plecs",
+      "bytes": 4374,
+      "sha256": "7a184d87c774684a3feb7b73b9cba421fdb3ceaaf7110f05315ab636c56186dc"
+    },
+    {
+      "path": "model/benches/03_Gate_PWM.plecs",
+      "bytes": 4367,
+      "sha256": "98974bd47de4578830d3d7304aa9c401b142e999fff298f0fe5966bf0465a9de"
+    },
+    {
+      "path": "model/benches/04_PWM_CC_Replay.plecs",
+      "bytes": 2886,
+      "sha256": "d94b64b42d1893d16ac1de693ed9c217ff01b22f3401ed6b827c41a1c6c3d639"
+    },
+    {
+      "path": "model/benches/05_Startup_BMS.plecs",
+      "bytes": 61900,
+      "sha256": "d37b1f2f0ed845b7dcdacd1af467bb45a60a8570b4fc2566fd85b2e33beea80b"
+    },
+    {
+      "path": "model/gate/llc_gate_events.c",
+      "bytes": 2905,
+      "sha256": "5312f613abf38551c81371c964c758b4f1ed7f4c4d6b5c6a57bf2365f870991d"
+    },
+    {
+      "path": "model/gate/llc_gate_events.h",
+      "bytes": 486,
+      "sha256": "40c63923b9ca6e678cf56368342d6791f9f4a71ff01553c9359bf0e9d64b64f4"
+    },
+    {
+      "path": "model/LLC1600_Combined_DLL_Port.plecs",
+      "bytes": 66344,
+      "sha256": "a467de54b69e161a33e302c5f4c4003c6f21edc9e3a05d52dd01bfd5d9c6f45d"
+    },
+    {
+      "path": "model/LLC1600_PWM_DLL_Port.plecs",
+      "bytes": 61900,
+      "sha256": "48b225420bff2154c60fb4846c46bdbde35df6903aab5c199489cdab72a14f68"
+    },
+    {
+      "path": "model/LLC1600_Split_DLL_Port.plecs",
+      "bytes": 72738,
+      "sha256": "4701dd4ad8f69b50c0a27d2680eb735e8dd1c98c21f682c01e9e4c511229fa7f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5990,
+      "sha256": "22ae0f55e8cd70a3a1b0522a643d939866de3179e8e1784fba3dc6226d2078ba"
+    },
+    {
+      "path": "results/implementation_status.md",
+      "bytes": 4021,
+      "sha256": "b0c6f0cb4d36aec4022b81560a3a91f8d80a4eacc2a9de45b6a9e07e12578dd3"
+    },
+    {
+      "path": "results/model_baseline.json",
+      "bytes": 200,
+      "sha256": "4cb32d2ad71db3b78a221b9b87a9d7a74330aec68b9350d78e6dbe44d959fc6a"
+    },
+    {
+      "path": "results/multirate_replay.csv",
+      "bytes": 540991,
+      "sha256": "07dc2a003c57b21e7f6275aea9a1f78ca531af1fb0941cd08d71f31a4d52fdf5"
+    },
+    {
+      "path": "results/plecs_01_DLL_IO.json",
+      "bytes": 1674435,
+      "sha256": "c833a6b0d0f012524b5f2274e0ad4f2aa9648dcca147433d37022c20a5196c02"
+    },
+    {
+      "path": "results/plecs_01_DLL_IO.options.json",
+      "bytes": 24,
+      "sha256": "27d5f5ba14f51a3975519c2f124a046a3077a5411e9880a973b47eed763d2022"
+    },
+    {
+      "path": "results/plecs_03_Gate_PFM_Windows.json",
+      "bytes": 50211,
+      "sha256": "585dd46a9577deb5ee7280675d2c35df77b27142439f5711c21cad4364ae787e"
+    },
+    {
+      "path": "results/plecs_03_Gate_PFM_Windows.options.json",
+      "bytes": 24,
+      "sha256": "27d5f5ba14f51a3975519c2f124a046a3077a5411e9880a973b47eed763d2022"
+    },
+    {
+      "path": "results/plecs_03_Gate_PWM.json",
+      "bytes": 43691,
+      "sha256": "068c4103de183b4429883032499035dd4d32acb2ae2bb85b6eb0399e42ed9109"
+    },
+    {
+      "path": "results/plecs_03_Gate_PWM.options.json",
+      "bytes": 24,
+      "sha256": "27d5f5ba14f51a3975519c2f124a046a3077a5411e9880a973b47eed763d2022"
+    },
+    {
+      "path": "results/plecs_04_PWM_CC_Replay.json",
+      "bytes": 24284275,
+      "sha256": "fc7125cb0d91ded532985c6a385a751505ba52adbb9d18331e3fa3f687f5f7c4"
+    },
+    {
+      "path": "results/plecs_04_PWM_CC_Replay.options.json",
+      "bytes": 24,
+      "sha256": "27d5f5ba14f51a3975519c2f124a046a3077a5411e9880a973b47eed763d2022"
+    },
+    {
+      "path": "results/plecs_gate_edges.csv",
+      "bytes": 6093,
+      "sha256": "a72768a5cc86804a43f212955014a08c9cd181b1baf8c882bd86e0cd1eabdcf9"
+    },
+    {
+      "path": "results/plecs_gate_waveforms.png",
+      "bytes": 61638,
+      "sha256": "8f737a558b0f8e6f0ada06e4fdaa1134649c41e2948efbe6af55b42c81b9dc7c"
+    },
+    {
+      "path": "results/plecs_LLC1600_Combined_DLL_Port.json",
+      "bytes": 999450,
+      "sha256": "0fde69675ce0eaa7c08551761907a355a58193cf58ee4bbced1043a470780637"
+    },
+    {
+      "path": "results/plecs_LLC1600_Combined_DLL_Port.options.json",
+      "bytes": 31706,
+      "sha256": "a0d3ac0703ed2048b32f5b66176b2c4e567a42a2ea7c22277e02e29d6552cde7"
+    },
+    {
+      "path": "results/plecs_LLC1600_PWM_DLL_Port.json",
+      "bytes": 17522,
+      "sha256": "f5eb9383fa4e6e552faa5a9f07e954283b5219dc491f983bfbc19397b911df57"
+    },
+    {
+      "path": "results/plecs_LLC1600_PWM_DLL_Port.options.json",
+      "bytes": 988,
+      "sha256": "b66a131f27ec3caecfa9185d8107894d4347d59bf2a642ad3eadc625e8dae63e"
+    },
+    {
+      "path": "results/plecs_LLC1600_Split_DLL_Port.json",
+      "bytes": 1009764,
+      "sha256": "7dfdc33011e351758ead444adfd1dc811d2e2d213805913e569878a8a068e656"
+    },
+    {
+      "path": "results/plecs_LLC1600_Split_DLL_Port.options.json",
+      "bytes": 31706,
+      "sha256": "a0d3ac0703ed2048b32f5b66176b2c4e567a42a2ea7c22277e02e29d6552cde7"
+    },
+    {
+      "path": "results/plecs_startup_comparison.png",
+      "bytes": 101972,
+      "sha256": "1eeeaa603cfe0a480c0a596f3a5155f51b8b4cef2bdb42525b3f48dcf6846f9f"
+    },
+    {
+      "path": "results/source_audit.json",
+      "bytes": 4798,
+      "sha256": "77728f284e697359187d061546276241b1b63ef7ef3efaa8011661a1da340eea"
+    },
+    {
+      "path": "results/startup_comparison.csv",
+      "bytes": 289795,
+      "sha256": "81c59f97366135e9235c2321098dd17600dd57ea037f4bd7d7b5a99a2d120d5a"
+    },
+    {
+      "path": "results/startup_summary.json",
+      "bytes": 2388,
+      "sha256": "389144da8b1aa182a847acc57d3e036d879321b64164d2bee9a863352ef55c74"
+    },
+    {
+      "path": "results/verification.json",
+      "bytes": 4629,
+      "sha256": "3b22fe6df42be4b5bbb990e65b994e6c8fcb648e1fb3af2ea85da51a7a63c86f"
+    },
+    {
+      "path": "supervisor/llc_slow_task.c",
+      "bytes": 12420,
+      "sha256": "2376c91e9c113415e7eb0e2232ff47783924941817ea1bb6a23b43455dd5522f"
+    },
+    {
+      "path": "test_core.vcxproj",
+      "bytes": 2255,
+      "sha256": "921e13863416b2f9275d2604c012e40993627565325dafaa3f453b91dfa1daef"
+    },
+    {
+      "path": "test_gate.vcxproj",
+      "bytes": 2175,
+      "sha256": "525211f06113eda2b550bbd3082c39dc95d3e758e346b102527e39c4e333fd14"
+    },
+    {
+      "path": "test_slow.vcxproj",
+      "bytes": 2173,
+      "sha256": "4811deae433f4c20d1e76f74655a6ba26a7e9dd36f58d87830d14ae846669543"
+    },
+    {
+      "path": "test_timer.vcxproj",
+      "bytes": 2172,
+      "sha256": "13a0a41e1f8795454118444199820fd6a597b7882a0830d3e7dd7a2d29e141ab"
+    },
+    {
+      "path": "tests/test_core.c",
+      "bytes": 6668,
+      "sha256": "344bfb8b06820e9316438dc1ebfcf117b4972cff3d9d6048b8a8a11672e83b2d"
+    },
+    {
+      "path": "tests/test_dll.py",
+      "bytes": 3310,
+      "sha256": "437dbb8b55df01c39f5e352bed91cd8ca82ea12f499a309bf837823f60e17ee9"
+    },
+    {
+      "path": "tests/test_gate.c",
+      "bytes": 2092,
+      "sha256": "5c94f48c9c027c44af6fd4bb142fc4c24fa989013c586a67c669e5cde810b1bb"
+    },
+    {
+      "path": "tests/test_multirate.py",
+      "bytes": 1714,
+      "sha256": "3ffc7ec30d15f87a54e898d048591a0352e2e8f5fee4dd9fb4e092bef3faf908"
+    },
+    {
+      "path": "tests/test_run_plecs.py",
+      "bytes": 987,
+      "sha256": "1efb2268a439f1d74bad0bc7b796f695b9789c783495d38b35bd56113d4c62c3"
+    },
+    {
+      "path": "tests/test_slow.c",
+      "bytes": 3686,
+      "sha256": "58b3dd7ab981a17392c84a04a82c607f5f24e766280b30ebd6b4fb2c597bf7e0"
+    },
+    {
+      "path": "tests/test_timer.c",
+      "bytes": 918,
+      "sha256": "0351f2ecac156aa68632ff504a9f093dc68a5d26a025f22216982303f0ff94d8"
+    },
+    {
+      "path": "tools/audit_sources.py",
+      "bytes": 2244,
+      "sha256": "87de9d6820a23609006bac760919bd5cb74fd2433ef6dfce505d9ea75c5b9abd"
+    },
+    {
+      "path": "tools/build_probe.cmd",
+      "bytes": 346,
+      "sha256": "8e9dc496f504a3e84161111278a501a825bf2faab44d2120476b31ba6fefc774"
+    },
+    {
+      "path": "tools/check_cscripts.cmd",
+      "bytes": 253,
+      "sha256": "cad558bf355b6728896dc5ce32a724d60f3f2ed15fe5b3c182919c50b8c890eb"
+    },
+    {
+      "path": "tools/generate_models.py",
+      "bytes": 17653,
+      "sha256": "fc6ba2a681175afba7ccbb0232b5516932680566247db489f4ce67f44c1ba8a5"
+    },
+    {
+      "path": "tools/generate_projects.py",
+      "bytes": 3867,
+      "sha256": "f428724cdb706b783557391d76cf9b1b78e9d27025afd690120fa0391630cbf5"
+    },
+    {
+      "path": "tools/package_port.py",
+      "bytes": 2247,
+      "sha256": "93619b6ba571ebf37eb368c17b04a19d382ab11dbf2b3718fd861b50337fe61b"
+    },
+    {
+      "path": "tools/plecs_text.py",
+      "bytes": 2868,
+      "sha256": "be8be032892ee27ca05479408e2a4e66007065db044367bed3665c51c1844df6"
+    },
+    {
+      "path": "tools/read_plecs_help.py",
+      "bytes": 632,
+      "sha256": "495726fc3b93d69bad6e0b5260d395aae00c7c1aea1772347d1ab144a4ae2753"
+    },
+    {
+      "path": "tools/report_gate.py",
+      "bytes": 1818,
+      "sha256": "acefdf0aebd2c3202acde781c25d3fceaac148e7577eb17639fcf66818cbe9b4"
+    },
+    {
+      "path": "tools/report_startup.py",
+      "bytes": 3525,
+      "sha256": "f8f908b577e7ed7d528e26cbe40a726f993b1a037d3eb184a65fba6601973ac9"
+    },
+    {
+      "path": "tools/run_plecs.py",
+      "bytes": 3337,
+      "sha256": "78b187cae70727483e938bee47e47e54510558ce896948bc5b20f4a7fdbb4355"
+    },
+    {
+      "path": "tools/test_core.cmd",
+      "bytes": 389,
+      "sha256": "c2d3f568628c0e1cd38b653ffb53abeea9de7b0632f9ead2296cf12f8cabdc71"
+    },
+    {
+      "path": "tools/test_gate.cmd",
+      "bytes": 334,
+      "sha256": "2abef57171d0802c23e198efa82ecb14d731b4961d2aa4cf07a78b7ddd0c69ee"
+    },
+    {
+      "path": "tools/test_slow.cmd",
+      "bytes": 353,
+      "sha256": "8aa20e081bbdab838036ca0d3fc987468ae69d1547fd4425276710f936d49b7f"
+    },
+    {
+      "path": "tools/test_timer.cmd",
+      "bytes": 341,
+      "sha256": "d8eabcc8339026d9f6b7bbea11c67fcb8dc657893ff3268655139548a00ee912"
+    },
+    {
+      "path": "tools/validate_models.py",
+      "bytes": 3799,
+      "sha256": "252652d5493b357a8267c79cb311ff518b98b3f9dc6b0cc44907a55326db52d4"
+    },
+    {
+      "path": "tools/verify_port.py",
+      "bytes": 1710,
+      "sha256": "259397264e462e586cb162630a4ca0128b65a94c9ea3a4ec7cbfbd83d74efa5d"
+    },
+    {
+      "path": "vendor/plecs/DllHeader.h",
+      "bytes": 2201,
+      "sha256": "dd03144e3f06824416ec928ae8a85bd53b44785384068d59db330ca2e5d67c29"
+    },
+    {
+      "path": "worklog/core-brief.md",
+      "bytes": 2888,
+      "sha256": "10ffb172ee1eb43080ca785384231f6128a85f1df6c258b1c43122005b3071bd"
+    },
+    {
+      "path": "worklog/core-report.md",
+      "bytes": 6156,
+      "sha256": "3df3dfb557a642b7d1448f598b98b71b4b83534e92c21f0a437b078ccf668f60"
+    },
+    {
+      "path": "worklog/progress.md",
+      "bytes": 2448,
+      "sha256": "cbac486665d3e2d2a9fc6f8fbc1290578333bce25ff770860da5fc6c19cc122c"
+    },
+    {
+      "path": "worklog/review.md",
+      "bytes": 1761,
+      "sha256": "4fbd6b1d16b2e4a520c239b93c08fc0f3da550de72725d1222f1adf9fb909e9f"
+    },
+    {
+      "path": "worklog/slow-report.md",
+      "bytes": 912,
+      "sha256": "9f08f513a98cf28049e55d5fb92d842b160d35da59527310b046091a9ad1dcdf"
+    }
+  ]
+}

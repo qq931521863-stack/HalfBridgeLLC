@@ -1,0 +1,155 @@
+Plecs {
+  Name          "01_DLL_IO"
+  Version       "4.9"
+  CircuitModel  "ContStateSpace"
+  StartTime     "0.0"
+  TimeSpan      ".001"
+  Timeout       ""
+  Solver        "radau"
+  MaxStep       "1e-7"
+  InitStep      "-1"
+  FixedStep     "1e-3"
+  Refine        "1"
+  ZCStepSize    "1e-9"
+  RelTol        "1e-3"
+  AbsTol        "-1"
+  TurnOnThreshold "0"
+  NonIdealSwitchResistance "1"
+  SyncFixedStepTasks "1"
+  UseSingleCommonBaseRate "2"
+  LossVariableLimitExceededMsg "3"
+  NegativeSwitchLossMsg "3"
+  DivisionByZeroMsg "3"
+  DatatypeOverflowMsg "2"
+  DatatypeInheritanceConflictMsg "1"
+  ContSampleTimeConflictMsg "1"
+  StiffnessDetectionMsg "2"
+  MaxConsecutiveZCs "0"
+  AlgebraicLoopWithStateMachineMsg "2"
+  AssertionAction "1"
+  FixedPointDatatypeOverride "1"
+  InitializationCommands ""
+  InitialState  "1"
+  SystemState   ""
+  TaskingMode   "1"
+  TaskConfigurations ""
+  CodeGenParameterInlining "2"
+  CodeGenFloatingPointFormat "2"
+  CodeGenAbsTimeUsageMsg "3"
+  CodeGenBaseName ""
+  CodeGenOutputDir ""
+  CodeGenExtraOpts ""
+  CodeGenTarget "Generic"
+  CodeGenTargetSettings ""
+  ExtendedMatrixPrecision "2"
+  MatrixSignificanceCheck "2"
+  RemoveUnusedStateSpaceOutputs "1"
+  EnableStateSpaceSplitting "2"
+  DisplayStateSpaceSplitting "1"
+  DiscretizationMethod "2"
+  ExternalModeSettings ""
+  AlgebraicLoopMethod "1"
+  AlgebraicLoopTolerance "1e-6"
+  ScriptsDialogGeometry "[764 395 446 243]"
+  ScriptsDialogSplitterPos "95"
+  Terminal {
+Type Output
+Index "1"
+}
+Schematic {
+Location [50,50;1400,850]
+ZoomFactor 1
+SliderPosition [0,0]
+
+
+
+Component {
+ Type Constant
+ Name "Stimulus"
+ Show on
+ Position [100, 150]
+ Direction right
+ Flipped off
+ LabelPosition south
+ Parameter {
+ Variable "Value"
+ Value "[11 22 33 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ]"
+ Show off
+ }
+ Parameter {
+ Variable "DataType"
+ Value "10"
+ Show off
+ }
+
+}
+Component {
+ Type Dll
+ Name "LLC_Probe"
+ Show on
+ Position [300, 150]
+ Direction right
+ Flipped off
+ LabelPosition south
+ Parameter {
+ Variable "Filename"
+ Value "../../bin/x64/LLC_Probe.dll"
+ Show off
+ }
+ Parameter {
+ Variable "SampleTime"
+ Value "25e-6"
+ Show off
+ }
+ Parameter {
+ Variable "OutputDelay"
+ Value "0"
+ Show off
+ }
+ Parameter {
+ Variable "Parameters"
+ Value "[1,25e-6]"
+ Show off
+ }
+
+}
+Component {
+ Type Output
+ Name "Probe_28"
+ Show on
+ Position [500, 150]
+ Direction right
+ Flipped off
+ LabelPosition south
+ Parameter {
+ Variable "Index"
+ Value "1"
+ Show off
+ }
+ Parameter {
+ Variable "Width"
+ Value "28"
+ Show off
+ }
+
+}
+Connection {
+ Type Signal
+ SrcComponent "Stimulus"
+ SrcTerminal 1
+ DstComponent "LLC_Probe"
+ DstTerminal 1
+}
+Connection {
+ Type Signal
+ SrcComponent "LLC_Probe"
+ SrcTerminal 2
+ DstComponent "Probe_28"
+ DstTerminal 1
+}
+
+
+
+
+}
+}
