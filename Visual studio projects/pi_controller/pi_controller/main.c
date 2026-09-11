@@ -6,6 +6,9 @@
 
 #define Duty		aState->outputs[0]
 #define SR_Duty		aState->outputs[1]
+#define DrvH		aState->outputs[2]
+#define DrvL		aState->outputs[3]
+
 #define Iout		aState->inputs[0]
 #define Vout		aState->inputs[1]
 #define Vout		aState->inputs[2]	
@@ -16,7 +19,7 @@
 DLLEXPORT void plecsSetSizes(struct SimulationSizes* aSizes)
 {
    aSizes->numInputs = 4;
-   aSizes->numOutputs = 2;
+   aSizes->numOutputs = 4;
    aSizes->numStates = 0;
    aSizes->numParameters = 0; //number of user parameters passed in
 }
@@ -35,5 +38,7 @@ DLLEXPORT void plecsOutput(struct SimulationState* aState)
 {	
 	Duty = 0.20;
 	SR_Duty = 0.40;
+	DrvH = 1;
+	DrvL = 1;
 }
  

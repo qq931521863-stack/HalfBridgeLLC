@@ -131,17 +131,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\R02_LLC_APP_V1.1.1_0824\AppUser\HwConfig.h" />
-    <ClInclude Include="..\..\..\R02_LLC_APP_V1.1.1_0824\AppUser\mathR02.h" />
     <ClInclude Include="DllHeader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\R02_LLC_APP_V1.1.1_0824\AppUser\mathR02.c" />
-    <ClCompile Include="..\..\..\R02_LLC_APP_V1.1.1_0824\AppUser\user_sample.c" />
+    <ClCompile Include="HwConfig.h" />
     <ClCompile Include="main.c" />
-    <ClCompile Include="State.c" />
     <ClCompile Include="type.h" />
-    <ClCompile Include="user_sample.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -39,7 +39,7 @@
 "xpllc474_v0.1\user_sample.o"
 "xpllc474_v0.1\operatestatus.o"
 "xpllc474_v0.1\protectionllc.o"
-"..\AppUser\R02_LLC_APP_V1.lib"
+"xpllc474_v0.1\sr_handle.o"
 "xpllc474_v0.1\otagw.o"
 "xpllc474_v0.1\llcota.o"
 "xpllc474_v0.1\hostx1jumpshutdown.o"

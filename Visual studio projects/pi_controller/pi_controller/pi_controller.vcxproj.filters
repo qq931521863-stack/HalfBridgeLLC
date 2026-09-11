@@ -18,30 +18,15 @@
     <ClInclude Include="DllHeader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\R02_LLC_APP_V1.1.1_0824\AppUser\HwConfig.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\R02_LLC_APP_V1.1.1_0824\AppUser\mathR02.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="State.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="user_sample.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\R02_LLC_APP_V1.1.1_0824\AppUser\mathR02.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\R02_LLC_APP_V1.1.1_0824\AppUser\user_sample.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="type.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HwConfig.h">
       <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>

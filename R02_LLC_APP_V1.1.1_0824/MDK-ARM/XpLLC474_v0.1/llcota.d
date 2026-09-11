@@ -45,9 +45,9 @@ xpllc474_v0.1\llcota.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h
 xpllc474_v0.1\llcota.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h
 xpllc474_v0.1\llcota.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h
 xpllc474_v0.1\llcota.o: ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h
+xpllc474_v0.1\llcota.o: ../Core/Inc/main.h
 xpllc474_v0.1\llcota.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 xpllc474_v0.1\llcota.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-xpllc474_v0.1\llcota.o: ../Core/Inc/main.h
 xpllc474_v0.1\llcota.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 xpllc474_v0.1\llcota.o: ../AppUser/mathR02.h
 xpllc474_v0.1\llcota.o: ../AppUser/HwConfig.h

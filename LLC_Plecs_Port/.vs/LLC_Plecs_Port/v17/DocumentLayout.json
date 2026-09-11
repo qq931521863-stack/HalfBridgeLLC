@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\LLC_Plecs_Port\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1F6382F1-E892-5C30-8B1D-D901080504BF}|test_core.vcxproj|D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\LLC_Plecs_Port\\core\\llc_control.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1F6382F1-E892-5C30-8B1D-D901080504BF}|test_core.vcxproj|solutionrelative:core\\llc_control.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D08C9181-82E3-5F79-91B5-AF7923C0313A}|test_timer.vcxproj|D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\LLC_Plecs_Port\\core\\llc_timer_image.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D08C9181-82E3-5F79-91B5-AF7923C0313A}|test_timer.vcxproj|solutionrelative:core\\llc_timer_image.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D08C9181-82E3-5F79-91B5-AF7923C0313A}|test_timer.vcxproj|D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\LLC_Plecs_Port\\tests\\test_timer.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D08C9181-82E3-5F79-91B5-AF7923C0313A}|test_timer.vcxproj|solutionrelative:tests\\test_timer.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{73B851A3-BCB8-5B61-AA20-DBE4B9939B44}|LLC_Combined.vcxproj|D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\LLC_Plecs_Port\\adapters\\plecs_combined.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{73B851A3-BCB8-5B61-AA20-DBE4B9939B44}|LLC_Combined.vcxproj|solutionrelative:adapters\\plecs_combined.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -35,15 +47,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "llc_control.c",
+              "DocumentMoniker": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\LLC_Plecs_Port\\core\\llc_control.c",
+              "RelativeDocumentMoniker": "core\\llc_control.c",
+              "ToolTip": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\LLC_Plecs_Port\\core\\llc_control.c",
+              "RelativeToolTip": "core\\llc_control.c",
+              "ViewState": "AgIAAEACAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-09-11T01:21:19.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "llc_timer_image.c",
+              "DocumentMoniker": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\LLC_Plecs_Port\\core\\llc_timer_image.c",
+              "RelativeDocumentMoniker": "core\\llc_timer_image.c",
+              "ToolTip": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\LLC_Plecs_Port\\core\\llc_timer_image.c",
+              "RelativeToolTip": "core\\llc_timer_image.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-09-11T00:56:01.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "test_timer.c",
+              "DocumentMoniker": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\LLC_Plecs_Port\\tests\\test_timer.c",
+              "RelativeDocumentMoniker": "tests\\test_timer.c",
+              "ToolTip": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\LLC_Plecs_Port\\tests\\test_timer.c",
+              "RelativeToolTip": "tests\\test_timer.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-09-11T00:54:32.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "plecs_combined.c",
               "DocumentMoniker": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\LLC_Plecs_Port\\adapters\\plecs_combined.c",
               "RelativeDocumentMoniker": "adapters\\plecs_combined.c",
               "ToolTip": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\LLC_Plecs_Port\\adapters\\plecs_combined.c",
               "RelativeToolTip": "adapters\\plecs_combined.c",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-09-10T06:20:23.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-10T06:20:23.048Z"
             }
           ]
         }

@@ -54,95 +54,28 @@ Plecs {
   ScriptsDialogGeometry "[764 395 446 243]"
   ScriptsDialogSplitterPos "95"
   Terminal {
-Type Output
-Index "1"
-}
-Terminal {
-Type Output
-Index "2"
-}
-Terminal {
-Type Output
-Index "3"
-}
-Schematic {
+    Type          Output
+    Index         "1"
+  }
+  Terminal {
+    Type          Output
+    Index         "2"
+  }
+  Terminal {
+    Type          Output
+    Index         "3"
+  }
+  Schematic {
     Location      [0, 24; 1536, 871]
-    ZoomFactor    0.905837
-    SliderPosition [743, 270]
+    ZoomFactor    0.791562
+    SliderPosition [82, 123]
     ShowBrowser   off
     BrowserWidth  100
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     Component {
       Type          Transformer
       Name          "Tr3"
       Show          on
-      Position      [1105, 540]
+      Position      [1300, 650]
       Direction     right
       Flipped       on
       LabelPosition south
@@ -172,11 +105,11 @@ Schematic {
         Show          off
       }
     }
-Component {
+    Component {
       Type          MosfetWithDiode
       Name          "FETD21"
       Show          on
-      Position      [610, 645]
+      Position      [805, 755]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -206,11 +139,11 @@ Component {
         Show          off
       }
     }
-Component {
+    Component {
       Type          Capacitor
       Name          "C13"
       Show          off
-      Position      [460, 515]
+      Position      [655, 625]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -225,11 +158,11 @@ Component {
         Show          off
       }
     }
-Component {
+    Component {
       Type          Resistor
       Name          "R11"
       Show          on
-      Position      [460, 610]
+      Position      [655, 720]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -239,11 +172,11 @@ Component {
         Show          on
       }
     }
-Component {
+    Component {
       Type          Capacitor
       Name          "C14"
       Show          off
-      Position      [1655, 600]
+      Position      [1850, 710]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -258,11 +191,11 @@ Component {
         Show          off
       }
     }
-Component {
+    Component {
       Type          Resistor
       Name          "R12"
       Show          on
-      Position      [1655, 680]
+      Position      [1850, 790]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -272,29 +205,29 @@ Component {
         Show          on
       }
     }
-Component {
+    Component {
       Type          Ammeter
       Name          "Am4"
       Show          on
-      Position      [835, 510]
+      Position      [1030, 620]
       Direction     left
       Flipped       off
       LabelPosition south
     }
-Component {
+    Component {
       Type          Ammeter
       Name          "Am6"
       Show          on
-      Position      [1315, 505]
+      Position      [1510, 615]
       Direction     left
       Flipped       off
       LabelPosition south
     }
-Component {
+    Component {
       Type          Scope
       Name          "Scope5"
       Show          on
-      Position      [2190, 465]
+      Position      [2385, 575]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -455,20 +388,20 @@ Component {
         }
       }
     }
-Component {
+    Component {
       Type          Voltmeter
       Name          "Vm15"
       Show          off
-      Position      [1780, 680]
+      Position      [1975, 790]
       Direction     up
       Flipped       off
       LabelPosition west
     }
-Component {
+    Component {
       Type          Capacitor
       Name          "C17"
       Show          off
-      Position      [1495, 670]
+      Position      [1690, 780]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -483,11 +416,11 @@ Component {
         Show          off
       }
     }
-Component {
+    Component {
       Type          Capacitor
       Name          "C18"
       Show          off
-      Position      [1350, 670]
+      Position      [1545, 780]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -502,11 +435,11 @@ Component {
         Show          off
       }
     }
-Component {
+    Component {
       Type          MosfetWithDiode
       Name          "FETD22"
       Show          on
-      Position      [610, 450]
+      Position      [805, 560]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -536,11 +469,11 @@ Component {
         Show          off
       }
     }
-Component {
+    Component {
       Type          MosfetWithDiode
       Name          "FETD23"
       Show          on
-      Position      [1420, 615]
+      Position      [1615, 725]
       Direction     up
       Flipped       off
       LabelPosition north
@@ -570,11 +503,11 @@ Component {
         Show          off
       }
     }
-Component {
+    Component {
       Type          MosfetWithDiode
       Name          "FETD24"
       Show          on
-      Position      [1275, 645]
+      Position      [1470, 755]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -604,11 +537,11 @@ Component {
         Show          off
       }
     }
-Component {
+    Component {
       Type          DCVoltageSource
       Name          "V_dc2"
       Show          on
-      Position      [405, 560]
+      Position      [600, 670]
       Direction     down
       Flipped       on
       LabelPosition east
@@ -618,11 +551,11 @@ Component {
         Show          off
       }
     }
-Component {
+    Component {
       Type          Resistor
       Name          "R16"
       Show          on
-      Position      [1850, 635]
+      Position      [2045, 745]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -632,11 +565,11 @@ Component {
         Show          on
       }
     }
-Component {
+    Component {
       Type          Resistor
       Name          "R20"
       Show          on
-      Position      [1165, 575]
+      Position      [1360, 685]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -646,11 +579,11 @@ Component {
         Show          on
       }
     }
-Component {
+    Component {
       Type          Resistor
       Name          "R21"
       Show          on
-      Position      [1165, 505]
+      Position      [1360, 615]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -660,11 +593,11 @@ Component {
         Show          on
       }
     }
-Component {
+    Component {
       Type          Capacitor
       Name          "C20"
       Show          off
-      Position      [550, 570]
+      Position      [745, 680]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -679,11 +612,11 @@ Component {
         Show          off
       }
     }
-Component {
+    Component {
       Type          Resistor
       Name          "R22"
       Show          on
-      Position      [550, 610]
+      Position      [745, 720]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -693,11 +626,11 @@ Component {
         Show          on
       }
     }
-Component {
+    Component {
       Type          Capacitor
       Name          "C21"
       Show          off
-      Position      [555, 395]
+      Position      [750, 505]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -712,11 +645,11 @@ Component {
         Show          off
       }
     }
-Component {
+    Component {
       Type          Resistor
       Name          "R23"
       Show          on
-      Position      [555, 480]
+      Position      [750, 590]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -726,20 +659,20 @@ Component {
         Show          on
       }
     }
-Component {
+    Component {
       Type          Ammeter
       Name          "Am5"
       Show          on
-      Position      [1005, 605]
+      Position      [1200, 715]
       Direction     up
       Flipped       off
       LabelPosition west
     }
-Component {
+    Component {
       Type          SignalMux
       Name          "Mux13"
       Show          off
-      Position      [1110, 450]
+      Position      [1305, 560]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -749,20 +682,20 @@ Component {
         Show          off
       }
     }
-Component {
+    Component {
       Type          Ammeter
       Name          "Am8"
       Show          on
-      Position      [1070, 645]
+      Position      [1265, 755]
       Direction     left
       Flipped       on
       LabelPosition south
     }
-Component {
+    Component {
       Type          Inductor
       Name          "L7"
       Show          on
-      Position      [1005, 550]
+      Position      [1200, 660]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -777,20 +710,20 @@ Component {
         Show          off
       }
     }
-Component {
+    Component {
       Type          Ammeter
       Name          "Am7"
       Show          on
-      Position      [1850, 775]
+      Position      [2045, 885]
       Direction     up
       Flipped       off
       LabelPosition west
     }
-Component {
+    Component {
       Type          Capacitor
       Name          "C15"
       Show          off
-      Position      [1750, 590]
+      Position      [1945, 700]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -805,11 +738,11 @@ Component {
         Show          off
       }
     }
-Component {
+    Component {
       Type          Resistor
       Name          "R13"
       Show          on
-      Position      [1750, 700]
+      Position      [1945, 810]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -819,11 +752,11 @@ Component {
         Show          on
       }
     }
-Component {
+    Component {
       Type          Capacitor
       Name          "C24"
       Show          off
-      Position      [730, 510]
+      Position      [925, 620]
       Direction     right
       Flipped       on
       LabelPosition south
@@ -838,11 +771,11 @@ Component {
         Show          off
       }
     }
-Component {
+    Component {
       Type          Resistor
       Name          "R32"
       Show          on
-      Position      [1350, 615]
+      Position      [1545, 725]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -852,11 +785,11 @@ Component {
         Show          on
       }
     }
-Component {
+    Component {
       Type          Resistor
       Name          "R33"
       Show          on
-      Position      [1495, 590]
+      Position      [1690, 700]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -866,11 +799,11 @@ Component {
         Show          on
       }
     }
-Component {
+    Component {
       Type          SignalMux
       Name          "Mux14"
       Show          off
-      Position      [1615, 460]
+      Position      [1810, 570]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -880,47 +813,47 @@ Component {
         Show          off
       }
     }
-Component {
+    Component {
       Type          Ammeter
       Name          "Am9"
       Show          on
-      Position      [1230, 575]
+      Position      [1425, 685]
       Direction     left
       Flipped       off
       LabelPosition south
     }
-Component {
+    Component {
       Type          Voltmeter
       Name          "Vm18"
       Show          off
-      Position      [665, 615]
+      Position      [860, 725]
       Direction     up
       Flipped       off
       LabelPosition west
     }
-Component {
+    Component {
       Type          Voltmeter
       Name          "Vm20"
       Show          off
-      Position      [1035, 575]
+      Position      [1230, 685]
       Direction     up
       Flipped       off
       LabelPosition west
     }
-Component {
+    Component {
       Type          Voltmeter
       Name          "Vm22"
       Show          off
-      Position      [1005, 475]
+      Position      [1200, 585]
       Direction     up
       Flipped       off
       LabelPosition west
     }
-Component {
+    Component {
       Type          Inductor
       Name          "L14"
       Show          on
-      Position      [935, 510]
+      Position      [1130, 620]
       Direction     left
       Flipped       off
       LabelPosition north
@@ -935,83 +868,83 @@ Component {
         Show          off
       }
     }
-Component {
+    Component {
       Type          Voltmeter
       Name          "Vm23"
       Show          off
-      Position      [645, 440]
+      Position      [840, 550]
       Direction     up
       Flipped       off
       LabelPosition west
     }
-Component {
+    Component {
       Type          Voltmeter
       Name          "Vm16"
       Show          off
-      Position      [1545, 690]
+      Position      [1740, 800]
       Direction     up
       Flipped       off
       LabelPosition west
     }
-Component {
+    Component {
       Type          Ammeter
       Name          "Am11"
       Show          on
-      Position      [610, 395]
+      Position      [805, 505]
       Direction     up
       Flipped       off
       LabelPosition west
     }
-Component {
+    Component {
       Type          Ammeter
       Name          "Am12"
       Show          on
-      Position      [610, 705]
+      Position      [805, 815]
       Direction     up
       Flipped       off
       LabelPosition west
     }
-Component {
+    Component {
       Type          Voltmeter
       Name          "Vm24"
       Show          off
-      Position      [635, 610]
+      Position      [830, 720]
       Direction     up
       Flipped       off
       LabelPosition west
     }
-Component {
+    Component {
       Type          Ammeter
       Name          "Am13"
       Show          on
-      Position      [555, 430]
+      Position      [750, 540]
       Direction     up
       Flipped       off
       LabelPosition west
     }
-Component {
+    Component {
       Type          Ammeter
       Name          "Am14"
       Show          on
-      Position      [550, 675]
+      Position      [745, 785]
       Direction     up
       Flipped       off
       LabelPosition west
     }
-Component {
+    Component {
       Type          Ammeter
       Name          "Am15"
       Show          on
-      Position      [1275, 540]
+      Position      [1470, 650]
       Direction     left
       Flipped       off
       LabelPosition south
     }
-Component {
+    Component {
       Type          Inductor
       Name          "L15"
       Show          on
-      Position      [1695, 540]
+      Position      [1890, 650]
       Direction     left
       Flipped       off
       LabelPosition north
@@ -1026,47 +959,47 @@ Component {
         Show          off
       }
     }
-Component {
+    Component {
       Type          Ammeter
       Name          "Am10"
       Show          on
-      Position      [1420, 680]
+      Position      [1615, 790]
       Direction     up
       Flipped       on
       LabelPosition west
     }
-Component {
+    Component {
       Type          Ammeter
       Name          "Am16"
       Show          on
-      Position      [1275, 710]
+      Position      [1470, 820]
       Direction     up
       Flipped       on
       LabelPosition west
     }
-Component {
+    Component {
       Type          Voltmeter
       Name          "Vm19"
       Show          off
-      Position      [1580, 670]
+      Position      [1775, 780]
       Direction     up
       Flipped       off
       LabelPosition west
     }
-Component {
+    Component {
       Type          Voltmeter
       Name          "Vm21"
       Show          off
-      Position      [1620, 740]
+      Position      [1815, 850]
       Direction     up
       Flipped       off
       LabelPosition west
     }
-Component {
+    Component {
       Type          Scope
       Name          "Scope15"
       Show          on
-      Position      [1705, 735]
+      Position      [1900, 845]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1141,11 +1074,11 @@ Component {
         }
       }
     }
-Component {
+    Component {
       Type          Resistor
       Name          "R24"
       Show          on
-      Position      [1900, 540]
+      Position      [2095, 650]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1155,11 +1088,11 @@ Component {
         Show          on
       }
     }
-Component {
+    Component {
       Type          Capacitor
       Name          "C16"
       Show          off
-      Position      [1945, 650]
+      Position      [2140, 760]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -1174,20 +1107,20 @@ Component {
         Show          off
       }
     }
-Component {
+    Component {
       Type          Voltmeter
       Name          "Vm25"
       Show          off
-      Position      [2050, 680]
+      Position      [2245, 790]
       Direction     up
       Flipped       off
       LabelPosition west
     }
-Component {
+    Component {
       Type          DCVoltageSource
       Name          "V_dc3"
       Show          on
-      Position      [1850, 710]
+      Position      [2045, 820]
       Direction     down
       Flipped       on
       LabelPosition east
@@ -1197,19 +1130,19 @@ Component {
         Show          off
       }
     }
-Component {
+    Component {
       Type          Scope
       Name          "Scope"
       Show          on
-      Position      [820, 350]
+      Position      [1015, 460]
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 24; 1536, 903]
+      Location      [0, 24; 1536, 913]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAASEA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGMA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABjAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAABgAAAANQAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAABgAAAANaAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -1384,551 +1317,578 @@ Component {
         }
       }
     }
-Component {
- Type Resistor
- Name "R_RELAY_ON"
- Show on
- Position [1800, 570]
- Direction right
- Flipped off
- LabelPosition south
- Parameter {
- Variable "R"
- Value "1e-3"
- Show off
- }
-
-}
-Component {
- Type Switch
- Name "K_RELAY"
- Show on
- Position [1840, 570]
- Direction right
- Flipped off
- LabelPosition south
- Parameter {
- Variable "s_init"
- Value "0"
- Show off
- }
- Parameter {
- Variable "SwitchModel"
- Value "1"
- Show off
- }
- Parameter {
- Variable "f_grid"
- Value "0"
- Show off
- }
-
-}
-Component {
- Type Resistor
- Name "R_DIS"
- Show on
- Position [2100, 590]
- Direction right
- Flipped off
- LabelPosition south
- Parameter {
- Variable "R"
- Value "100"
- Show off
- }
-
-}
-Component {
- Type Switch
- Name "K_DIS"
- Show on
- Position [2100, 700]
- Direction right
- Flipped off
- LabelPosition south
- Parameter {
- Variable "s_init"
- Value "0"
- Show off
- }
- Parameter {
- Variable "SwitchModel"
- Value "1"
- Show off
- }
- Parameter {
- Variable "f_grid"
- Value "0"
- Show off
- }
-
-}
-Component {
- Type Voltmeter
- Name "V_BAT"
- Show on
- Position [1990, 740]
- Direction right
- Flipped off
- LabelPosition south
-
-}
-Component {
- Type Constant
- Name "Fast_commands_3_to_21"
- Show on
- Position [300, 1060]
- Direction right
- Flipped off
- LabelPosition south
- Parameter {
- Variable "Value"
- Value "[1 0 230 0 1 2 151 4 54 1 1 3 0 0 0 3 0 0 0]"
- Show off
- }
- Parameter {
- Variable "DataType"
- Value "10"
- Show off
- }
-
-}
-Component {
- Type SignalMux
- Name "Fast_input_mux"
- Show on
- Position [560, 1020]
- Direction right
- Flipped off
- LabelPosition south
- Parameter {
- Variable "Width"
- Value "[1 1 1 19]"
- Show off
- }
-
-}
-Component {
- Type Dll
- Name "LLC_Fast"
- Show on
- Position [740, 1020]
- Direction right
- Flipped off
- LabelPosition south
- Parameter {
- Variable "Filename"
- Value "../../bin/x64/LLC_Fast.dll"
- Show off
- }
- Parameter {
- Variable "SampleTime"
- Value "25e-6"
- Show off
- }
- Parameter {
- Variable "OutputDelay"
- Value "0"
- Show off
- }
- Parameter {
- Variable "Parameters"
- Value "[1,25e-6,1e-3,680e6,1]"
- Show off
- }
-
-}
-Component {
- Type CScript
- Name "Gate_frame_adapter"
- Show on
- Position [990, 1020]
- Direction right
- Flipped off
- LabelPosition south
- Parameter {
- Variable "NumInputs"
- Value "[28 19]"
- Show off
- }
- Parameter {
- Variable "NumOutputs"
- Value "15"
- Show off
- }
- Parameter {
- Variable "NumContStates"
- Value "0"
- Show off
- }
- Parameter {
- Variable "NumDiscStates"
- Value "0"
- Show off
- }
- Parameter {
- Variable "NumZCSignals"
- Value "0"
- Show off
- }
- Parameter {
- Variable "DirectFeedthrough"
- Value "1"
- Show off
- }
- Parameter {
- Variable "Ts"
- Value "25e-6"
- Show off
- }
- Parameter {
- Variable "Parameters"
- Value ""
- Show off
- }
- Parameter {
- Variable "LangStandard"
- Value "2"
- Show off
- }
- Parameter {
- Variable "GnuExtensions"
- Value "1"
- Show off
- }
- Parameter {
- Variable "RuntimeCheck"
- Value "2"
- Show off
- }
- Parameter {
- Variable "Declarations"
- Value ""
- Show off
- }
- Parameter {
- Variable "StartFcn"
- Value ""
- Show off
- }
- Parameter {
- Variable "OutputFcn"
- Value "int k; for(k=0;k<12;k++) OutputSignal(0,k)=InputSignal(0,k);\nOutputSignal(0,12)=InputSignal(0,26);\nOutputSignal(0,13)=(InputSignal(0,0)>0 && InputSignal(0,27)==0);\nOutputSignal(0,14)=InputSignal(1,14);"
- Show off
- }
- Parameter {
- Variable "UpdateFcn"
- Value ""
- Show off
- }
- Parameter {
- Variable "DerivativeFcn"
- Value ""
- Show off
- }
- Parameter {
- Variable "TerminateFcn"
- Value ""
- Show off
- }
- Parameter {
- Variable "StoreCustomStateFcn"
- Value ""
- Show off
- }
- Parameter {
- Variable "RestoreCustomStateFcn"
- Value ""
- Show off
- }
-
-}
-Component {
- Type CScript
- Name "LLC_Gate"
- Show on
- Position [1210, 1020]
- Direction right
- Flipped off
- LabelPosition south
- Parameter {
- Variable "NumInputs"
- Value "15"
- Show off
- }
- Parameter {
- Variable "NumOutputs"
- Value "4"
- Show off
- }
- Parameter {
- Variable "NumContStates"
- Value "0"
- Show off
- }
- Parameter {
- Variable "NumDiscStates"
- Value "1"
- Show off
- }
- Parameter {
- Variable "NumZCSignals"
- Value "0"
- Show off
- }
- Parameter {
- Variable "DirectFeedthrough"
- Value "1"
- Show off
- }
- Parameter {
- Variable "Ts"
- Value "[25e-6,0;-2,0]"
- Show off
- }
- Parameter {
- Variable "Parameters"
- Value ""
- Show off
- }
- Parameter {
- Variable "LangStandard"
- Value "2"
- Show off
- }
- Parameter {
- Variable "GnuExtensions"
- Value "1"
- Show off
- }
- Parameter {
- Variable "RuntimeCheck"
- Value "2"
- Show off
- }
- Parameter {
- Variable "Declarations"
- Value "#include \"../gate/llc_gate_events.c\"\n#include <float.h>\nstatic LlcGate committed,candidate;"
- Show off
- }
- Parameter {
- Variable "StartFcn"
- Value "llcGateReset(&committed); llcGateReset(&candidate); DiscState(0)=0; NextSampleHit=DBL_MAX;"
- Show off
- }
- Parameter {
- Variable "OutputFcn"
- Value "double u[15],y[4],next; int k;\nfor(k=0;k<15;k++) u[k]=InputSignal(0,k);\nif(!llcGateEvaluate(&committed,CurrentTime,IsSampleHit(0),u,&candidate,y,&next)) SetErrorMessage(\"Invalid LLC timer frame\");\nfor(k=0;k<4;k++) OutputSignal(0,k)=y[k];\nNextSampleHit=isfinite(next)?next:DBL_MAX;"
- Show off
- }
- Parameter {
- Variable "UpdateFcn"
- Value "committed=candidate; DiscState(0)+=1;"
- Show off
- }
- Parameter {
- Variable "DerivativeFcn"
- Value ""
- Show off
- }
- Parameter {
- Variable "TerminateFcn"
- Value ""
- Show off
- }
- Parameter {
- Variable "StoreCustomStateFcn"
- Value ""
- Show off
- }
- Parameter {
- Variable "RestoreCustomStateFcn"
- Value ""
- Show off
- }
-
-}
-Component {
- Type SignalDemux
- Name "Primary_and_SR"
- Show on
- Position [1410, 1020]
- Direction right
- Flipped off
- LabelPosition south
- Parameter {
- Variable "Width"
- Value "[1 1 1 1]"
- Show off
- }
-
-}
-Component {
- Type SignalSelector
- Name "Relay_cmd"
- Show on
- Position [950, 1120]
- Direction right
- Flipped off
- LabelPosition south
- Parameter {
- Variable "InputWidth"
- Value "28"
- Show off
- }
- Parameter {
- Variable "OutputIndices"
- Value "14"
- Show off
- }
-
-}
-Component {
- Type SignalSelector
- Name "Discharge_cmd"
- Show on
- Position [1140, 1120]
- Direction right
- Flipped off
- LabelPosition south
- Parameter {
- Variable "InputWidth"
- Value "28"
- Show off
- }
- Parameter {
- Variable "OutputIndices"
- Value "15"
- Show off
- }
-
-}
-Component {
- Type Constant
- Name "SR_off_pending_polarity"
- Show on
- Position [1430, 1150]
- Direction right
- Flipped off
- LabelPosition south
- Parameter {
- Variable "Value"
- Value "0"
- Show off
- }
- Parameter {
- Variable "DataType"
- Value "10"
- Show off
- }
-
-}
-Component {
- Type Output
- Name "Fast_trace_28"
- Show on
- Position [1620, 1030]
- Direction right
- Flipped off
- LabelPosition south
- Parameter {
- Variable "Index"
- Value "1"
- Show off
- }
- Parameter {
- Variable "Width"
- Value "28"
- Show off
- }
-
-}
-Component {
- Type Output
- Name "Gate_trace_4"
- Show on
- Position [1620, 1090]
- Direction right
- Flipped off
- LabelPosition south
- Parameter {
- Variable "Index"
- Value "2"
- Show off
- }
- Parameter {
- Variable "Width"
- Value "4"
- Show off
- }
-
-}
-Component {
- Type SignalMux
- Name "Additional_measurements"
- Show on
- Position [1860, 1200]
- Direction right
- Flipped off
- LabelPosition south
- Parameter {
- Variable "Width"
- Value "[1 1 1 1 1 1 1 1 1]"
- Show off
- }
-
-}
-Component {
- Type Output
- Name "Measurements_and_SR_requests"
- Show on
- Position [2050, 1200]
- Direction right
- Flipped off
- LabelPosition south
- Parameter {
- Variable "Index"
- Value "3"
- Show off
- }
- Parameter {
- Variable "Width"
- Value "9"
- Show off
- }
-
-}
-Connection {
+    Component {
+      Type          Resistor
+      Name          "R_RELAY_ON"
+      Show          on
+      Position      [1995, 680]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "R"
+        Value         "1e-3"
+        Show          off
+      }
+    }
+    Component {
+      Type          Switch
+      Name          "K_RELAY"
+      Show          on
+      Position      [2035, 680]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "SwitchModel"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "f_grid"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R_DIS"
+      Show          on
+      Position      [2295, 700]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "R"
+        Value         "100"
+        Show          off
+      }
+    }
+    Component {
+      Type          Switch
+      Name          "K_DIS"
+      Show          on
+      Position      [2295, 810]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "SwitchModel"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "f_grid"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Voltmeter
+      Name          "V_BAT"
+      Show          on
+      Position      [2185, 850]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+    }
+    Component {
+      Type          Constant
+      Name          "Fast_commands_3_to_21"
+      Show          on
+      Position      [495, 1170]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Frame         [-10, -10; 10, 10]
+      Parameter {
+        Variable      "Value"
+        Value         "[1 0 230 0 1 2 151 4 54 1 1 3 0 0 0 3 0 0 0]"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalMux
+      Name          "Fast_input_mux"
+      Show          on
+      Position      [755, 1130]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "[1 1 1 19]"
+        Show          off
+      }
+    }
+    Component {
+      Type          Dll
+      Name          "LLC_Fast"
+      Show          on
+      Position      [935, 1130]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Filename"
+        Value         "../../bin/x64/LLC_Fast.dll"
+        Show          off
+        Evaluate      off
+      }
+      Parameter {
+        Variable      "SampleTime"
+        Value         "25e-6"
+        Show          off
+      }
+      Parameter {
+        Variable      "OutputDelay"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Parameters"
+        Value         "[1,25e-6,1e-3,680e6,1]"
+        Show          off
+      }
+    }
+    Component {
+      Type          CScript
+      Name          "Gate_frame_adapter"
+      Show          on
+      Position      [1185, 1130]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "DialogGeometry"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "NumInputs"
+        Value         "[28 19]"
+        Show          off
+      }
+      Parameter {
+        Variable      "NumOutputs"
+        Value         "15"
+        Show          off
+      }
+      Parameter {
+        Variable      "NumContStates"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "NumDiscStates"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "NumZCSignals"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "DirectFeedthrough"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ts"
+        Value         "25e-6"
+        Show          off
+      }
+      Parameter {
+        Variable      "TerminalBasedSampleTimes"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Parameters"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "LangStandard"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "GnuExtensions"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "RuntimeCheck"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "HighlightLevel"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Declarations"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "StartFcn"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "OutputFcn"
+        Value         "int k; for(k=0;k<12;k++) OutputSignal(0,k)=InputSignal("
+"0,k);\n"
+"OutputSignal(0,12)=InputSignal(0,26);\n"
+"OutputSignal(0,13)=(InputSignal(0,0)>0 && InputSignal(0,27)==0);\n"
+"OutputSignal(0,14)=InputSignal(1,14);"
+        Show          off
+      }
+      Parameter {
+        Variable      "UpdateFcn"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "DerivativeFcn"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "TerminateFcn"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "StoreCustomStateFcn"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "RestoreCustomStateFcn"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          CScript
+      Name          "LLC_Gate"
+      Show          on
+      Position      [1405, 1130]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "DialogGeometry"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "NumInputs"
+        Value         "15"
+        Show          off
+      }
+      Parameter {
+        Variable      "NumOutputs"
+        Value         "4"
+        Show          off
+      }
+      Parameter {
+        Variable      "NumContStates"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "NumDiscStates"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NumZCSignals"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "DirectFeedthrough"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ts"
+        Value         "[25e-6,0;-2,0]"
+        Show          off
+      }
+      Parameter {
+        Variable      "TerminalBasedSampleTimes"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Parameters"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "LangStandard"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "GnuExtensions"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "RuntimeCheck"
+        Value         "2"
+        Show          off
+      }
+      Parameter {
+        Variable      "HighlightLevel"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Declarations"
+        Value         "#include \"../gate/llc_gate_events.c\"\n"
+"#include <float.h>\n"
+"static LlcGate committed,candidate;"
+        Show          off
+      }
+      Parameter {
+        Variable      "StartFcn"
+        Value         "llcGateReset(&committed); llcGateReset(&candidate); Dis"
+"cState(0)=0; NextSampleHit=DBL_MAX;"
+        Show          off
+      }
+      Parameter {
+        Variable      "OutputFcn"
+        Value         "double u[15],y[4],next; int k;\n"
+"for(k=0;k<15;k++) u[k]=InputSignal(0,k);\n"
+"if(!llcGateEvaluate(&committed,CurrentTime,IsSampleHit(0),u,&candidate,y,&nex"
+"t)) SetErrorMessage(\"Invalid LLC timer frame\");\n"
+"for(k=0;k<4;k++) OutputSignal(0,k)=y[k];\n"
+"NextSampleHit=isfinite(next)?next:DBL_MAX;"
+        Show          off
+      }
+      Parameter {
+        Variable      "UpdateFcn"
+        Value         "committed=candidate; DiscState(0)+=1;"
+        Show          off
+      }
+      Parameter {
+        Variable      "DerivativeFcn"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "TerminateFcn"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "StoreCustomStateFcn"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "RestoreCustomStateFcn"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalDemux
+      Name          "Primary_and_SR"
+      Show          on
+      Position      [1605, 1130]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "[1 1 1 1]"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalSelector
+      Name          "Relay_cmd"
+      Show          on
+      Position      [1145, 1230]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "InputWidth"
+        Value         "28"
+        Show          off
+      }
+      Parameter {
+        Variable      "OutputIndices"
+        Value         "14"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalSelector
+      Name          "Discharge_cmd"
+      Show          on
+      Position      [1335, 1230]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "InputWidth"
+        Value         "28"
+        Show          off
+      }
+      Parameter {
+        Variable      "OutputIndices"
+        Value         "15"
+        Show          off
+      }
+    }
+    Component {
+      Type          Constant
+      Name          "SR_off_pending_polarity"
+      Show          on
+      Position      [1625, 1260]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Frame         [-10, -10; 10, 10]
+      Parameter {
+        Variable      "Value"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Output
+      Name          "Fast_trace_28"
+      Show          on
+      Position      [1815, 1140]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Index"
+        Value         "1"
+        Show          on
+      }
+      Parameter {
+        Variable      "Width"
+        Value         "28"
+        Show          off
+      }
+    }
+    Component {
+      Type          Output
+      Name          "Gate_trace_4"
+      Show          on
+      Position      [1815, 1200]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Index"
+        Value         "2"
+        Show          on
+      }
+      Parameter {
+        Variable      "Width"
+        Value         "4"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalMux
+      Name          "Additional_measurements"
+      Show          on
+      Position      [2055, 1310]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "[1 1 1 1 1 1 1 1 1]"
+        Show          off
+      }
+    }
+    Component {
+      Type          Output
+      Name          "Measurements_and_SR_requests"
+      Show          on
+      Position      [2245, 1310]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Index"
+        Value         "3"
+        Show          on
+      }
+      Parameter {
+        Variable      "Width"
+        Value         "9"
+        Show          off
+      }
+    }
+    Connection {
       Type          Wire
       SrcComponent  "R11"
       SrcTerminal   1
       DstComponent  "C13"
       DstTerminal   2
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "R12"
       SrcTerminal   2
-      Points        [1655, 815]
+      Points        [1850, 925]
       Branch {
-        Points        [1750, 815]
+        Points        [1945, 925]
         Branch {
-          Points        [1780, 815]
+          Points        [1975, 925]
           Branch {
-            Points        [1850, 815]
+            Points        [2045, 925]
             Branch {
               DstComponent  "Am7"
               DstTerminal   2
             }
             Branch {
-              Points        [1945, 815]
+              Points        [2140, 925]
               Branch {
                 DstComponent  "C16"
                 DstTerminal   2
               }
               Branch {
-                Points        [2050, 815]
+                Points        [2245, 925]
                 DstComponent  "Vm25"
                 DstTerminal   2
               }
@@ -1945,19 +1905,19 @@ Connection {
         }
       }
       Branch {
-        Points        [1620, 815]
+        Points        [1815, 925]
         Branch {
-          Points        [1580, 815]
+          Points        [1775, 925]
           Branch {
-            Points        [1545, 815]
+            Points        [1740, 925]
             Branch {
-              Points        [1495, 815]
+              Points        [1690, 925]
               Branch {
-                Points        [1420, 815]
+                Points        [1615, 925]
                 Branch {
-                  Points        [1350, 815]
+                  Points        [1545, 925]
                   Branch {
-                    Points        [1275, 815]
+                    Points        [1470, 925]
                     DstComponent  "Am16"
                     DstTerminal   1
                   }
@@ -1991,53 +1951,53 @@ Connection {
           DstTerminal   2
         }
       }
-    
-Branch {
-DstComponent "V_BAT"
-DstTerminal 2
-}
-
-Branch {
-DstComponent "K_DIS"
-DstTerminal 2
-}
-}
-Connection {
+      Branch {
+        Points        [1850, 850]
+        DstComponent  "V_BAT"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [1850, 810]
+        DstComponent  "K_DIS"
+        DstTerminal   2
+      }
+    }
+    Connection {
       Type          Wire
       SrcComponent  "C14"
       SrcTerminal   2
       DstComponent  "R12"
       DstTerminal   1
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "V_dc2"
       SrcTerminal   2
-      Points        [405, 750; 460, 750]
+      Points        [600, 860; 655, 860]
       Branch {
-        Points        [550, 750]
+        Points        [745, 860]
         Branch {
-          Points        [610, 750]
+          Points        [805, 860]
           Branch {
             DstComponent  "Am12"
             DstTerminal   2
           }
           Branch {
-            Points        [635, 750]
+            Points        [830, 860]
             Branch {
-              Points        [665, 750]
+              Points        [860, 860]
               Branch {
                 DstComponent  "Vm18"
                 DstTerminal   2
               }
               Branch {
-                Points        [1005, 750; 1005, 645]
+                Points        [1200, 860; 1200, 755]
                 Branch {
                   DstComponent  "Am5"
                   DstTerminal   2
                 }
                 Branch {
-                  Points        [1035, 645]
+                  Points        [1230, 755]
                   Branch {
                     DstComponent  "Am8"
                     DstTerminal   2
@@ -2065,21 +2025,21 @@ Connection {
         DstTerminal   2
       }
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "C13"
       SrcTerminal   1
-      Points        [460, 365]
+      Points        [655, 475]
       Branch {
-        Points        [555, 365]
+        Points        [750, 475]
         Branch {
-          Points        [610, 365]
+          Points        [805, 475]
           Branch {
             DstComponent  "Am11"
             DstTerminal   1
           }
           Branch {
-            Points        [645, 365]
+            Points        [840, 475]
             DstComponent  "Vm23"
             DstTerminal   1
           }
@@ -2090,45 +2050,45 @@ Connection {
         }
       }
       Branch {
-        Points        [405, 365]
+        Points        [600, 475]
         DstComponent  "V_dc2"
         DstTerminal   1
       }
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "R22"
       SrcTerminal   1
       DstComponent  "C20"
       DstTerminal   2
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "FETD21"
       SrcTerminal   1
-      Points        [610, 545]
+      Points        [805, 655]
       Branch {
-        Points        [550, 545]
+        Points        [745, 655]
         DstComponent  "C20"
         DstTerminal   1
       }
       Branch {
-        Points        [610, 510]
+        Points        [805, 620]
         Branch {
           DstComponent  "FETD22"
           DstTerminal   2
         }
         Branch {
-          Points        [555, 510]
+          Points        [750, 620]
           DstComponent  "R23"
           DstTerminal   2
         }
         Branch {
-          Points        [635, 510]
+          Points        [830, 620]
           Branch {
-            Points        [645, 510]
+            Points        [840, 620]
             Branch {
-              Points        [665, 510]
+              Points        [860, 620]
               Branch {
                 DstComponent  "Vm18"
                 DstTerminal   1
@@ -2150,13 +2110,13 @@ Connection {
         }
       }
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "C14"
       SrcTerminal   1
-      Points        [1655, 540]
+      Points        [1850, 650]
       Branch {
-        Points        [1545, 540]
+        Points        [1740, 650]
         Branch {
           DstComponent  "Vm16"
           DstTerminal   1
@@ -2171,55 +2131,55 @@ Connection {
         DstTerminal   1
       }
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "Tr3"
       SrcTerminal   2
-      Points        [1095, 645]
+      Points        [1290, 755]
       DstComponent  "Am8"
       DstTerminal   1
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "L7"
       SrcTerminal   2
       DstComponent  "Am5"
       DstTerminal   1
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "C15"
       SrcTerminal   2
       DstComponent  "R13"
       DstTerminal   1
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "R32"
       SrcTerminal   2
       DstComponent  "C18"
       DstTerminal   1
     }
-Connection {
+    Connection {
       Type          Signal
       SrcComponent  "Mux14"
       SrcTerminal   1
       DstComponent  "Scope5"
       DstTerminal   3
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "Am6"
       SrcTerminal   2
-      Points        [1420, 505]
+      Points        [1615, 615]
       Branch {
-        Points        [1495, 505]
+        Points        [1690, 615]
         Branch {
           DstComponent  "R33"
           DstTerminal   1
         }
         Branch {
-          Points        [1580, 505]
+          Points        [1775, 615]
           DstComponent  "Vm19"
           DstTerminal   1
         }
@@ -2229,19 +2189,19 @@ Connection {
         DstTerminal   1
       }
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "Am9"
       SrcTerminal   2
-      Points        [1275, 575]
+      Points        [1470, 685]
       Branch {
-        Points        [1350, 575]
+        Points        [1545, 685]
         Branch {
           DstComponent  "R32"
           DstTerminal   1
         }
         Branch {
-          Points        [1620, 575]
+          Points        [1815, 685]
           DstComponent  "Vm21"
           DstTerminal   1
         }
@@ -2251,33 +2211,33 @@ Connection {
         DstTerminal   1
       }
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "R21"
       SrcTerminal   2
       DstComponent  "Tr3"
       DstTerminal   3
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "R20"
       SrcTerminal   2
       DstComponent  "Tr3"
       DstTerminal   6
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "L7"
       SrcTerminal   1
-      Points        [1005, 510]
+      Points        [1200, 620]
       Branch {
         DstComponent  "L14"
         DstTerminal   2
       }
       Branch {
-        Points        [1035, 510]
+        Points        [1230, 620]
         Branch {
-          Points        [1095, 510]
+          Points        [1290, 620]
           DstComponent  "Tr3"
           DstTerminal   1
         }
@@ -2291,35 +2251,35 @@ Connection {
         DstTerminal   2
       }
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "Am4"
       SrcTerminal   2
-      Points        [880, 510]
+      Points        [1075, 620]
       Branch {
         DstComponent  "L14"
         DstTerminal   1
       }
       Branch {
-        Points        [880, 410; 1005, 410]
+        Points        [1075, 520; 1200, 520]
         DstComponent  "Vm22"
         DstTerminal   1
       }
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "R33"
       SrcTerminal   2
       DstComponent  "C17"
       DstTerminal   1
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "Tr3"
       SrcTerminal   4
-      Points        [1120, 535; 1120, 540]
+      Points        [1315, 645; 1315, 650]
       Branch {
-        Points        [1110, 540; 1110, 545]
+        Points        [1305, 650; 1305, 655]
         DstComponent  "Tr3"
         DstTerminal   5
       }
@@ -2328,59 +2288,60 @@ Connection {
         DstTerminal   1
       }
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "Am11"
       SrcTerminal   2
       DstComponent  "FETD22"
       DstTerminal   1
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "Am12"
       SrcTerminal   1
       DstComponent  "FETD21"
       DstTerminal   2
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "R23"
       SrcTerminal   1
       DstComponent  "Am13"
       DstTerminal   2
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "Am13"
       SrcTerminal   1
       DstComponent  "C21"
       DstTerminal   2
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "Am14"
       SrcTerminal   1
       DstComponent  "R22"
       DstTerminal   2
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "C15"
       SrcTerminal   1
-      Points        [1750, 540]
+      Points        [1945, 650]
       Branch {
-        Points        [1780, 540]
+        Points        [1975, 650]
         Branch {
           DstComponent  "Vm15"
           DstTerminal   1
         }
         Branch {
-          Points        [1850, 540]
+          Points        [2045, 650]
           Branch {
             DstComponent  "R24"
             DstTerminal   2
           }
           Branch {
+            Points        [2045, 680]
             DstComponent  "R_RELAY_ON"
             DstTerminal   1
           }
@@ -2390,591 +2351,473 @@ Connection {
         DstComponent  "L15"
         DstTerminal   2
       }
-    
-Branch {
-DstComponent "R_DIS"
-DstTerminal 1
-}
-}
-Connection {
+      Branch {
+        Points        [1945, 700]
+        DstComponent  "R_DIS"
+        DstTerminal   1
+      }
+    }
+    Connection {
       Type          Wire
       SrcComponent  "Am10"
       SrcTerminal   2
       DstComponent  "FETD23"
       DstTerminal   2
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "Am16"
       SrcTerminal   2
       DstComponent  "FETD24"
       DstTerminal   2
     }
-Connection {
+    Connection {
       Type          Signal
       SrcComponent  "Am10"
       SrcTerminal   3
-      Points        [1455, 680; 1455, 455]
+      Points        [1650, 790; 1650, 565]
       DstComponent  "Mux14"
       DstTerminal   2
     }
-Connection {
+    Connection {
       Type          Signal
       SrcComponent  "Am16"
       SrcTerminal   3
-      Points        [1475, 710; 1475, 465]
+      Points        [1670, 820; 1670, 575]
       DstComponent  "Mux14"
       DstTerminal   3
     }
-Connection {
+    Connection {
       Type          Signal
       SrcComponent  "Am7"
       SrcTerminal   3
-      Points        [1895, 775; 1895, 490]
-Branch {
-
-      DstComponent  "Scope5"
-      DstTerminal   6
-}
-
-    
-Branch {
-DstComponent "Fast_input_mux"
-DstTerminal 4
-}
-}
-Connection {
+      Points        [2090, 885; 2090, 600]
+      Branch {
+        DstComponent  "Scope5"
+        DstTerminal   6
+      }
+      Branch {
+        Points        [2090, 1135]
+        DstComponent  "Fast_input_mux"
+        DstTerminal   4
+      }
+    }
+    Connection {
       Type          Signal
       SrcComponent  "Vm19"
       SrcTerminal   3
-      Points        [1635, 670; 1635, 730]
+      Points        [1830, 780; 1830, 840]
       DstComponent  "Scope15"
       DstTerminal   1
     }
-Connection {
+    Connection {
       Type          Signal
       SrcComponent  "Vm21"
       SrcTerminal   3
       DstComponent  "Scope15"
       DstTerminal   2
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "R24"
       SrcTerminal   1
-      Points        [1945, 540]
+      Points        [2140, 650]
       Branch {
         DstComponent  "C16"
         DstTerminal   1
       }
       Branch {
-        Points        [2050, 540]
+        Points        [2245, 650]
         DstComponent  "Vm25"
         DstTerminal   1
       }
     }
-Connection {
+    Connection {
       Type          Signal
       SrcComponent  "Vm15"
       SrcTerminal   3
-      Points        [1820, 680; 1820, 470]
-Branch {
-
-      DstComponent  "Scope5"
-      DstTerminal   4
-}
-
-    
-Branch {
-DstComponent "Fast_input_mux"
-DstTerminal 2
-}
-}
-Connection {
+      Points        [2015, 790; 2015, 580]
+      Branch {
+        DstComponent  "Scope5"
+        DstTerminal   4
+      }
+      Branch {
+        Points        [2015, 1115]
+        DstComponent  "Fast_input_mux"
+        DstTerminal   2
+      }
+    }
+    Connection {
       Type          Wire
       SrcComponent  "Am6"
       SrcTerminal   1
       DstComponent  "R21"
       DstTerminal   1
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "R20"
       SrcTerminal   1
       DstComponent  "Am9"
       DstTerminal   1
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "Am7"
       SrcTerminal   1
       DstComponent  "V_dc3"
       DstTerminal   2
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "V_dc3"
       SrcTerminal   1
       DstComponent  "R16"
       DstTerminal   2
     }
-Connection {
+    Connection {
       Type          Signal
       SrcComponent  "Am5"
       SrcTerminal   3
-      Points        [1060, 605; 1060, 455]
+      Points        [1255, 715; 1255, 565]
       DstComponent  "Mux13"
       DstTerminal   3
     }
-Connection {
+    Connection {
       Type          Signal
       SrcComponent  "Am4"
       SrcTerminal   3
-      Points        [835, 445]
+      Points        [1030, 555]
       DstComponent  "Mux13"
       DstTerminal   2
     }
-Connection {
+    Connection {
       Type          Signal
       SrcComponent  "Mux13"
       SrcTerminal   1
       DstComponent  "Scope5"
       DstTerminal   2
     }
-Connection {
+    Connection {
       Type          Wire
       SrcComponent  "Am4"
       SrcTerminal   1
       DstComponent  "C24"
       DstTerminal   2
     }
-Connection {
+    Connection {
       Type          Signal
       SrcComponent  "Vm23"
       SrcTerminal   3
-      Points        [725, 440; 725, 340]
+      Points        [920, 550; 920, 450]
       DstComponent  "Scope"
       DstTerminal   3
     }
-Connection {
+    Connection {
       Type          Signal
       SrcComponent  "Vm24"
       SrcTerminal   3
-      Points        [730, 610; 730, 350]
+      Points        [925, 720; 925, 460]
       DstComponent  "Scope"
       DstTerminal   4
     }
-Connection {
+    Connection {
       Type          Signal
       SrcComponent  "Vm18"
       SrcTerminal   3
-      Points        [735, 615; 735, 360]
+      Points        [930, 725; 930, 470]
       DstComponent  "Scope"
       DstTerminal   5
     }
-Connection {
+    Connection {
       Type          Signal
       SrcComponent  "Am11"
       SrcTerminal   3
-      Points        [720, 395; 720, 330]
+      Points        [915, 505; 915, 440]
       DstComponent  "Scope"
       DstTerminal   2
     }
-Connection {
+    Connection {
       Type          Signal
       SrcComponent  "Am13"
       SrcTerminal   3
-      Points        [715, 430; 715, 320]
+      Points        [910, 540; 910, 430]
       DstComponent  "Scope"
       DstTerminal   1
     }
-Connection {
+    Connection {
       Type          Signal
       SrcComponent  "Am14"
       SrcTerminal   3
-      Points        [740, 675; 740, 370]
+      Points        [935, 785; 935, 480]
       DstComponent  "Scope"
       DstTerminal   6
     }
-Connection {
+    Connection {
       Type          Signal
       SrcComponent  "Am12"
       SrcTerminal   3
-      Points        [745, 705; 745, 380]
+      Points        [940, 815; 940, 490]
       DstComponent  "Scope"
       DstTerminal   7
     }
-Connection {
- Type Signal
- SrcComponent "Vm25"
- SrcTerminal 3
- DstComponent "Scope5"
- DstTerminal 5
-}
-Connection {
- Type Wire
- SrcComponent "R_RELAY_ON"
- SrcTerminal 2
- DstComponent "K_RELAY"
- DstTerminal 1
-}
-Connection {
- Type Wire
- SrcComponent "K_RELAY"
- SrcTerminal 2
-Branch {
-
- DstComponent "R16"
- DstTerminal 1
-}
-
-
-Branch {
-DstComponent "V_BAT"
-DstTerminal 1
-}
-}
-Connection {
- Type Wire
- SrcComponent "R_DIS"
- SrcTerminal 2
- DstComponent "K_DIS"
- DstTerminal 1
-}
-Connection {
- Type Signal
- SrcComponent "V_BAT"
- SrcTerminal 3
- DstComponent "Fast_input_mux"
- DstTerminal 3
-}
-Connection {
- Type Signal
- SrcComponent "Fast_commands_3_to_21"
- SrcTerminal 1
-Branch {
-
- DstComponent "Fast_input_mux"
- DstTerminal 5
-}
-
-
-Branch {
-DstComponent "Gate_frame_adapter"
-DstTerminal 2
-}
-}
-Connection {
- Type Signal
- SrcComponent "Fast_input_mux"
- SrcTerminal 1
- DstComponent "LLC_Fast"
- DstTerminal 1
-}
-Connection {
- Type Signal
- SrcComponent "LLC_Fast"
- SrcTerminal 2
-Branch {
-
- DstComponent "Fast_trace_28"
- DstTerminal 1
-}
-
-
-Branch {
-DstComponent "Gate_frame_adapter"
-DstTerminal 1
-}
-
-Branch {
-DstComponent "Relay_cmd"
-DstTerminal 1
-}
-
-Branch {
-DstComponent "Discharge_cmd"
-DstTerminal 1
-}
-}
-Connection {
- Type Signal
- SrcComponent "Gate_frame_adapter"
- SrcTerminal 3
- DstComponent "LLC_Gate"
- DstTerminal 1
-}
-Connection {
- Type Signal
- SrcComponent "LLC_Gate"
- SrcTerminal 2
-Branch {
-
- DstComponent "Primary_and_SR"
- DstTerminal 1
-}
-
-
-Branch {
-DstComponent "Gate_trace_4"
-DstTerminal 1
-}
-
-Branch {
-DstComponent "Scope5"
-DstTerminal 1
-}
-}
-Connection {
- Type Signal
- SrcComponent "Primary_and_SR"
- SrcTerminal 2
- DstComponent "FETD21"
- DstTerminal 3
-}
-Connection {
- Type Signal
- SrcComponent "Primary_and_SR"
- SrcTerminal 3
- DstComponent "FETD22"
- DstTerminal 3
-}
-Connection {
- Type Signal
- SrcComponent "Relay_cmd"
- SrcTerminal 2
- DstComponent "K_RELAY"
- DstTerminal 3
-}
-Connection {
- Type Signal
- SrcComponent "Discharge_cmd"
- SrcTerminal 2
- DstComponent "K_DIS"
- DstTerminal 3
-}
-Connection {
- Type Signal
- SrcComponent "SR_off_pending_polarity"
- SrcTerminal 1
-Branch {
-
- DstComponent "FETD23"
- DstTerminal 3
-}
-
-
-Branch {
-DstComponent "FETD24"
-DstTerminal 3
-}
-}
-Connection {
- Type Signal
- SrcComponent "Am6"
- SrcTerminal 3
- DstComponent "Additional_measurements"
- DstTerminal 2
-}
-Connection {
- Type Signal
- SrcComponent "Am8"
- SrcTerminal 3
- DstComponent "Additional_measurements"
- DstTerminal 3
-}
-Connection {
- Type Signal
- SrcComponent "Am9"
- SrcTerminal 3
- DstComponent "Additional_measurements"
- DstTerminal 4
-}
-Connection {
- Type Signal
- SrcComponent "Vm20"
- SrcTerminal 3
- DstComponent "Additional_measurements"
- DstTerminal 5
-}
-Connection {
- Type Signal
- SrcComponent "Vm22"
- SrcTerminal 3
- DstComponent "Additional_measurements"
- DstTerminal 6
-}
-Connection {
- Type Signal
- SrcComponent "Vm16"
- SrcTerminal 3
- DstComponent "Additional_measurements"
- DstTerminal 7
-}
-Connection {
- Type Signal
- SrcComponent "Am15"
- SrcTerminal 3
- DstComponent "Additional_measurements"
- DstTerminal 8
-}
-Connection {
- Type Signal
- SrcComponent "Primary_and_SR"
- SrcTerminal 4
- DstComponent "Additional_measurements"
- DstTerminal 9
-}
-Connection {
- Type Signal
- SrcComponent "Primary_and_SR"
- SrcTerminal 5
- DstComponent "Additional_measurements"
- DstTerminal 10
-}
-Connection {
- Type Signal
- SrcComponent "Additional_measurements"
- SrcTerminal 1
- DstComponent "Measurements_and_SR_requests"
- DstTerminal 1
-}
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    Connection {
+      Type          Signal
+      SrcComponent  "Vm25"
+      SrcTerminal   3
+      Points        [2260, 590]
+      DstComponent  "Scope5"
+      DstTerminal   5
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R_RELAY_ON"
+      SrcTerminal   2
+      DstComponent  "K_RELAY"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "K_RELAY"
+      SrcTerminal   2
+      Points        [2015, 110; 195, 110]
+      Branch {
+        Points        [195, 725]
+        DstComponent  "R16"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [195, 850]
+        DstComponent  "V_BAT"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R_DIS"
+      SrcTerminal   2
+      Points        [2275, 810]
+      DstComponent  "K_DIS"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "V_BAT"
+      SrcTerminal   3
+      Points        [2185, 1125]
+      DstComponent  "Fast_input_mux"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Fast_commands_3_to_21"
+      SrcTerminal   1
+      Points        [510, 110; 195, 110]
+      Branch {
+        Points        [195, 1145]
+        DstComponent  "Fast_input_mux"
+        DstTerminal   5
+      }
+      Branch {
+        Points        [195, 1085]
+        DstComponent  "Gate_frame_adapter"
+        DstTerminal   2
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Fast_input_mux"
+      SrcTerminal   1
+      DstComponent  "LLC_Fast"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "LLC_Fast"
+      SrcTerminal   2
+      Points        [970, 110; 195, 110]
+      Branch {
+        Points        [195, 1140]
+        DstComponent  "Fast_trace_28"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [195, 1085]
+        DstComponent  "Gate_frame_adapter"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [195, 1230]
+        DstComponent  "Relay_cmd"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [195, 1230]
+        DstComponent  "Discharge_cmd"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Gate_frame_adapter"
+      SrcTerminal   3
+      Points        [1185, 1085]
+      DstComponent  "LLC_Gate"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "LLC_Gate"
+      SrcTerminal   2
+      Points        [1405, 110; 195, 110]
+      Branch {
+        Points        [195, 1130]
+        DstComponent  "Primary_and_SR"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [195, 1200]
+        DstComponent  "Gate_trace_4"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [195, 550]
+        DstComponent  "Scope5"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Primary_and_SR"
+      SrcTerminal   2
+      Points        [1600, 755]
+      DstComponent  "FETD21"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Primary_and_SR"
+      SrcTerminal   3
+      Points        [1600, 560]
+      DstComponent  "FETD22"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Relay_cmd"
+      SrcTerminal   2
+      Points        [1165, 700]
+      DstComponent  "K_RELAY"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Discharge_cmd"
+      SrcTerminal   2
+      Points        [1355, 830]
+      DstComponent  "K_DIS"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "SR_off_pending_polarity"
+      SrcTerminal   1
+      Points        [1640, 110; 195, 110]
+      Branch {
+        Points        [195, 725]
+        DstComponent  "FETD23"
+        DstTerminal   3
+      }
+      Branch {
+        Points        [195, 755]
+        DstComponent  "FETD24"
+        DstTerminal   3
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Am6"
+      SrcTerminal   3
+      Points        [1510, 1270]
+      DstComponent  "Additional_measurements"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Am8"
+      SrcTerminal   3
+      Points        [1265, 1280]
+      DstComponent  "Additional_measurements"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Am9"
+      SrcTerminal   3
+      Points        [1425, 1290]
+      DstComponent  "Additional_measurements"
+      DstTerminal   4
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Vm20"
+      SrcTerminal   3
+      Points        [1245, 1300]
+      DstComponent  "Additional_measurements"
+      DstTerminal   5
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Vm22"
+      SrcTerminal   3
+      Points        [1215, 1310]
+      DstComponent  "Additional_measurements"
+      DstTerminal   6
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Vm16"
+      SrcTerminal   3
+      Points        [1755, 1320]
+      DstComponent  "Additional_measurements"
+      DstTerminal   7
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Am15"
+      SrcTerminal   3
+      Points        [1470, 1330]
+      DstComponent  "Additional_measurements"
+      DstTerminal   8
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Primary_and_SR"
+      SrcTerminal   4
+      Points        [1600, 1340]
+      DstComponent  "Additional_measurements"
+      DstTerminal   9
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Primary_and_SR"
+      SrcTerminal   5
+      Points        [1600, 1350]
+      DstComponent  "Additional_measurements"
+      DstTerminal   10
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Additional_measurements"
+      SrcTerminal   1
+      DstComponent  "Measurements_and_SR_requests"
+      DstTerminal   1
+    }
     Annotation {
       Name          "<html><body>\n<p align=\"center\">+</p></body></html>"
       Position      [4425, 1995]
     } 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
+  }
   Analysis {
     Type          ImpulseResponseAnalysis
     Name          "Impulse Response Analysis"
@@ -2995,4 +2838,4 @@ Connection {
     MaxNumberOfThreads "-1"
   }
 }
-DemoSignature "BLjCbomrGNzpP7HoX4JQlXZPj0NzGImeDNb0PlLkdIU="
+DemoSignature "ymghahOTog0i6N4TYNXRdP6PH4gxHxp4H5eS8Lq57xk="

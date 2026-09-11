@@ -1527,6 +1527,18 @@ Section Cross References
     protectionllc.o(i.SysReset) refers to protectionllc.o(.bss) for HwprotectData
     protectionllc.o(i.SysReset) refers to main.o(.bss) for hhrtim1
     protectionllc.o(i.SysReset) refers to consoleslow.o(.bss) for DataFlowFace
+    sr_handle.o(i.Sr_compute) refers to user_sample.o(.bss) for ADSample_Info
+    sr_handle.o(i.Sr_compute) refers to consoleslow.o(.bss) for DriverPwm
+    sr_handle.o(i.Sr_compute) refers to mathr02.o(.bss) for Ctrl_interFace
+    sr_handle.o(i.Sr_compute) refers to sr_handle.o(.constdata) for M_Arloplv
+    sr_handle.o(i.mComputer) refers to consoleslow.o(.bss) for DriverPwm
+    sr_handle.o(i.mComputer) refers to sr_handle.o(.constdata) for M_CoeffiFX
+    sr_handle.o(i.mComputer) refers to mathr02.o(.bss) for piStructInter
+    sr_handle.o(i.mComputer) refers to user_sample.o(.bss) for ADSample_Info
+    sr_handle.o(i.mathTimeHandle) refers to sr_handle.o(i.Sr_compute) for Sr_compute
+    sr_handle.o(i.mathTimeHandle) refers to consoleslow.o(.bss) for DriverPwm
+    sr_handle.o(i.mathTimeHandle) refers to user_sample.o(.bss) for ADSample_Info
+    sr_handle.o(i.mathTimeHandle) refers to mathr02.o(.bss) for Ctrl_interFace
     otagw.o(i.OtaGw_AbortHandoff) refers to hostx1gate.o(i.HostA2_ReplyIntoUpgradeMode) for HostA2_ReplyIntoUpgradeMode
     otagw.o(i.OtaGw_AbortHandoff) refers to otagw.o(.data) for s_u8HandoffNeedB0Reply
     otagw.o(i.OtaGw_AbortHandoff) refers to otagw.o(.bss) for s_stHandoffMsg
@@ -1856,18 +1868,6 @@ Section Cross References
     crc16.o(i.CalCRC) refers to crc16.o(.constdata) for CRCtbl
     crc16.o(i.CalcCRCStandard) refers to crc16.o(.constdata) for m_CRCTable
     crc16.o(i.Modbus_CalCRC) refers to crc16.o(i.CalCRC) for CalCRC
-    sr_handle.o(i.Sr_compute) refers to user_sample.o(.bss) for ADSample_Info
-    sr_handle.o(i.Sr_compute) refers to consoleslow.o(.bss) for DriverPwm
-    sr_handle.o(i.Sr_compute) refers to mathr02.o(.bss) for Ctrl_interFace
-    sr_handle.o(i.Sr_compute) refers to sr_handle.o(.constdata) for M_Arloplv
-    sr_handle.o(i.mComputer) refers to consoleslow.o(.bss) for DriverPwm
-    sr_handle.o(i.mComputer) refers to sr_handle.o(.constdata) for M_CoeffiFX
-    sr_handle.o(i.mComputer) refers to mathr02.o(.bss) for piStructInter
-    sr_handle.o(i.mComputer) refers to user_sample.o(.bss) for ADSample_Info
-    sr_handle.o(i.mathTimeHandle) refers to sr_handle.o(i.Sr_compute) for Sr_compute
-    sr_handle.o(i.mathTimeHandle) refers to consoleslow.o(.bss) for DriverPwm
-    sr_handle.o(i.mathTimeHandle) refers to user_sample.o(.bss) for ADSample_Info
-    sr_handle.o(i.mathTimeHandle) refers to mathr02.o(.bss) for Ctrl_interFace
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000F) for __rt_final_cpp
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$00000011) for __rt_final_exit
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry12b.o(.ARM.Collect$$$$0000000E) for __rt_lib_shutdown_fini
@@ -2801,6 +2801,9 @@ Removing Unused input sections from the image.
     Removing protectionllc.o(i.OutOvProtect), (140 bytes).
     Removing protectionllc.o(i.OutUvConProtect), (88 bytes).
     Removing protectionllc.o(i.OutUvProtect), (88 bytes).
+    Removing sr_handle.o(.rev16_text), (4 bytes).
+    Removing sr_handle.o(.revsh_text), (4 bytes).
+    Removing sr_handle.o(.rrx_text), (6 bytes).
     Removing otagw.o(.rev16_text), (4 bytes).
     Removing otagw.o(.revsh_text), (4 bytes).
     Removing otagw.o(.rrx_text), (6 bytes).
@@ -2875,9 +2878,6 @@ Removing Unused input sections from the image.
     Removing crc16.o(.revsh_text), (4 bytes).
     Removing crc16.o(.rrx_text), (6 bytes).
     Removing crc16.o(i.File_Bin_ModBusCRC16), (60 bytes).
-    Removing sr_handle.o(.rev16_text), (4 bytes).
-    Removing sr_handle.o(.revsh_text), (4 bytes).
-    Removing sr_handle.o(.rrx_text), (6 bytes).
 
 986 unused section(s) (total 93782 bytes) removed from the image.
 
@@ -2921,25 +2921,25 @@ Image Symbol Table
     ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c 0x00000000   Number         0  stm32g4xx_hal_uart_ex.o ABSOLUTE
     ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c 0x00000000   Number         0  stm32g4xx_ll_adc.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
-    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
     ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
     ..\AppUser\CAN_Control_2800W.c           0x00000000   Number         0  can_control_2800w.o ABSOLUTE
     ..\AppUser\ConsoleFast.c                 0x00000000   Number         0  consolefast.o ABSOLUTE
@@ -3588,10 +3588,10 @@ Image Symbol Table
     .constdata                               0x08031264   Section      664  user_sample.o(.constdata)
     .constdata                               0x080314fc   Section       72  operatestatus.o(.constdata)
     .constdata                               0x08031544   Section      504  protectionllc.o(.constdata)
-    .constdata                               0x0803173c   Section       16  otagw.o(.constdata)
-    u8CanFDRecDataLenTab                     0x0803173c   Data          16  otagw.o(.constdata)
-    .constdata                               0x0803174c   Section     1536  crc16.o(.constdata)
-    .constdata                               0x08031d4c   Section     1064  sr_handle.o(.constdata)
+    .constdata                               0x0803173c   Section     1064  sr_handle.o(.constdata)
+    .constdata                               0x08031b64   Section       16  otagw.o(.constdata)
+    u8CanFDRecDataLenTab                     0x08031b64   Data          16  otagw.o(.constdata)
+    .constdata                               0x08031b74   Section     1536  crc16.o(.constdata)
     .data                                    0x20000000   Section        4  stm32g4xx_hal_msp.o(.data)
     HAL_RCC_ADC12_CLK_ENABLED                0x20000000   Data           4  stm32g4xx_hal_msp.o(.data)
     .data                                    0x20000004   Section       12  stm32g4xx_hal.o(.data)
@@ -4096,16 +4096,16 @@ Image Symbol Table
     SysProPara                               0x08031544   Data         248  protectionllc.o(.constdata)
     OTP_SysProParaUp                         0x0803163c   Data         128  protectionllc.o(.constdata)
     OTP_SysProParaDw                         0x080316bc   Data         128  protectionllc.o(.constdata)
-    CRCtbl                                   0x0803174c   Data         512  crc16.o(.constdata)
-    m_CRCTable                               0x0803194c   Data        1024  crc16.o(.constdata)
-    M_highPlv                                0x08031d4c   Data         480  sr_handle.o(.constdata)
-    M_lowPlv                                 0x08031f2c   Data         288  sr_handle.o(.constdata)
-    M_ArHigh                                 0x0803204c   Data          60  sr_handle.o(.constdata)
-    M_Arloplv                                0x08032088   Data          36  sr_handle.o(.constdata)
-    M_ArLow                                  0x080320ac   Data          32  sr_handle.o(.constdata)
-    M_CoeffiFX                               0x080320cc   Data          56  sr_handle.o(.constdata)
-    M_CoeffiFp                               0x08032104   Data          56  sr_handle.o(.constdata)
-    M_CoeffiFi                               0x0803213c   Data          56  sr_handle.o(.constdata)
+    M_highPlv                                0x0803173c   Data         480  sr_handle.o(.constdata)
+    M_lowPlv                                 0x0803191c   Data         288  sr_handle.o(.constdata)
+    M_ArHigh                                 0x08031a3c   Data          60  sr_handle.o(.constdata)
+    M_Arloplv                                0x08031a78   Data          36  sr_handle.o(.constdata)
+    M_ArLow                                  0x08031a9c   Data          32  sr_handle.o(.constdata)
+    M_CoeffiFX                               0x08031abc   Data          56  sr_handle.o(.constdata)
+    M_CoeffiFp                               0x08031af4   Data          56  sr_handle.o(.constdata)
+    M_CoeffiFi                               0x08031b2c   Data          56  sr_handle.o(.constdata)
+    CRCtbl                                   0x08031b74   Data         512  crc16.o(.constdata)
+    m_CRCTable                               0x08031d74   Data        1024  crc16.o(.constdata)
     Region$$Table$$Base                      0x08032174   Number         0  anon$$obj.o(Region$$Table)
     Region$$Table$$Limit                     0x08032194   Number         0  anon$$obj.o(Region$$Table)
     uwTick                                   0x20000004   Data           4  stm32g4xx_hal.o(.data)
@@ -4187,23 +4187,23 @@ Memory Map of the image
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08022000   0x08022000   0x000001d8   Data   RO            3    RESET               startup_stm32g474xx.o
-    0x080221d8   0x080221d8   0x00000000   Code   RO         8726  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x080221d8   0x080221d8   0x00000004   Code   RO         8737    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x080221dc   0x080221dc   0x00000004   Code   RO         8740    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x080221e0   0x080221e0   0x00000000   Code   RO         8742    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x080221e0   0x080221e0   0x00000000   Code   RO         8744    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x080221e0   0x080221e0   0x00000008   Code   RO         8745    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080221e8   0x080221e8   0x00000004   Code   RO         8752    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
-    0x080221ec   0x080221ec   0x00000000   Code   RO         8747    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
-    0x080221ec   0x080221ec   0x00000000   Code   RO         8749    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
-    0x080221ec   0x080221ec   0x00000004   Code   RO         8738    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x080221d8   0x080221d8   0x00000000   Code   RO         8564  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080221d8   0x080221d8   0x00000004   Code   RO         8575    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080221dc   0x080221dc   0x00000004   Code   RO         8578    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080221e0   0x080221e0   0x00000000   Code   RO         8580    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080221e0   0x080221e0   0x00000000   Code   RO         8582    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080221e0   0x080221e0   0x00000008   Code   RO         8583    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080221e8   0x080221e8   0x00000004   Code   RO         8590    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
+    0x080221ec   0x080221ec   0x00000000   Code   RO         8585    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
+    0x080221ec   0x080221ec   0x00000000   Code   RO         8587    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
+    0x080221ec   0x080221ec   0x00000004   Code   RO         8576    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x080221f0   0x080221f0   0x00000024   Code   RO            4    .text               startup_stm32g474xx.o
-    0x08022214   0x08022214   0x00000062   Code   RO         8729    .text               mc_w.l(uldiv.o)
-    0x08022276   0x08022276   0x00000024   Code   RO         8731    .text               mc_w.l(memcpya.o)
-    0x0802229a   0x0802229a   0x00000024   Code   RO         8733    .text               mc_w.l(memseta.o)
-    0x080222be   0x080222be   0x0000001e   Code   RO         8753    .text               mc_w.l(llshl.o)
-    0x080222dc   0x080222dc   0x00000020   Code   RO         8755    .text               mc_w.l(llushr.o)
-    0x080222fc   0x080222fc   0x00000024   Code   RO         8757    .text               mc_w.l(init.o)
+    0x08022214   0x08022214   0x00000062   Code   RO         8567    .text               mc_w.l(uldiv.o)
+    0x08022276   0x08022276   0x00000024   Code   RO         8569    .text               mc_w.l(memcpya.o)
+    0x0802229a   0x0802229a   0x00000024   Code   RO         8571    .text               mc_w.l(memseta.o)
+    0x080222be   0x080222be   0x0000001e   Code   RO         8591    .text               mc_w.l(llshl.o)
+    0x080222dc   0x080222dc   0x00000020   Code   RO         8593    .text               mc_w.l(llushr.o)
+    0x080222fc   0x080222fc   0x00000024   Code   RO         8595    .text               mc_w.l(init.o)
     0x08022320   0x08022320   0x000000c8   Code   RO         7063    i.ADC0_Sample       user_sample.o
     0x080223e8   0x080223e8   0x00000258   Code   RO         7064    i.ADC2_Sample       user_sample.o
     0x08022640   0x08022640   0x00000094   Code   RO          589    i.ADC_Disable       stm32g4xx_hal_adc.o
@@ -4215,21 +4215,21 @@ Memory Map of the image
     0x08022954   0x08022954   0x000004f8   Code   RO         6746    i.CAN_SendData_Run  can_control_2800w.o
     0x08022e4c   0x08022e4c   0x00000002   Code   RO          325    i.COMP1_2_3_IRQHandler  stm32g4xx_it.o
     0x08022e4e   0x08022e4e   0x00000002   PAD
-    0x08022e50   0x08022e50   0x00000018   Code   RO         8480    i.CalCRC            crc16.o
-    0x08022e68   0x08022e68   0x0000002c   Code   RO         8481    i.CalcCRCStandard   crc16.o
-    0x08022e94   0x08022e94   0x00000024   Code   RO         7610    i.CanFdTxQueue_Drain  canfdtxqueue.o
-    0x08022eb8   0x08022eb8   0x00000054   Code   RO         7611    i.CanFdTxQueue_Enqueue  canfdtxqueue.o
-    0x08022f0c   0x08022f0c   0x00000018   Code   RO         7612    i.CanFdTxQueue_GetPendingCount  canfdtxqueue.o
-    0x08022f24   0x08022f24   0x00000040   Code   RO         7613    i.CanFdTxQueue_Init  canfdtxqueue.o
-    0x08022f64   0x08022f64   0x0000002c   Code   RO         7614    i.CanFdTxQueue_PeekCharger  canfdtxqueue.o
-    0x08022f90   0x08022f90   0x0000002c   Code   RO         7615    i.CanFdTxQueue_PeekOta  canfdtxqueue.o
-    0x08022fbc   0x08022fbc   0x0000002c   Code   RO         7616    i.CanFdTxQueue_PopCharger  canfdtxqueue.o
-    0x08022fe8   0x08022fe8   0x00000034   Code   RO         7617    i.CanFdTxQueue_PopOta  canfdtxqueue.o
-    0x0802301c   0x0802301c   0x00000068   Code   RO         7618    i.CanFdTxQueue_Push  canfdtxqueue.o
-    0x08023084   0x08023084   0x00000044   Code   RO         7619    i.CanFdTxQueue_SendOnePending  canfdtxqueue.o
-    0x080230c8   0x080230c8   0x0000003c   Code   RO         7620    i.CanFdTxQueue_TryHwSend  canfdtxqueue.o
-    0x08023104   0x08023104   0x00000030   Code   RO         7621    i.CanFdTx_IsFullyDrained  canfdtxqueue.o
-    0x08023134   0x08023134   0x0000001c   Code   RO         7622    i.CanFd_SysTickCanService  canfdtxqueue.o
+    0x08022e50   0x08022e50   0x00000018   Code   RO         8523    i.CalCRC            crc16.o
+    0x08022e68   0x08022e68   0x0000002c   Code   RO         8524    i.CalcCRCStandard   crc16.o
+    0x08022e94   0x08022e94   0x00000024   Code   RO         7653    i.CanFdTxQueue_Drain  canfdtxqueue.o
+    0x08022eb8   0x08022eb8   0x00000054   Code   RO         7654    i.CanFdTxQueue_Enqueue  canfdtxqueue.o
+    0x08022f0c   0x08022f0c   0x00000018   Code   RO         7655    i.CanFdTxQueue_GetPendingCount  canfdtxqueue.o
+    0x08022f24   0x08022f24   0x00000040   Code   RO         7656    i.CanFdTxQueue_Init  canfdtxqueue.o
+    0x08022f64   0x08022f64   0x0000002c   Code   RO         7657    i.CanFdTxQueue_PeekCharger  canfdtxqueue.o
+    0x08022f90   0x08022f90   0x0000002c   Code   RO         7658    i.CanFdTxQueue_PeekOta  canfdtxqueue.o
+    0x08022fbc   0x08022fbc   0x0000002c   Code   RO         7659    i.CanFdTxQueue_PopCharger  canfdtxqueue.o
+    0x08022fe8   0x08022fe8   0x00000034   Code   RO         7660    i.CanFdTxQueue_PopOta  canfdtxqueue.o
+    0x0802301c   0x0802301c   0x00000068   Code   RO         7661    i.CanFdTxQueue_Push  canfdtxqueue.o
+    0x08023084   0x08023084   0x00000044   Code   RO         7662    i.CanFdTxQueue_SendOnePending  canfdtxqueue.o
+    0x080230c8   0x080230c8   0x0000003c   Code   RO         7663    i.CanFdTxQueue_TryHwSend  canfdtxqueue.o
+    0x08023104   0x08023104   0x00000030   Code   RO         7664    i.CanFdTx_IsFullyDrained  canfdtxqueue.o
+    0x08023134   0x08023134   0x0000001c   Code   RO         7665    i.CanFd_SysTickCanService  canfdtxqueue.o
     0x08023150   0x08023150   0x00000038   Code   RO         6506    i.ChargeFull        consoleslow.o
     0x08023188   0x08023188   0x0000028c   Code   RO         6507    i.ChargeOn          consoleslow.o
     0x08023414   0x08023414   0x00000002   Code   RO         7130    i.ChargeStandby_state_Function  operatestatus.o
@@ -4272,19 +4272,19 @@ Memory Map of the image
     0x08024584   0x08024584   0x00000002   Code   RO         7136    i.Fault_state_Function  operatestatus.o
     0x08024586   0x08024586   0x00000002   PAD
     0x08024588   0x08024588   0x00000028   Code   RO         7137    i.Fault_state_Switch  operatestatus.o
-    0x080245b0   0x080245b0   0x00000048   Code   RO         8314    i.FlashGet_ElectronicInfo  mx25l1606e.o
-    0x080245f8   0x080245f8   0x0000003c   Code   RO         8315    i.FlashGet_Info     mx25l1606e.o
-    0x08024634   0x08024634   0x00000064   Code   RO         8317    i.FlashPage_Write   mx25l1606e.o
-    0x08024698   0x08024698   0x00000016   Code   RO         8318    i.FlashRead         mx25l1606e.o
+    0x080245b0   0x080245b0   0x00000048   Code   RO         8357    i.FlashGet_ElectronicInfo  mx25l1606e.o
+    0x080245f8   0x080245f8   0x0000003c   Code   RO         8358    i.FlashGet_Info     mx25l1606e.o
+    0x08024634   0x08024634   0x00000064   Code   RO         8360    i.FlashPage_Write   mx25l1606e.o
+    0x08024698   0x08024698   0x00000016   Code   RO         8361    i.FlashRead         mx25l1606e.o
     0x080246ae   0x080246ae   0x00000002   PAD
-    0x080246b0   0x080246b0   0x00000070   Code   RO         8319    i.FlashReadEx       mx25l1606e.o
-    0x08024720   0x08024720   0x00000048   Code   RO         8322    i.FlashSector_Erase  mx25l1606e.o
-    0x08024768   0x08024768   0x00000024   Code   RO         8324    i.FlashWriteEnable  mx25l1606e.o
-    0x0802478c   0x0802478c   0x00000130   Code   RO         8257    i.Flash_SPI_BusRecover  flash_spi.o
-    0x080248bc   0x080248bc   0x000000f8   Code   RO         8258    i.Flash_SPI_Init    flash_spi.o
-    0x080249b4   0x080249b4   0x00000040   Code   RO         8259    i.Flash_SPI_PeriphHardReset  flash_spi.o
-    0x080249f4   0x080249f4   0x00000044   Code   RO         8260    i.Flash_SPI_ReadWriteByte  flash_spi.o
-    0x08024a38   0x08024a38   0x00000048   Code   RO         8261    i.Flash_SPI_SetSpeed  flash_spi.o
+    0x080246b0   0x080246b0   0x00000070   Code   RO         8362    i.FlashReadEx       mx25l1606e.o
+    0x08024720   0x08024720   0x00000048   Code   RO         8365    i.FlashSector_Erase  mx25l1606e.o
+    0x08024768   0x08024768   0x00000024   Code   RO         8367    i.FlashWriteEnable  mx25l1606e.o
+    0x0802478c   0x0802478c   0x00000130   Code   RO         8300    i.Flash_SPI_BusRecover  flash_spi.o
+    0x080248bc   0x080248bc   0x000000f8   Code   RO         8301    i.Flash_SPI_Init    flash_spi.o
+    0x080249b4   0x080249b4   0x00000040   Code   RO         8302    i.Flash_SPI_PeriphHardReset  flash_spi.o
+    0x080249f4   0x080249f4   0x00000044   Code   RO         8303    i.Flash_SPI_ReadWriteByte  flash_spi.o
+    0x08024a38   0x08024a38   0x00000048   Code   RO         8304    i.Flash_SPI_SetSpeed  flash_spi.o
     0x08024a80   0x08024a80   0x00000002   Code   RO         7138    i.FullCharged_state_Function  operatestatus.o
     0x08024a82   0x08024a82   0x00000002   PAD
     0x08024a84   0x08024a84   0x00000034   Code   RO         7139    i.FullCharged_state_Switch  operatestatus.o
@@ -4329,7 +4329,7 @@ Memory Map of the image
     0x08026c5a   0x08026c5a   0x00000002   Code   RO         3158    i.HAL_FDCAN_TxBufferCompleteCallback  stm32g4xx_hal_fdcan.o
     0x08026c5c   0x08026c5c   0x00000002   Code   RO         3159    i.HAL_FDCAN_TxEventFifoCallback  stm32g4xx_hal_fdcan.o
     0x08026c5e   0x08026c5e   0x00000002   PAD
-    0x08026c60   0x08026c60   0x00000018   Code   RO         7623    i.HAL_FDCAN_TxFifoEmptyCallback  canfdtxqueue.o
+    0x08026c60   0x08026c60   0x00000018   Code   RO         7666    i.HAL_FDCAN_TxFifoEmptyCallback  canfdtxqueue.o
     0x08026c78   0x08026c78   0x0000012c   Code   RO         1891    i.HAL_GPIO_DeInit   stm32g4xx_hal_gpio.o
     0x08026da4   0x08026da4   0x000001dc   Code   RO         1894    i.HAL_GPIO_Init     stm32g4xx_hal_gpio.o
     0x08026f80   0x08026f80   0x00000010   Code   RO         1896    i.HAL_GPIO_ReadPin  stm32g4xx_hal_gpio.o
@@ -4410,60 +4410,60 @@ Memory Map of the image
     0x0802a5aa   0x0802a5aa   0x00000002   PAD
     0x0802a5ac   0x0802a5ac   0x00000240   Code   RO         6449    i.HandleFast        consolefast.o
     0x0802a7ec   0x0802a7ec   0x00000004   Code   RO          333    i.HardFault_Handler  stm32g4xx_it.o
-    0x0802a7f0   0x0802a7f0   0x00000084   Code   RO         8041    i.HostA2FactoryInfo_ApplyCompileDefaults  hosta2factoryinfo.o
-    0x0802a874   0x0802a874   0x00000018   Code   RO         8042    i.HostA2FactoryInfo_ApplyRuntime  hosta2factoryinfo.o
-    0x0802a88c   0x0802a88c   0x00000038   Code   RO         8043    i.HostA2FactoryInfo_CopyAsciiField  hosta2factoryinfo.o
-    0x0802a8c4   0x0802a8c4   0x00000074   Code   RO         8044    i.HostA2FactoryInfo_FillChrgrIdentityFields  hosta2factoryinfo.o
-    0x0802a938   0x0802a938   0x00000012   Code   RO         8045    i.HostA2FactoryInfo_GetRxDataLen  hosta2factoryinfo.o
+    0x0802a7f0   0x0802a7f0   0x00000084   Code   RO         8084    i.HostA2FactoryInfo_ApplyCompileDefaults  hosta2factoryinfo.o
+    0x0802a874   0x0802a874   0x00000018   Code   RO         8085    i.HostA2FactoryInfo_ApplyRuntime  hosta2factoryinfo.o
+    0x0802a88c   0x0802a88c   0x00000038   Code   RO         8086    i.HostA2FactoryInfo_CopyAsciiField  hosta2factoryinfo.o
+    0x0802a8c4   0x0802a8c4   0x00000074   Code   RO         8087    i.HostA2FactoryInfo_FillChrgrIdentityFields  hosta2factoryinfo.o
+    0x0802a938   0x0802a938   0x00000012   Code   RO         8088    i.HostA2FactoryInfo_GetRxDataLen  hosta2factoryinfo.o
     0x0802a94a   0x0802a94a   0x00000002   PAD
-    0x0802a94c   0x0802a94c   0x00000018   Code   RO         8046    i.HostA2FactoryInfo_Init  hosta2factoryinfo.o
-    0x0802a964   0x0802a964   0x00000032   Code   RO         8047    i.HostA2FactoryInfo_IsAlnumField  hosta2factoryinfo.o
-    0x0802a996   0x0802a996   0x00000046   Code   RO         8048    i.HostA2FactoryInfo_IsAsciiPrintable  hosta2factoryinfo.o
-    0x0802a9dc   0x0802a9dc   0x00000020   Code   RO         8049    i.HostA2FactoryInfo_IsBusyContext  hosta2factoryinfo.o
-    0x0802a9fc   0x0802a9fc   0x0000002a   Code   RO         8050    i.HostA2FactoryInfo_IsDigitField  hosta2factoryinfo.o
-    0x0802aa26   0x0802aa26   0x0000001c   Code   RO         8051    i.HostA2FactoryInfo_IsValidDate  hosta2factoryinfo.o
-    0x0802aa42   0x0802aa42   0x0000002c   Code   RO         8052    i.HostA2FactoryInfo_IsValidHwRev  hosta2factoryinfo.o
-    0x0802aa6e   0x0802aa6e   0x00000012   Code   RO         8053    i.HostA2FactoryInfo_IsValidRework  hosta2factoryinfo.o
-    0x0802aa80   0x0802aa80   0x00000044   Code   RO         8054    i.HostA2FactoryInfo_LoadFromFlash  hosta2factoryinfo.o
-    0x0802aac4   0x0802aac4   0x00000020   Code   RO         8055    i.HostA2FactoryInfo_MainLoopTask  hosta2factoryinfo.o
-    0x0802aae4   0x0802aae4   0x000000a0   Code   RO         8056    i.HostA2FactoryInfo_NormalizeWriteRecord  hosta2factoryinfo.o
-    0x0802ab84   0x0802ab84   0x0000000c   Code   RO         8057    i.HostA2FactoryInfo_QueueFlashSave  hosta2factoryinfo.o
-    0x0802ab90   0x0802ab90   0x0000001c   Code   RO         8058    i.HostA2FactoryInfo_SaveToFlash  hosta2factoryinfo.o
-    0x0802abac   0x0802abac   0x0000001e   Code   RO         8059    i.HostA2FactoryInfo_SendResult  hosta2factoryinfo.o
-    0x0802abca   0x0802abca   0x00000028   Code   RO         8060    i.HostA2FactoryInfo_UpperAlnumField  hosta2factoryinfo.o
+    0x0802a94c   0x0802a94c   0x00000018   Code   RO         8089    i.HostA2FactoryInfo_Init  hosta2factoryinfo.o
+    0x0802a964   0x0802a964   0x00000032   Code   RO         8090    i.HostA2FactoryInfo_IsAlnumField  hosta2factoryinfo.o
+    0x0802a996   0x0802a996   0x00000046   Code   RO         8091    i.HostA2FactoryInfo_IsAsciiPrintable  hosta2factoryinfo.o
+    0x0802a9dc   0x0802a9dc   0x00000020   Code   RO         8092    i.HostA2FactoryInfo_IsBusyContext  hosta2factoryinfo.o
+    0x0802a9fc   0x0802a9fc   0x0000002a   Code   RO         8093    i.HostA2FactoryInfo_IsDigitField  hosta2factoryinfo.o
+    0x0802aa26   0x0802aa26   0x0000001c   Code   RO         8094    i.HostA2FactoryInfo_IsValidDate  hosta2factoryinfo.o
+    0x0802aa42   0x0802aa42   0x0000002c   Code   RO         8095    i.HostA2FactoryInfo_IsValidHwRev  hosta2factoryinfo.o
+    0x0802aa6e   0x0802aa6e   0x00000012   Code   RO         8096    i.HostA2FactoryInfo_IsValidRework  hosta2factoryinfo.o
+    0x0802aa80   0x0802aa80   0x00000044   Code   RO         8097    i.HostA2FactoryInfo_LoadFromFlash  hosta2factoryinfo.o
+    0x0802aac4   0x0802aac4   0x00000020   Code   RO         8098    i.HostA2FactoryInfo_MainLoopTask  hosta2factoryinfo.o
+    0x0802aae4   0x0802aae4   0x000000a0   Code   RO         8099    i.HostA2FactoryInfo_NormalizeWriteRecord  hosta2factoryinfo.o
+    0x0802ab84   0x0802ab84   0x0000000c   Code   RO         8100    i.HostA2FactoryInfo_QueueFlashSave  hosta2factoryinfo.o
+    0x0802ab90   0x0802ab90   0x0000001c   Code   RO         8101    i.HostA2FactoryInfo_SaveToFlash  hosta2factoryinfo.o
+    0x0802abac   0x0802abac   0x0000001e   Code   RO         8102    i.HostA2FactoryInfo_SendResult  hosta2factoryinfo.o
+    0x0802abca   0x0802abca   0x00000028   Code   RO         8103    i.HostA2FactoryInfo_UpperAlnumField  hosta2factoryinfo.o
     0x0802abf2   0x0802abf2   0x00000002   PAD
-    0x0802abf4   0x0802abf4   0x000000a0   Code   RO         8061    i.HostA2FactoryInfo_ValidateWireRecord  hosta2factoryinfo.o
-    0x0802ac94   0x0802ac94   0x0000005c   Code   RO         7966    i.HostA2Inquire_Init  hosta2inquire.o
-    0x0802acf0   0x0802acf0   0x00000030   Code   RO         7967    i.HostA2Inquire_SyncIdentityFromFactory  hosta2inquire.o
-    0x0802ad20   0x0802ad20   0x00000032   Code   RO         7712    i.HostA2_CanSendExt8  hostx1gate.o
-    0x0802ad52   0x0802ad52   0x0000009c   Code   RO         7713    i.HostA2_CanSendExtMsg  hostx1gate.o
-    0x0802adee   0x0802adee   0x00000036   Code   RO         7714    i.HostA2_CanSendStatusReply  hostx1gate.o
-    0x0802ae24   0x0802ae24   0x0000003e   Code   RO         7968    i.HostA2_DecRevToU16  hosta2inquire.o
+    0x0802abf4   0x0802abf4   0x000000a0   Code   RO         8104    i.HostA2FactoryInfo_ValidateWireRecord  hosta2factoryinfo.o
+    0x0802ac94   0x0802ac94   0x0000005c   Code   RO         8009    i.HostA2Inquire_Init  hosta2inquire.o
+    0x0802acf0   0x0802acf0   0x00000030   Code   RO         8010    i.HostA2Inquire_SyncIdentityFromFactory  hosta2inquire.o
+    0x0802ad20   0x0802ad20   0x00000032   Code   RO         7755    i.HostA2_CanSendExt8  hostx1gate.o
+    0x0802ad52   0x0802ad52   0x0000009c   Code   RO         7756    i.HostA2_CanSendExtMsg  hostx1gate.o
+    0x0802adee   0x0802adee   0x00000036   Code   RO         7757    i.HostA2_CanSendStatusReply  hostx1gate.o
+    0x0802ae24   0x0802ae24   0x0000003e   Code   RO         8011    i.HostA2_DecRevToU16  hosta2inquire.o
     0x0802ae62   0x0802ae62   0x00000002   PAD
-    0x0802ae64   0x0802ae64   0x00000050   Code   RO         7715    i.HostA2_EnterOtaService  hostx1gate.o
-    0x0802aeb4   0x0802aeb4   0x00000098   Code   RO         7969    i.HostA2_FillHostExt  hosta2inquire.o
-    0x0802af4c   0x0802af4c   0x0000001c   Code   RO         7970    i.HostA2_NormalizeSlotVer  hosta2inquire.o
-    0x0802af68   0x0802af68   0x00000060   Code   RO         8062    i.HostA2_QueueFactoryInfoDeleteFromCan  hosta2factoryinfo.o
-    0x0802afc8   0x0802afc8   0x00000080   Code   RO         8063    i.HostA2_QueueFactoryInfoWriteFromCan  hosta2factoryinfo.o
-    0x0802b048   0x0802b048   0x00000014   Code   RO         7971    i.HostA2_RefreshProgStatus  hosta2inquire.o
-    0x0802b05c   0x0802b05c   0x00000018   Code   RO         8064    i.HostA2_ReplyFactoryInfoReadFromCan  hosta2factoryinfo.o
-    0x0802b074   0x0802b074   0x0000003c   Code   RO         7972    i.HostA2_ReplyInquireDevMsgFromCan  hosta2inquire.o
-    0x0802b0b0   0x0802b0b0   0x0000001c   Code   RO         7973    i.HostA2_ReplyInquireHostDevExtFromCan  hosta2inquire.o
-    0x0802b0cc   0x0802b0cc   0x00000018   Code   RO         7974    i.HostA2_ReplyInquireSlaveDevMsgFromCan  hosta2inquire.o
-    0x0802b0e4   0x0802b0e4   0x00000016   Code   RO         7716    i.HostA2_ReplyIntoUpgradeMode  hostx1gate.o
+    0x0802ae64   0x0802ae64   0x00000050   Code   RO         7758    i.HostA2_EnterOtaService  hostx1gate.o
+    0x0802aeb4   0x0802aeb4   0x00000098   Code   RO         8012    i.HostA2_FillHostExt  hosta2inquire.o
+    0x0802af4c   0x0802af4c   0x0000001c   Code   RO         8013    i.HostA2_NormalizeSlotVer  hosta2inquire.o
+    0x0802af68   0x0802af68   0x00000060   Code   RO         8105    i.HostA2_QueueFactoryInfoDeleteFromCan  hosta2factoryinfo.o
+    0x0802afc8   0x0802afc8   0x00000080   Code   RO         8106    i.HostA2_QueueFactoryInfoWriteFromCan  hosta2factoryinfo.o
+    0x0802b048   0x0802b048   0x00000014   Code   RO         8014    i.HostA2_RefreshProgStatus  hosta2inquire.o
+    0x0802b05c   0x0802b05c   0x00000018   Code   RO         8107    i.HostA2_ReplyFactoryInfoReadFromCan  hosta2factoryinfo.o
+    0x0802b074   0x0802b074   0x0000003c   Code   RO         8015    i.HostA2_ReplyInquireDevMsgFromCan  hosta2inquire.o
+    0x0802b0b0   0x0802b0b0   0x0000001c   Code   RO         8016    i.HostA2_ReplyInquireHostDevExtFromCan  hosta2inquire.o
+    0x0802b0cc   0x0802b0cc   0x00000018   Code   RO         8017    i.HostA2_ReplyInquireSlaveDevMsgFromCan  hosta2inquire.o
+    0x0802b0e4   0x0802b0e4   0x00000016   Code   RO         7759    i.HostA2_ReplyIntoUpgradeMode  hostx1gate.o
     0x0802b0fa   0x0802b0fa   0x00000002   PAD
-    0x0802b0fc   0x0802b0fc   0x0000007c   Code   RO         7717    i.HostA2_ReplyUpgradeStatusFromCan  hostx1gate.o
-    0x0802b178   0x0802b178   0x00000030   Code   RO         7718    i.HostA2_SetOtaServiceFlag  hostx1gate.o
-    0x0802b1a8   0x0802b1a8   0x00000078   Code   RO         7719    i.HostA2_ShouldHandoffToA1  hostx1gate.o
-    0x0802b220   0x0802b220   0x0000006e   Code   RO         7907    i.HostProgStatus_ApplyFactoryDefaults  hostprogstatusinit.o
-    0x0802b28e   0x0802b28e   0x0000004e   Code   RO         7908    i.HostProgStatus_SanitizeAfterRead  hostprogstatusinit.o
-    0x0802b2dc   0x0802b2dc   0x00000020   Code   RO         7833    i.HostSlot_GetX1FromGroup  hostslotvalidate.o
-    0x0802b2fc   0x0802b2fc   0x00000020   Code   RO         7835    i.HostSlot_GetX2FromGroup  hostslotvalidate.o
-    0x0802b31c   0x0802b31c   0x00000012   Code   RO         7837    i.HostSlot_IsKnownGroup  hostslotvalidate.o
+    0x0802b0fc   0x0802b0fc   0x0000007c   Code   RO         7760    i.HostA2_ReplyUpgradeStatusFromCan  hostx1gate.o
+    0x0802b178   0x0802b178   0x00000030   Code   RO         7761    i.HostA2_SetOtaServiceFlag  hostx1gate.o
+    0x0802b1a8   0x0802b1a8   0x00000078   Code   RO         7762    i.HostA2_ShouldHandoffToA1  hostx1gate.o
+    0x0802b220   0x0802b220   0x0000006e   Code   RO         7950    i.HostProgStatus_ApplyFactoryDefaults  hostprogstatusinit.o
+    0x0802b28e   0x0802b28e   0x0000004e   Code   RO         7951    i.HostProgStatus_SanitizeAfterRead  hostprogstatusinit.o
+    0x0802b2dc   0x0802b2dc   0x00000020   Code   RO         7876    i.HostSlot_GetX1FromGroup  hostslotvalidate.o
+    0x0802b2fc   0x0802b2fc   0x00000020   Code   RO         7878    i.HostSlot_GetX2FromGroup  hostslotvalidate.o
+    0x0802b31c   0x0802b31c   0x00000012   Code   RO         7880    i.HostSlot_IsKnownGroup  hostslotvalidate.o
     0x0802b32e   0x0802b32e   0x00000002   PAD
-    0x0802b330   0x0802b330   0x00000048   Code   RO         7839    i.HostSlot_VectorValid  hostslotvalidate.o
-    0x0802b378   0x0802b378   0x00000026   Code   RO         7840    i.HostSlot_X1Valid  hostslotvalidate.o
-    0x0802b39e   0x0802b39e   0x00000026   Code   RO         7841    i.HostSlot_X2Valid  hostslotvalidate.o
+    0x0802b330   0x0802b330   0x00000048   Code   RO         7882    i.HostSlot_VectorValid  hostslotvalidate.o
+    0x0802b378   0x0802b378   0x00000026   Code   RO         7883    i.HostSlot_X1Valid  hostslotvalidate.o
+    0x0802b39e   0x0802b39e   0x00000026   Code   RO         7884    i.HostSlot_X2Valid  hostslotvalidate.o
     0x0802b3c4   0x0802b3c4   0x00000044   Code   RO         7236    i.HwProtectIni      protectionllc.o
     0x0802b408   0x0802b408   0x00000098   Code   RO         6671    i.InitModbusData    modbus_slave.o
     0x0802b4a0   0x0802b4a0   0x00000002   Code   RO         7140    i.Initial_state_Function  operatestatus.o
@@ -4495,13 +4495,13 @@ Memory Map of the image
     0x0802b7d0   0x0802b7d0   0x00000010   Code   RO         2703    i.LL_EXTI_DisableEvent_32_63  stm32g4xx_hal_comp.o
     0x0802b7e0   0x0802b7e0   0x00000010   Code   RO         2704    i.LL_EXTI_DisableIT_0_31  stm32g4xx_hal_comp.o
     0x0802b7f0   0x0802b7f0   0x00000010   Code   RO         2705    i.LL_EXTI_DisableIT_32_63  stm32g4xx_hal_comp.o
-    0x0802b800   0x0802b800   0x0000000c   Code   RO         7495    i.LlcOta_GetPfcSafeReqFlag  llcota.o
-    0x0802b80c   0x0802b80c   0x00000004   Code   RO         7496    i.LlcOta_IsRunStateBlockingUpgrade  llcota.o
-    0x0802b810   0x0802b810   0x00000004   Code   RO         7497    i.LlcOta_PollPfcSafeRequest  llcota.o
-    0x0802b814   0x0802b814   0x00000084   Code   RO         7498    i.LlcOta_PreHandoffShutdown  llcota.o
-    0x0802b898   0x0802b898   0x00000018   Code   RO         7499    i.LlcOta_SendPfcSafeRequestOnce  llcota.o
-    0x0802b8b0   0x0802b8b0   0x00000014   Code   RO         7500    i.LlcOta_StartPfcSafeRequest  llcota.o
-    0x0802b8c4   0x0802b8c4   0x00000064   Code   RO         8326    i.MX25L1606E_Flash_Init  mx25l1606e.o
+    0x0802b800   0x0802b800   0x0000000c   Code   RO         7538    i.LlcOta_GetPfcSafeReqFlag  llcota.o
+    0x0802b80c   0x0802b80c   0x00000004   Code   RO         7539    i.LlcOta_IsRunStateBlockingUpgrade  llcota.o
+    0x0802b810   0x0802b810   0x00000004   Code   RO         7540    i.LlcOta_PollPfcSafeRequest  llcota.o
+    0x0802b814   0x0802b814   0x00000084   Code   RO         7541    i.LlcOta_PreHandoffShutdown  llcota.o
+    0x0802b898   0x0802b898   0x00000018   Code   RO         7542    i.LlcOta_SendPfcSafeRequestOnce  llcota.o
+    0x0802b8b0   0x0802b8b0   0x00000014   Code   RO         7543    i.LlcOta_StartPfcSafeRequest  llcota.o
+    0x0802b8c4   0x0802b8c4   0x00000064   Code   RO         8369    i.MX25L1606E_Flash_Init  mx25l1606e.o
     0x0802b928   0x0802b928   0x00000118   Code   RO           14    i.MX_ADC1_Init      main.o
     0x0802ba40   0x0802ba40   0x00000154   Code   RO           15    i.MX_ADC2_Init      main.o
     0x0802bb94   0x0802bb94   0x00000038   Code   RO           16    i.MX_COMP1_Init     main.o
@@ -4521,34 +4521,34 @@ Memory Map of the image
     0x0802c5fc   0x0802c5fc   0x0000006c   Code   RO           30    i.MX_USART3_UART_Init  main.o
     0x0802c668   0x0802c668   0x00000004   Code   RO          334    i.MemManage_Handler  stm32g4xx_it.o
     0x0802c66c   0x0802c66c   0x0000003a   Code   RO         6672    i.Modbus_CRC16      modbus_slave.o
-    0x0802c6a6   0x0802c6a6   0x00000028   Code   RO         8483    i.Modbus_CalCRC     crc16.o
+    0x0802c6a6   0x0802c6a6   0x00000028   Code   RO         8526    i.Modbus_CalCRC     crc16.o
     0x0802c6ce   0x0802c6ce   0x00000002   PAD
     0x0802c6d0   0x0802c6d0   0x00000054   Code   RO         6673    i.Modbus_Slave_Rx   modbus_slave.o
     0x0802c724   0x0802c724   0x00000004   Code   RO          335    i.NMI_Handler       stm32g4xx_it.o
     0x0802c728   0x0802c728   0x0000005c   Code   RO         7238    i.OTP_Protection    protectionllc.o
     0x0802c784   0x0802c784   0x00000036   Code   RO         6893    i.OneOrderForm      mathr02.o
     0x0802c7ba   0x0802c7ba   0x00000002   PAD
-    0x0802c7bc   0x0802c7bc   0x00000034   Code   RO         7332    i.OtaGw_AbortHandoff  otagw.o
-    0x0802c7f0   0x0802c7f0   0x00000074   Code   RO         7333    i.OtaGw_BeginHandoff  otagw.o
-    0x0802c864   0x0802c864   0x0000000e   Code   RO         7334    i.OtaGw_GetCmdCode  otagw.o
-    0x0802c872   0x0802c872   0x00000012   Code   RO         7335    i.OtaGw_GetCmdType  otagw.o
-    0x0802c884   0x0802c884   0x0000000c   Code   RO         7336    i.OtaGw_GetDataLen  otagw.o
-    0x0802c890   0x0802c890   0x00000020   Code   RO         7337    i.OtaGw_GetRxPayloadBytes  otagw.o
-    0x0802c8b0   0x0802c8b0   0x000000b0   Code   RO         7338    i.OtaGw_HandleRxMessage  otagw.o
-    0x0802c960   0x0802c960   0x000000d0   Code   RO         7339    i.OtaGw_HandoffTask  otagw.o
-    0x0802ca30   0x0802ca30   0x00000020   Code   RO         7340    i.OtaGw_Init        otagw.o
-    0x0802ca50   0x0802ca50   0x00000010   Code   RO         7341    i.OtaGw_IsCanTxFifoDrained  otagw.o
-    0x0802ca60   0x0802ca60   0x00000032   Code   RO         7342    i.OtaGw_IsGwExtFrame  otagw.o
-    0x0802ca92   0x0802ca92   0x0000001e   Code   RO         7343    i.OtaGw_IsHandoffCmd  otagw.o
-    0x0802cab0   0x0802cab0   0x00000044   Code   RO         7344    i.OtaGw_IsSciWatchdogPaused  otagw.o
-    0x0802caf4   0x0802caf4   0x0000004c   Code   RO         7345    i.OtaGw_IsTrafficActive  otagw.o
-    0x0802cb40   0x0802cb40   0x00000044   Code   RO         7346    i.OtaGw_Poll        otagw.o
-    0x0802cb84   0x0802cb84   0x00000064   Code   RO         7347    i.OtaGw_QueuePop    otagw.o
-    0x0802cbe8   0x0802cbe8   0x000000e8   Code   RO         7348    i.OtaGw_QueuePopPreferB5  otagw.o
-    0x0802ccd0   0x0802ccd0   0x0000008c   Code   RO         7349    i.OtaGw_QueuePush   otagw.o
-    0x0802cd5c   0x0802cd5c   0x00000058   Code   RO         7350    i.OtaGw_RxIsrHook   otagw.o
-    0x0802cdb4   0x0802cdb4   0x00000018   Code   RO         7931    i.OtaHandoffDevType_CalcCrc  otahandoffdevtype.o
-    0x0802cdcc   0x0802cdcc   0x00000044   Code   RO         7932    i.OtaHandoffDevType_Write  otahandoffdevtype.o
+    0x0802c7bc   0x0802c7bc   0x00000034   Code   RO         7375    i.OtaGw_AbortHandoff  otagw.o
+    0x0802c7f0   0x0802c7f0   0x00000074   Code   RO         7376    i.OtaGw_BeginHandoff  otagw.o
+    0x0802c864   0x0802c864   0x0000000e   Code   RO         7377    i.OtaGw_GetCmdCode  otagw.o
+    0x0802c872   0x0802c872   0x00000012   Code   RO         7378    i.OtaGw_GetCmdType  otagw.o
+    0x0802c884   0x0802c884   0x0000000c   Code   RO         7379    i.OtaGw_GetDataLen  otagw.o
+    0x0802c890   0x0802c890   0x00000020   Code   RO         7380    i.OtaGw_GetRxPayloadBytes  otagw.o
+    0x0802c8b0   0x0802c8b0   0x000000b0   Code   RO         7381    i.OtaGw_HandleRxMessage  otagw.o
+    0x0802c960   0x0802c960   0x000000d0   Code   RO         7382    i.OtaGw_HandoffTask  otagw.o
+    0x0802ca30   0x0802ca30   0x00000020   Code   RO         7383    i.OtaGw_Init        otagw.o
+    0x0802ca50   0x0802ca50   0x00000010   Code   RO         7384    i.OtaGw_IsCanTxFifoDrained  otagw.o
+    0x0802ca60   0x0802ca60   0x00000032   Code   RO         7385    i.OtaGw_IsGwExtFrame  otagw.o
+    0x0802ca92   0x0802ca92   0x0000001e   Code   RO         7386    i.OtaGw_IsHandoffCmd  otagw.o
+    0x0802cab0   0x0802cab0   0x00000044   Code   RO         7387    i.OtaGw_IsSciWatchdogPaused  otagw.o
+    0x0802caf4   0x0802caf4   0x0000004c   Code   RO         7388    i.OtaGw_IsTrafficActive  otagw.o
+    0x0802cb40   0x0802cb40   0x00000044   Code   RO         7389    i.OtaGw_Poll        otagw.o
+    0x0802cb84   0x0802cb84   0x00000064   Code   RO         7390    i.OtaGw_QueuePop    otagw.o
+    0x0802cbe8   0x0802cbe8   0x000000e8   Code   RO         7391    i.OtaGw_QueuePopPreferB5  otagw.o
+    0x0802ccd0   0x0802ccd0   0x0000008c   Code   RO         7392    i.OtaGw_QueuePush   otagw.o
+    0x0802cd5c   0x0802cd5c   0x00000058   Code   RO         7393    i.OtaGw_RxIsrHook   otagw.o
+    0x0802cdb4   0x0802cdb4   0x00000018   Code   RO         7974    i.OtaHandoffDevType_CalcCrc  otahandoffdevtype.o
+    0x0802cdcc   0x0802cdcc   0x00000044   Code   RO         7975    i.OtaHandoffDevType_Write  otahandoffdevtype.o
     0x0802ce10   0x0802ce10   0x000000a0   Code   RO         6750    i.PMS_HandShakeCheck  can_control_2800w.o
     0x0802ceb0   0x0802ceb0   0x00000002   Code   RO          336    i.PendSV_Handler    stm32g4xx_it.o
     0x0802ceb2   0x0802ceb2   0x00000002   PAD
@@ -4560,7 +4560,7 @@ Memory Map of the image
     0x0802d414   0x0802d414   0x00000074   Code   RO         6897    i.PwmSyncDrvUpdate  mathr02.o
     0x0802d488   0x0802d488   0x00000068   Code   RO         1379    i.RCC_GetSysClockFreqFromPLLSource  stm32g4xx_hal_rcc.o
     0x0802d4f0   0x0802d4f0   0x00000032   Code   RO         6898    i.RampToward        mathr02.o
-    0x0802d522   0x0802d522   0x000000ec   Code   RO         8194    i.ReadWriteUpgradeFileMsg  upgrademsgsavefunctiondf.o
+    0x0802d522   0x0802d522   0x000000ec   Code   RO         8237    i.ReadWriteUpgradeFileMsg  upgrademsgsavefunctiondf.o
     0x0802d60e   0x0802d60e   0x00000002   PAD
     0x0802d610   0x0802d610   0x00000100   Code   RO         6899    i.RefRampPfmCurr    mathr02.o
     0x0802d710   0x0802d710   0x000000bc   Code   RO         6900    i.RefRampPwmCurr    mathr02.o
@@ -4570,20 +4570,20 @@ Memory Map of the image
     0x0802d864   0x0802d864   0x00000014   Code   RO         6901    i.RequestMode       mathr02.o
     0x0802d878   0x0802d878   0x00000478   Code   RO         6519    i.SHRTIMERdrive     consoleslow.o
     0x0802dcf0   0x0802dcf0   0x00000064   Code   RO         4406    i.SPI_EndRxTxTransaction  stm32g4xx_hal_spi.o
-    0x0802dd54   0x0802dd54   0x00000120   Code   RO         8327    i.SPI_FLASH_BufferWrite  mx25l1606e.o
-    0x0802de74   0x0802de74   0x00000038   Code   RO         8328    i.SPI_FLASH_WaitForWriteEnd  mx25l1606e.o
+    0x0802dd54   0x0802dd54   0x00000120   Code   RO         8370    i.SPI_FLASH_BufferWrite  mx25l1606e.o
+    0x0802de74   0x0802de74   0x00000038   Code   RO         8371    i.SPI_FLASH_WaitForWriteEnd  mx25l1606e.o
     0x0802deac   0x0802deac   0x000000f8   Code   RO         4411    i.SPI_WaitFifoStateUntilTimeout  stm32g4xx_hal_spi.o
     0x0802dfa4   0x0802dfa4   0x000000d8   Code   RO         4412    i.SPI_WaitFlagStateUntilTimeout  stm32g4xx_hal_spi.o
     0x0802e07c   0x0802e07c   0x00000002   Code   RO          337    i.SVC_Handler       stm32g4xx_it.o
     0x0802e07e   0x0802e07e   0x00000002   PAD
     0x0802e080   0x0802e080   0x00000084   Code   RO         6902    i.SampleLpfHandle   mathr02.o
-    0x0802e104   0x0802e104   0x00000022   Code   RO         8195    i.SaveWriteUpgradeFileMsg  upgrademsgsavefunctiondf.o
+    0x0802e104   0x0802e104   0x00000022   Code   RO         8238    i.SaveWriteUpgradeFileMsg  upgrademsgsavefunctiondf.o
     0x0802e126   0x0802e126   0x00000002   PAD
     0x0802e128   0x0802e128   0x00000064   Code   RO         6674    i.SendData_API      modbus_slave.o
     0x0802e18c   0x0802e18c   0x000000e8   Code   RO         6675    i.Send_to_Pfc_info  modbus_slave.o
     0x0802e274   0x0802e274   0x00000330   Code   RO         6904    i.SoftCurStart      mathr02.o
     0x0802e5a4   0x0802e5a4   0x00000168   Code   RO         6905    i.SoftStart         mathr02.o
-    0x0802e70c   0x0802e70c   0x00000310   Code   RO         8524    i.Sr_compute        R02_LLC_APP_V1.lib(sr_handle.o)
+    0x0802e70c   0x0802e70c   0x00000310   Code   RO         7332    i.Sr_compute        sr_handle.o
     0x0802ea1c   0x0802ea1c   0x00000038   Code   RO         6520    i.StandBy           consoleslow.o
     0x0802ea54   0x0802ea54   0x00000068   Code   RO         6521    i.StateM            consoleslow.o
     0x0802eabc   0x0802eabc   0x0000004c   Code   RO         6522    i.StateMErr         consoleslow.o
@@ -4619,9 +4619,9 @@ Memory Map of the image
     0x0802fb8c   0x0802fb8c   0x00000004   Code   RO          340    i.UsageFault_Handler  stm32g4xx_it.o
     0x0802fb90   0x0802fb90   0x00000010   Code   RO         2556    i.__NVIC_GetPriorityGrouping  stm32g4xx_hal_cortex.o
     0x0802fba0   0x0802fba0   0x00000028   Code   RO         2557    i.__NVIC_SetPriority  stm32g4xx_hal_cortex.o
-    0x0802fbc8   0x0802fbc8   0x0000000e   Code   RO         8761    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0802fbd6   0x0802fbd6   0x00000002   Code   RO         8762    i.__scatterload_null  mc_w.l(handlers.o)
-    0x0802fbd8   0x0802fbd8   0x0000000e   Code   RO         8763    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0802fbc8   0x0802fbc8   0x0000000e   Code   RO         8599    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0802fbd6   0x0802fbd6   0x00000002   Code   RO         8600    i.__scatterload_null  mc_w.l(handlers.o)
+    0x0802fbd8   0x0802fbd8   0x0000000e   Code   RO         8601    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x0802fbe6   0x0802fbe6   0x00000002   PAD
     0x0802fbe8   0x0802fbe8   0x000000a4   Code   RO         6751    i.configCANFD       can_control_2800w.o
     0x0802fc8c   0x0802fc8c   0x00000010   Code   RO         6752    i.ctRoll            can_control_2800w.o
@@ -4629,9 +4629,9 @@ Memory Map of the image
     0x0802fdb4   0x0802fdb4   0x00000030   Code   RO         6753    i.initCANFDData     can_control_2800w.o
     0x0802fde4   0x0802fde4   0x0000000c   Code   RO         6525    i.interrupt_ADC1    consoleslow.o
     0x0802fdf0   0x0802fdf0   0x00000008   Code   RO         6526    i.interrupt_ADC2    consoleslow.o
-    0x0802fdf8   0x0802fdf8   0x00000188   Code   RO         8525    i.mComputer         R02_LLC_APP_V1.lib(sr_handle.o)
+    0x0802fdf8   0x0802fdf8   0x00000188   Code   RO         7333    i.mComputer         sr_handle.o
     0x0802ff80   0x0802ff80   0x000002c4   Code   RO           32    i.main              main.o
-    0x08030244   0x08030244   0x000000ec   Code   RO         8526    i.mathTimeHandle    R02_LLC_APP_V1.lib(sr_handle.o)
+    0x08030244   0x08030244   0x000000ec   Code   RO         7334    i.mathTimeHandle    sr_handle.o
     0x08030330   0x08030330   0x0000007c   Code   RO         6676    i.overTime_pfc      modbus_slave.o
     0x080303ac   0x080303ac   0x0000006c   Code   RO         6754    i.parse_ID_BMS2_ChrgMsg0_Data  can_control_2800w.o
     0x08030418   0x08030418   0x00000074   Code   RO         6755    i.parse_ID_PMS_ChrgMsg0_Data  can_control_2800w.o
@@ -4653,10 +4653,10 @@ Memory Map of the image
     0x08031264   0x08031264   0x00000298   Data   RO         7071    .constdata          user_sample.o
     0x080314fc   0x080314fc   0x00000048   Data   RO         7146    .constdata          operatestatus.o
     0x08031544   0x08031544   0x000001f8   Data   RO         7247    .constdata          protectionllc.o
-    0x0803173c   0x0803173c   0x00000010   Data   RO         7352    .constdata          otagw.o
-    0x0803174c   0x0803174c   0x00000600   Data   RO         8484    .constdata          crc16.o
-    0x08031d4c   0x08031d4c   0x00000428   Data   RO         8527    .constdata          R02_LLC_APP_V1.lib(sr_handle.o)
-    0x08032174   0x08032174   0x00000020   Data   RO         8759    Region$$Table       anon$$obj.o
+    0x0803173c   0x0803173c   0x00000428   Data   RO         7335    .constdata          sr_handle.o
+    0x08031b64   0x08031b64   0x00000010   Data   RO         7395    .constdata          otagw.o
+    0x08031b74   0x08031b74   0x00000600   Data   RO         8527    .constdata          crc16.o
+    0x08032174   0x08032174   0x00000020   Data   RO         8597    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08032194, Size: 0x000016c8, Max: 0x00020000, ABSOLUTE)
@@ -4674,12 +4674,12 @@ Memory Map of the image
     0x20000049   0x080321dd   0x00000003   PAD
     0x2000004c   0x080321e0   0x00000012   Data   RW         6911    .data               mathr02.o
     0x2000005e   0x080321f2   0x00000002   Data   RW         7248    .data               protectionllc.o
-    0x20000060   0x080321f4   0x00000014   Data   RW         7353    .data               otagw.o
-    0x20000074   0x08032208   0x0000000c   Data   RW         7501    .data               llcota.o
-    0x20000080   0x08032214   0x00000007   Data   RW         7625    .data               canfdtxqueue.o
+    0x20000060   0x080321f4   0x00000014   Data   RW         7396    .data               otagw.o
+    0x20000074   0x08032208   0x0000000c   Data   RW         7544    .data               llcota.o
+    0x20000080   0x08032214   0x00000007   Data   RW         7668    .data               canfdtxqueue.o
     0x20000087   0x0803221b   0x00000001   PAD
-    0x20000088   0x0803221c   0x00000002   Data   RW         7976    .data               hosta2inquire.o
-    0x2000008a   0x0803221e   0x00000001   Data   RW         8066    .data               hosta2factoryinfo.o
+    0x20000088   0x0803221c   0x00000002   Data   RW         8019    .data               hosta2inquire.o
+    0x2000008a   0x0803221e   0x00000001   Data   RW         8109    .data               hosta2factoryinfo.o
     0x2000008b   0x0803221f   0x00000001   PAD
     0x2000008c        -       0x00000674   Zero   RW           33    .bss                main.o
     0x20000700        -       0x00000050   Zero   RW         6528    .bss                consoleslow.o
@@ -4691,12 +4691,12 @@ Memory Map of the image
     0x20000a60        -       0x00000010   Zero   RW         7145    .bss                operatestatus.o
     0x20000a70        -       0x000001a7   Zero   RW         7246    .bss                protectionllc.o
     0x20000c17   0x0803221f   0x00000001   PAD
-    0x20000c18        -       0x00000208   Zero   RW         7351    .bss                otagw.o
-    0x20000e20        -       0x000003e8   Zero   RW         7624    .bss                canfdtxqueue.o
-    0x20001208        -       0x0000001e   Zero   RW         7975    .bss                hosta2inquire.o
-    0x20001226        -       0x00000034   Zero   RW         8065    .bss                hosta2factoryinfo.o
+    0x20000c18        -       0x00000208   Zero   RW         7394    .bss                otagw.o
+    0x20000e20        -       0x000003e8   Zero   RW         7667    .bss                canfdtxqueue.o
+    0x20001208        -       0x0000001e   Zero   RW         8018    .bss                hosta2inquire.o
+    0x20001226        -       0x00000034   Zero   RW         8108    .bss                hosta2factoryinfo.o
     0x2000125a   0x0803221f   0x00000002   PAD
-    0x2000125c        -       0x00000068   Zero   RW         8198    .bss                upgrademsgsavefunctiondf.o
+    0x2000125c        -       0x00000068   Zero   RW         8241    .bss                upgrademsgsavefunctiondf.o
     0x200012c4   0x0803221f   0x00000004   PAD
     0x200012c8        -       0x00000400   Zero   RW            1    STACK               startup_stm32g474xx.o
 
@@ -4721,13 +4721,14 @@ Image component sizes
        654         34          0          0          0      38098   hostx1gate.o
        196         20          0         12          0       3815   llcota.o
       4214        284          0          0       1652    1113524   main.o
-      5252        728         92         18        292      17655   mathr02.o
+      5252        728         92         18        292      17707   mathr02.o
       1958        108          0          8        212       7511   modbus_slave.o
        918         48          0          0          0       8336   mx25l1606e.o
       1074        106         72          0         16       9167   operatestatus.o
       1528        202         16         20        520      19519   otagw.o
         92          8          0          0          0       2122   otahandoffdevtype.o
       1576         90        504          2        423       6267   protectionllc.o
+      1412        104       1064          0          0       3775   sr_handle.o
         36          8        472          0       1024        844   startup_stm32g474xx.o
        130         20          0         12          0       3231   stm32g4xx_hal.o
       2970        168          0          0          0      81694   stm32g4xx_hal_adc.o
@@ -4754,7 +4755,7 @@ Image component sizes
       1136         84        664          0        132       7736   user_sample.o
 
     ----------------------------------------------------------------------
-     59648       3982       3492        140       5692    1665893   Object Totals
+     61060       4086       4556        140       5692    1669720   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         70          0          1          7          9          0   (incl. Padding)
 
@@ -4762,7 +4763,6 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
 
-      1412        104       1064          0          0       6799   sr_handle.o
          0          0          0          0          0          0   entry.o
          0          0          0          0          0          0   entry10a.o
          0          0          0          0          0          0   entry11a.o
@@ -4781,18 +4781,17 @@ Image component sizes
         98          0          0          0          0         92   uldiv.o
 
     ----------------------------------------------------------------------
-      1736        120       1064          0          0       7271   Library Totals
+       324         16          0          0          0        472   Library Totals
          2          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
 
-      1412        104       1064          0          0       6799   R02_LLC_APP_V1.lib
        322         16          0          0          0        472   mc_w.l
 
     ----------------------------------------------------------------------
-      1736        120       1064          0          0       7271   Library Totals
+       324         16          0          0          0        472   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -4801,8 +4800,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     61384       4102       4556        140       5692    1634612   Grand Totals
-     61384       4102       4556        140       5692    1634612   ELF Image Totals
+     61384       4102       4556        140       5692    1631640   Grand Totals
+     61384       4102       4556        140       5692    1631640   ELF Image Totals
      61384       4102       4556        140          0          0   ROM Totals
 
 ==============================================================================

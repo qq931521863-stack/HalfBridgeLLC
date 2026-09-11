@@ -6,18 +6,15 @@
  extern "C" {
 #endif
 
-#ifdef SIMULATION_VERIFICATION					//simulation verification
+
 #include "stm32g4xx_hal.h"
 #include "main.h"
-#endif // SIMULATION_VERIFICATION
 #include <stdio.h>
 #include "string.h"
 #include "math.h"
 #include "mathR02.h"
-#ifdef SIMULATION_VERIFICATION
 #include "MODBUS_SLAVE.h"
 #include "CAN_Control_2800W.h"
-#endif // DEBUG
 #include "operateStatus.h"
 #include "ProtectionLLC.h"
 

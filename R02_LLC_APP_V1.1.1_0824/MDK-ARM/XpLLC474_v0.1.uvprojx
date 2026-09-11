@@ -609,9 +609,9 @@
           <GroupName>math</GroupName>
           <Files>
             <File>
-              <FileName>R02_LLC_APP_V1.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>..\AppUser\R02_LLC_APP_V1.lib</FilePath>
+              <FileName>Sr_Handle.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\AppUser\Sr_Handle.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1323,9 +1323,9 @@
           <GroupName>math</GroupName>
           <Files>
             <File>
-              <FileName>R02_LLC_APP_V1.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>..\AppUser\R02_LLC_APP_V1.lib</FilePath>
+              <FileName>Sr_Handle.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\AppUser\Sr_Handle.c</FilePath>
             </File>
           </Files>
         </Group>

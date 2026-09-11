@@ -53,103 +53,97 @@ Plecs {
   ScriptsDialogGeometry "[764 395 446 243]"
   ScriptsDialogSplitterPos "95"
   Terminal {
-Type Output
-Index "1"
-}
-Schematic {
-Location [50,50;1400,850]
-ZoomFactor 1
-SliderPosition [0,0]
-
-
-
-Component {
- Type Constant
- Name "Stimulus"
- Show on
- Position [100, 150]
- Direction right
- Flipped off
- LabelPosition south
- Parameter {
- Variable "Value"
- Value "[11 22 33 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ]"
- Show off
- }
- Parameter {
- Variable "DataType"
- Value "10"
- Show off
- }
-
-}
-Component {
- Type Dll
- Name "LLC_Probe"
- Show on
- Position [300, 150]
- Direction right
- Flipped off
- LabelPosition south
- Parameter {
- Variable "Filename"
- Value "../../bin/x64/LLC_Probe.dll"
- Show off
- }
- Parameter {
- Variable "SampleTime"
- Value "25e-6"
- Show off
- }
- Parameter {
- Variable "OutputDelay"
- Value "0"
- Show off
- }
- Parameter {
- Variable "Parameters"
- Value "[1,25e-6]"
- Show off
- }
-
-}
-Component {
- Type Output
- Name "Probe_28"
- Show on
- Position [500, 150]
- Direction right
- Flipped off
- LabelPosition south
- Parameter {
- Variable "Index"
- Value "1"
- Show off
- }
- Parameter {
- Variable "Width"
- Value "28"
- Show off
- }
-
-}
-Connection {
- Type Signal
- SrcComponent "Stimulus"
- SrcTerminal 1
- DstComponent "LLC_Probe"
- DstTerminal 1
-}
-Connection {
- Type Signal
- SrcComponent "LLC_Probe"
- SrcTerminal 2
- DstComponent "Probe_28"
- DstTerminal 1
-}
-
-
-
-
-}
+    Type          Output
+    Index         "1"
+  }
+  Schematic {
+    Location      [267, 126; 1617, 926]
+    ZoomFactor    1
+    SliderPosition [0, 0]
+    ShowBrowser   off
+    BrowserWidth  100
+    Component {
+      Type          Constant
+      Name          "Stimulus"
+      Show          on
+      Position      [285, 240]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Frame         [-10, -10; 10, 10]
+      Parameter {
+        Variable      "Value"
+        Value         "[11 22 33 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ]"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Dll
+      Name          "LLC_Probe"
+      Show          on
+      Position      [485, 240]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Filename"
+        Value         "../../bin/x64/LLC_Probe.dll"
+        Show          off
+        Evaluate      off
+      }
+      Parameter {
+        Variable      "SampleTime"
+        Value         "25e-6"
+        Show          off
+      }
+      Parameter {
+        Variable      "OutputDelay"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Parameters"
+        Value         "[1,25e-6]"
+        Show          off
+      }
+    }
+    Component {
+      Type          Output
+      Name          "Probe_28"
+      Show          on
+      Position      [685, 240]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Index"
+        Value         "1"
+        Show          on
+      }
+      Parameter {
+        Variable      "Width"
+        Value         "28"
+        Show          off
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Stimulus"
+      SrcTerminal   1
+      DstComponent  "LLC_Probe"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "LLC_Probe"
+      SrcTerminal   2
+      DstComponent  "Probe_28"
+      DstTerminal   1
+    }
+  }
 }

@@ -45,7 +45,7 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x69E7603E)
-I (../AppUser/HwConfig.h)(0x6A91346A)
+I (../AppUser/HwConfig.h)(0x6AA36196)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
@@ -104,7 +104,7 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x69E7603E)
 I (../Core/Inc/stm32g4xx_it.h)(0x69E81886)
-I (../AppUser/HwConfig.h)(0x6A91346A)
+I (../AppUser/HwConfig.h)(0x6AA36196)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
@@ -1320,7 +1320,7 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x69E7603E)
 F (..\AppUser\ConsoleFast.c)(0x6A9420BF)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../AppUser -I ../common -I ../OtaGateway -I ../User -I ../Driver/SPI -I ../Driver/mx25L1606E -I ../Service/CRC-I.\RTE\_XpLLC474_v0.1-ID:\Keil_v5\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="534" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o xpllc474_v0.1\consolefast.o --omf_browse xpllc474_v0.1\consolefast.crf --depend xpllc474_v0.1\consolefast.d)
-I (..\AppUser\HwConfig.h)(0x6A91346A)
+I (..\AppUser\HwConfig.h)(0x6AA36196)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x69E7603E)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69E81886)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x69E7603E)
@@ -1363,17 +1363,17 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x69E7603E)
+I (../Core/Inc/main.h)(0x69E81D9C)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
-I (../Core/Inc/main.h)(0x69E81D9C)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
 I (..\AppUser\mathR02.h)(0x6A94312F)
 I (..\AppUser\MODBUS_SLAVE.h)(0x6A4DEA5A)
 I (..\AppUser\CAN_Control_2800W.h)(0x6A46647F)
 I (..\AppUser\operateStatus.h)(0x6A5B109D)
 I (..\AppUser\ProtectionLLC.h)(0x6A5AD01C)
-F (..\AppUser\ConsoleSlow.c)(0x6A91036A)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../AppUser -I ../common -I ../OtaGateway -I ../User -I ../Driver/SPI -I ../Driver/mx25L1606E -I ../Service/CRC-I.\RTE\_XpLLC474_v0.1-ID:\Keil_v5\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="534" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o xpllc474_v0.1\consoleslow.o --omf_browse xpllc474_v0.1\consoleslow.crf --depend xpllc474_v0.1\consoleslow.d)
-I (..\AppUser\HwConfig.h)(0x6A91346A)
+F (..\AppUser\ConsoleSlow.c)(0x6AA39D08)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../AppUser -I ../common -I ../OtaGateway -I ../User -I ../Driver/SPI -I ../Driver/mx25L1606E -I ../Service/CRC-I.\RTE\_XpLLC474_v0.1-ID:\Keil_v5\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="534" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o xpllc474_v0.1\consoleslow.o --omf_browse xpllc474_v0.1\consoleslow.crf --depend xpllc474_v0.1\consoleslow.d)
+I (..\AppUser\HwConfig.h)(0x6AA36196)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x69E7603E)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69E81886)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x69E7603E)
@@ -1416,9 +1416,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x69E7603E)
+I (../Core/Inc/main.h)(0x69E81D9C)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
-I (../Core/Inc/main.h)(0x69E81D9C)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
 I (..\AppUser\mathR02.h)(0x6A94312F)
 I (..\AppUser\MODBUS_SLAVE.h)(0x6A4DEA5A)
@@ -1430,7 +1430,7 @@ I (../OtaGateway/OtaGw.h)(0x6A46647F)
 I (../OtaGateway/CanFdTxQueue.h)(0x6A2B9F9F)
 F (..\AppUser\MODBUS_SLAVE.c)(0x6A5A1E1D)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../AppUser -I ../common -I ../OtaGateway -I ../User -I ../Driver/SPI -I ../Driver/mx25L1606E -I ../Service/CRC-I.\RTE\_XpLLC474_v0.1-ID:\Keil_v5\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="534" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o xpllc474_v0.1\modbus_slave.o --omf_browse xpllc474_v0.1\modbus_slave.crf --depend xpllc474_v0.1\modbus_slave.d)
 I (..\AppUser\MODBUS_SLAVE.h)(0x6A4DEA5A)
-I (..\AppUser\HwConfig.h)(0x6A91346A)
+I (..\AppUser\HwConfig.h)(0x6AA36196)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x69E7603E)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69E81886)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x69E7603E)
@@ -1473,9 +1473,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x69E7603E)
+I (../Core/Inc/main.h)(0x69E81D9C)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
-I (../Core/Inc/main.h)(0x69E81D9C)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
 I (..\AppUser\mathR02.h)(0x6A94312F)
 I (..\AppUser\CAN_Control_2800W.h)(0x6A46647F)
@@ -1531,7 +1531,7 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x69E7603E)
 I (..\AppUser\operateStatus.h)(0x6A5B109D)
-I (..\AppUser\HwConfig.h)(0x6A91346A)
+I (..\AppUser\HwConfig.h)(0x6AA36196)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
 I (..\AppUser\mathR02.h)(0x6A94312F)
@@ -1542,9 +1542,9 @@ I (../OtaGateway/OtaGw.h)(0x6A46647F)
 I (../common/HostA2FactoryInfo.h)(0x6A46647F)
 I (../OtaGateway/OtaCanTypes.h)(0x6A2B9F9F)
 I (../OtaGateway/CanFdTxQueue.h)(0x6A2B9F9F)
-F (..\AppUser\mathR02.c)(0x6A94CD43)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../AppUser -I ../common -I ../OtaGateway -I ../User -I ../Driver/SPI -I ../Driver/mx25L1606E -I ../Service/CRC-I.\RTE\_XpLLC474_v0.1-ID:\Keil_v5\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="534" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o xpllc474_v0.1\mathr02.o --omf_browse xpllc474_v0.1\mathr02.crf --depend xpllc474_v0.1\mathr02.d)
+F (..\AppUser\mathR02.c)(0x6AA2AFBF)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../AppUser -I ../common -I ../OtaGateway -I ../User -I ../Driver/SPI -I ../Driver/mx25L1606E -I ../Service/CRC-I.\RTE\_XpLLC474_v0.1-ID:\Keil_v5\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="534" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o xpllc474_v0.1\mathr02.o --omf_browse xpllc474_v0.1\mathr02.crf --depend xpllc474_v0.1\mathr02.d)
 I (..\AppUser\mathR02.h)(0x6A94312F)
-I (..\AppUser\HwConfig.h)(0x6A91346A)
+I (..\AppUser\HwConfig.h)(0x6AA36196)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x69E7603E)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69E81886)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x69E7603E)
@@ -1587,16 +1587,16 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x69E7603E)
+I (../Core/Inc/main.h)(0x69E81D9C)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
-I (../Core/Inc/main.h)(0x69E81D9C)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
 I (..\AppUser\MODBUS_SLAVE.h)(0x6A4DEA5A)
 I (..\AppUser\CAN_Control_2800W.h)(0x6A46647F)
 I (..\AppUser\operateStatus.h)(0x6A5B109D)
 I (..\AppUser\ProtectionLLC.h)(0x6A5AD01C)
-F (..\AppUser\user_sample.c)(0x6A5A1D48)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../AppUser -I ../common -I ../OtaGateway -I ../User -I ../Driver/SPI -I ../Driver/mx25L1606E -I ../Service/CRC-I.\RTE\_XpLLC474_v0.1-ID:\Keil_v5\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="534" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o xpllc474_v0.1\user_sample.o --omf_browse xpllc474_v0.1\user_sample.crf --depend xpllc474_v0.1\user_sample.d)
-I (..\AppUser\HwConfig.h)(0x6A91346A)
+F (..\AppUser\user_sample.c)(0x6AA2690B)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../AppUser -I ../common -I ../OtaGateway -I ../User -I ../Driver/SPI -I ../Driver/mx25L1606E -I ../Service/CRC-I.\RTE\_XpLLC474_v0.1-ID:\Keil_v5\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="534" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o xpllc474_v0.1\user_sample.o --omf_browse xpllc474_v0.1\user_sample.crf --depend xpllc474_v0.1\user_sample.d)
+I (..\AppUser\HwConfig.h)(0x6AA36196)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x69E7603E)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69E81886)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x69E7603E)
@@ -1639,9 +1639,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x69E7603E)
+I (../Core/Inc/main.h)(0x69E81D9C)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
-I (../Core/Inc/main.h)(0x69E81D9C)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
 I (..\AppUser\mathR02.h)(0x6A94312F)
 I (..\AppUser\MODBUS_SLAVE.h)(0x6A4DEA5A)
@@ -1695,7 +1695,7 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x69E7603E)
 I (..\AppUser\CAN_Control_2800W.h)(0x6A46647F)
-I (..\AppUser\HwConfig.h)(0x6A91346A)
+I (..\AppUser\HwConfig.h)(0x6AA36196)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
 I (..\AppUser\mathR02.h)(0x6A94312F)
@@ -1752,11 +1752,63 @@ I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
 I (../Core/Inc/main.h)(0x69E81D9C)
 I (..\AppUser\MODBUS_SLAVE.h)(0x6A4DEA5A)
-I (..\AppUser\HwConfig.h)(0x6A91346A)
+I (..\AppUser\HwConfig.h)(0x6AA36196)
 I (..\AppUser\mathR02.h)(0x6A94312F)
 I (..\AppUser\CAN_Control_2800W.h)(0x6A46647F)
 I (..\AppUser\operateStatus.h)(0x6A5B109D)
-F (..\AppUser\R02_LLC_APP_V1.lib)(0x6A3F63E1)()
+F (..\AppUser\Sr_Handle.c)(0x6AA39E0B)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../AppUser -I ../common -I ../OtaGateway -I ../User -I ../Driver/SPI -I ../Driver/mx25L1606E -I ../Service/CRC-I.\RTE\_XpLLC474_v0.1-ID:\Keil_v5\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="534" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o xpllc474_v0.1\sr_handle.o --omf_browse xpllc474_v0.1\sr_handle.crf --depend xpllc474_v0.1\sr_handle.d)
+I (..\AppUser\mathR02.h)(0x6A94312F)
+I (..\AppUser\HwConfig.h)(0x6AA36196)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x69E7603E)
+I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69E81886)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h)(0x69E7603E)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h)(0x69E7603E)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h)(0x69E7603E)
+I (../Drivers/CMSIS/Include/core_cm4.h)(0x69E76020)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x69E76020)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x69E76020)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x69E76020)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x69E76020)
+I (../Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x69E7603E)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E3CC2)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_comp.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dac.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dac_ex.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_fdcan.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_hrtim.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_spi_ex.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x69E7603E)
+I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x69E7603E)
+I (../Core/Inc/main.h)(0x69E81D9C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
+I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
+I (..\AppUser\MODBUS_SLAVE.h)(0x6A4DEA5A)
+I (..\AppUser\CAN_Control_2800W.h)(0x6A46647F)
+I (..\AppUser\operateStatus.h)(0x6A5B109D)
+I (..\AppUser\ProtectionLLC.h)(0x6A5AD01C)
 F (..\OtaGateway\OtaGw.c)(0x6A46647F)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc -I ../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I ../Drivers/CMSIS/Include -I ../AppUser -I ../common -I ../OtaGateway -I ../User -I ../Driver/SPI -I ../Driver/mx25L1606E -I ../Service/CRC-I.\RTE\_XpLLC474_v0.1-ID:\Keil_v5\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-D__UVISION_VERSION="534" -D_RTE_ -DSTM32G474xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32G474xx-o xpllc474_v0.1\otagw.o --omf_browse xpllc474_v0.1\otagw.crf --depend xpllc474_v0.1\otagw.d)
 I (../AppUser/UpgradeFeatureConfig.h)(0x6A46647F)
 I (..\OtaGateway\OtaGw.h)(0x6A46647F)
@@ -1821,7 +1873,7 @@ F (..\OtaGateway\LlcOta.c)(0x6A46647F)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROL
 I (../AppUser/UpgradeFeatureConfig.h)(0x6A46647F)
 I (..\OtaGateway\LlcOta.h)(0x6A3B90FB)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
-I (../AppUser/HwConfig.h)(0x6A91346A)
+I (../AppUser/HwConfig.h)(0x6AA36196)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h)(0x69E7603E)
 I (../Core/Inc/stm32g4xx_hal_conf.h)(0x69E81886)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h)(0x69E7603E)
@@ -1863,9 +1915,9 @@ I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h)(0x69E7603E)
 I (../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h)(0x69E7603E)
+I (../Core/Inc/main.h)(0x69E81D9C)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E3CC2)
-I (../Core/Inc/main.h)(0x69E81D9C)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
 I (../AppUser/mathR02.h)(0x6A94312F)
 I (../AppUser/MODBUS_SLAVE.h)(0x6A4DEA5A)

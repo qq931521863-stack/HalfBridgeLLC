@@ -3,7 +3,7 @@
 <title>Static Call Graph - [XpLLC474_v0.1\XpLLC474_v0.1]</title></head>
 <body><HR>
 <H1>Static Call Graph for image XpLLC474_v0.1\XpLLC474_v0.1</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed Sep 09 14:12:02 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Fri Sep 11 15:00:46 2026
 <BR><P>
 <H3>Maximum Stack Usage =        568 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -470,11 +470,11 @@ Global Symbols
 
 <P><STRONG><a name="[a0]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_RxIsrHook
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2FactoryInfo_LoadFromFlash
 <LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_CanSendExtMsg
 <LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_CanSendExt8
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CanFdTxQueue_Push
 <LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_QueueFactoryInfoWriteFromCan
+<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2FactoryInfo_LoadFromFlash
 </UL>
 
 <P><STRONG><a name="[9f]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text))
@@ -506,9 +506,9 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initCANFDData
 <LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HwProtectIni
-<LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2FactoryInfo_ApplyCompileDefaults
 <LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostProgStatus_ApplyFactoryDefaults
 <LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2Inquire_Init
+<LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2FactoryInfo_ApplyCompileDefaults
 </UL>
 
 <P><STRONG><a name="[c2]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
@@ -953,8 +953,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashReadEx
 </UL>
-<BR>[Called By]<UL><LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2FactoryInfo_LoadFromFlash
-<LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadWriteUpgradeFileMsg
+<BR>[Called By]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadWriteUpgradeFileMsg
+<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2FactoryInfo_LoadFromFlash
 </UL>
 
 <P><STRONG><a name="[d6]"></a>FlashReadEx</STRONG> (Thumb, 106 bytes, Stack size 32 bytes, mx25l1606e.o(i.FlashReadEx))
@@ -975,9 +975,9 @@ Global Symbols
 <LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashWriteEnable
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_SPI_ReadWriteByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2FactoryInfo_SaveToFlash
-<LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SaveWriteUpgradeFileMsg
+<BR>[Called By]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SaveWriteUpgradeFileMsg
 <LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaHandoffDevType_Write
+<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2FactoryInfo_SaveToFlash
 </UL>
 
 <P><STRONG><a name="[d3]"></a>FlashWriteEnable</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, mx25l1606e.o(i.FlashWriteEnable))
@@ -986,8 +986,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_SPI_ReadWriteByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashPage_Write
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashSector_Erase
+<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashSector_Erase
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashPage_Write
 </UL>
 
 <P><STRONG><a name="[d7]"></a>Flash_SPI_BusRecover</STRONG> (Thumb, 294 bytes, Stack size 24 bytes, flash_spi.o(i.Flash_SPI_BusRecover))
@@ -1014,19 +1014,19 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_FLASH_WaitForWriteEnd
+<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashSector_Erase
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_FLASH_WaitForWriteEnd
 <LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashWriteEnable
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashReadEx
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashPage_Write
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashGet_Info
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashGet_ElectronicInfo
 <LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_SPI_Init
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashSector_Erase
 </UL>
 
 <P><STRONG><a name="[de]"></a>Flash_SPI_SetSpeed</STRONG> (Thumb, 68 bytes, Stack size 0 bytes, flash_spi.o(i.Flash_SPI_SetSpeed))
-<BR><BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_SPI_PeriphHardReset
-<LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX25L1606E_Flash_Init
+<BR><BR>[Called By]<UL><LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX25L1606E_Flash_Init
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_SPI_PeriphHardReset
 </UL>
 
 <P><STRONG><a name="[e0]"></a>HAL_ADCEx_Calibration_Start</STRONG> (Thumb, 166 bytes, Stack size 24 bytes, stm32g4xx_hal_adc_ex.o(i.HAL_ADCEx_Calibration_Start))
@@ -1349,8 +1349,8 @@ Global Symbols
 <LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
 <LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_HRTIM_MspPostInit
 <LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_SPI_Init
 <LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX25L1606E_Flash_Init
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_SPI_Init
 </UL>
 
 <P><STRONG><a name="[164]"></a>HAL_GPIO_ReadPin</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32g4xx_hal_gpio.o(i.HAL_GPIO_ReadPin))
@@ -1367,14 +1367,14 @@ Global Symbols
 <LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDShow
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DischargeOff
 <LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LLC_Enable
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashSector_Erase
+<LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX25L1606E_Flash_Init
 <LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_FLASH_WaitForWriteEnd
 <LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashWriteEnable
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashReadEx
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashPage_Write
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashGet_Info
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashGet_ElectronicInfo
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashSector_Erase
-<LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX25L1606E_Flash_Init
 </UL>
 
 <P><STRONG><a name="[8d]"></a>HAL_GetTick</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32g4xx_hal.o(i.HAL_GetTick))
@@ -1384,16 +1384,16 @@ Global Symbols
 <LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_HRTIM_PollForDLLCalibration
 <LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_FDCAN_Init
 <LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DAC_ConfigChannel
-<LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
-<LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_CheckIdleState
-<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
-<LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFlagStateUntilTimeout
-<LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFifoStateUntilTimeout
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Enable
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Disable
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_IsTrafficActive
 <LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_IsSciWatchdogPaused
 <LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_HandoffTask
+<LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
+<LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_CheckIdleState
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_TransmitReceive
+<LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFlagStateUntilTimeout
+<LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFifoStateUntilTimeout
 <LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_QueuePush
 </UL>
 
@@ -1531,8 +1531,7 @@ Global Symbols
 <P><STRONG><a name="[129]"></a>HAL_IncTick</STRONG> (Thumb, 202 bytes, Stack size 8 bytes, consoleslow.o(i.HAL_IncTick))
 <BR><BR>[Stack]<UL><LI>Max Depth = 560<LI>Call Chain = HAL_IncTick &rArr; CanFd_SysTickCanService &rArr; OtaGw_Poll &rArr; OtaGw_HandleRxMessage &rArr; HostA2_ReplyInquireHostDevExtFromCan &rArr; HostA2_FillHostExt &rArr; HostA2_RefreshProgStatus &rArr; ReadWriteUpgradeFileMsg &rArr; SaveWriteUpgradeFileMsg &rArr; SPI_FLASH_BufferWrite &rArr; FlashPage_Write &rArr; SPI_FLASH_WaitForWriteEnd &rArr; Flash_SPI_ReadWriteByte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFifoStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_COMP_Start
-<LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;runMainStateMachine
+<BR>[Calls]<UL><LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;runMainStateMachine
 <LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysReset
 <LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RelayProtect
 <LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_HandoffTask
@@ -1542,6 +1541,7 @@ Global Symbols
 <LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UartCom
 <LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StateM
 <LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDShow
+<LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_COMP_Start
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
@@ -1689,8 +1689,8 @@ Global Symbols
 <P><STRONG><a name="[df]"></a>HAL_SPI_TransmitReceive</STRONG> (Thumb, 730 bytes, Stack size 48 bytes, stm32g4xx_hal_spi.o(i.HAL_SPI_TransmitReceive))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFifoStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_EndRxTxTransaction
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_EndRxTxTransaction
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_SPI_ReadWriteByte
 </UL>
@@ -1901,9 +1901,9 @@ Global Symbols
 <P><STRONG><a name="[180]"></a>HostA2Inquire_Init</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, hosta2inquire.o(i.HostA2Inquire_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = HostA2Inquire_Init &rArr; HostA2_RefreshProgStatus &rArr; ReadWriteUpgradeFileMsg &rArr; SaveWriteUpgradeFileMsg &rArr; SPI_FLASH_BufferWrite &rArr; FlashPage_Write &rArr; SPI_FLASH_WaitForWriteEnd &rArr; Flash_SPI_ReadWriteByte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFifoStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
-<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_RefreshProgStatus
+<BR>[Calls]<UL><LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_RefreshProgStatus
 <LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_DecRevToU16
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_Init
 </UL>
@@ -1923,12 +1923,12 @@ Global Symbols
 <LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2FactoryInfo_SendResult
-<LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_CanSendExt8
+<BR>[Called By]<UL><LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_CanSendExt8
 <LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_ReplyInquireSlaveDevMsgFromCan
 <LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_ReplyInquireHostDevExtFromCan
 <LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_ReplyInquireDevMsgFromCan
 <LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_ReplyFactoryInfoReadFromCan
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2FactoryInfo_SendResult
 </UL>
 
 <P><STRONG><a name="[185]"></a>HostA2_EnterOtaService</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, hostx1gate.o(i.HostA2_EnterOtaService))
@@ -2039,9 +2039,9 @@ Global Symbols
 <P><STRONG><a name="[196]"></a>HostProgStatus_ApplyFactoryDefaults</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, hostprogstatusinit.o(i.HostProgStatus_ApplyFactoryDefaults))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = HostProgStatus_ApplyFactoryDefaults &rArr; HostSlot_X2Valid &rArr; HostSlot_GetX2FromGroup
 </UL>
-<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
-<LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostSlot_X2Valid
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostSlot_X2Valid
 <LI><a href="#[197]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostSlot_X1Valid
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadWriteUpgradeFileMsg
 </UL>
@@ -2210,8 +2210,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[16f]"></a>OtaGw_GetRxPayloadBytes</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, otagw.o(i.OtaGw_GetRxPayloadBytes))
-<BR><BR>[Called By]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2FactoryInfo_GetRxDataLen
-<LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_GetDataLen
+<BR><BR>[Called By]<UL><LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_GetDataLen
+<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2FactoryInfo_GetRxDataLen
 </UL>
 
 <P><STRONG><a name="[12e]"></a>OtaGw_HandoffTask</STRONG> (Thumb, 186 bytes, Stack size 16 bytes, otagw.o(i.OtaGw_HandoffTask))
@@ -2269,12 +2269,12 @@ Global Symbols
 <P><STRONG><a name="[117]"></a>OtaGw_RxIsrHook</STRONG> (Thumb, 88 bytes, Stack size 120 bytes, otagw.o(i.OtaGw_RxIsrHook))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = OtaGw_RxIsrHook &rArr; OtaGw_QueuePush
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_QueuePush
+<BR>[Calls]<UL><LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_QueuePush
 <LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_IsGwExtFrame
 <LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_GetDataLen
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_FDCAN_RxFifo0Callback
 </UL>
@@ -2282,10 +2282,10 @@ Global Symbols
 <P><STRONG><a name="[1cf]"></a>OtaHandoffDevType_Write</STRONG> (Thumb, 60 bytes, Stack size 40 bytes, otahandoffdevtype.o(i.OtaHandoffDevType_Write))
 <BR><BR>[Stack]<UL><LI>Max Depth = 256<LI>Call Chain = OtaHandoffDevType_Write &rArr; SPI_FLASH_BufferWrite &rArr; FlashPage_Write &rArr; SPI_FLASH_WaitForWriteEnd &rArr; Flash_SPI_ReadWriteByte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFifoStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_FLASH_BufferWrite
+<BR>[Calls]<UL><LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_FLASH_BufferWrite
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashSector_Erase
 <LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaHandoffDevType_CalcCrc
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_HandoffTask
 </UL>
@@ -2349,11 +2349,11 @@ Global Symbols
 <P><STRONG><a name="[18d]"></a>ReadWriteUpgradeFileMsg</STRONG> (Thumb, 236 bytes, Stack size 24 bytes, upgrademsgsavefunctiondf.o(i.ReadWriteUpgradeFileMsg))
 <BR><BR>[Stack]<UL><LI>Max Depth = 256<LI>Call Chain = ReadWriteUpgradeFileMsg &rArr; SaveWriteUpgradeFileMsg &rArr; SPI_FLASH_BufferWrite &rArr; FlashPage_Write &rArr; SPI_FLASH_WaitForWriteEnd &rArr; Flash_SPI_ReadWriteByte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFifoStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Modbus_CalCRC
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashRead
-<LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostProgStatus_SanitizeAfterRead
+<BR>[Calls]<UL><LI><a href="#[1da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostProgStatus_SanitizeAfterRead
 <LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostProgStatus_ApplyFactoryDefaults
 <LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SaveWriteUpgradeFileMsg
+<LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Modbus_CalCRC
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashRead
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_Init
 <LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_RefreshProgStatus
@@ -2433,9 +2433,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashPage_Write
 </UL>
-<BR>[Called By]<UL><LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2FactoryInfo_SaveToFlash
-<LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SaveWriteUpgradeFileMsg
+<BR>[Called By]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SaveWriteUpgradeFileMsg
 <LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaHandoffDevType_Write
+<LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2FactoryInfo_SaveToFlash
 </UL>
 
 <P><STRONG><a name="[d4]"></a>SPI_FLASH_WaitForWriteEnd</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, mx25l1606e.o(i.SPI_FLASH_WaitForWriteEnd))
@@ -2444,8 +2444,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_SPI_ReadWriteByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashPage_Write
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashSector_Erase
+<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashSector_Erase
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashPage_Write
 </UL>
 
 <P><STRONG><a name="[6]"></a>SVC_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32g4xx_it.o(i.SVC_Handler))
@@ -2463,9 +2463,9 @@ Global Symbols
 <P><STRONG><a name="[194]"></a>SaveWriteUpgradeFileMsg</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, upgrademsgsavefunctiondf.o(i.SaveWriteUpgradeFileMsg))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = SaveWriteUpgradeFileMsg &rArr; SPI_FLASH_BufferWrite &rArr; FlashPage_Write &rArr; SPI_FLASH_WaitForWriteEnd &rArr; Flash_SPI_ReadWriteByte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFifoStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Modbus_CalCRC
-<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_FLASH_BufferWrite
+<BR>[Calls]<UL><LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_FLASH_BufferWrite
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FlashSector_Erase
+<LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Modbus_CalCRC
 </UL>
 <BR>[Called By]<UL><LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_SetOtaServiceFlag
 <LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadWriteUpgradeFileMsg
@@ -2629,8 +2629,8 @@ Global Symbols
 <P><STRONG><a name="[15e]"></a>UART_CheckIdleState</STRONG> (Thumb, 234 bytes, Stack size 16 bytes, stm32g4xx_hal_uart.o(i.UART_CheckIdleState))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = UART_CheckIdleState &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Called By]<UL><LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 </UL>
@@ -2649,8 +2649,8 @@ Global Symbols
 <P><STRONG><a name="[1e7]"></a>UART_WaitOnFlagUntilTimeout</STRONG> (Thumb, 172 bytes, Stack size 24 bytes, stm32g4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndRxTransfer
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndRxTransfer
 </UL>
 <BR>[Called By]<UL><LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_CheckIdleState
 </UL>
@@ -3413,13 +3413,13 @@ Local Symbols
 <P><STRONG><a name="[1c5]"></a>OtaGw_BeginHandoff</STRONG> (Thumb, 98 bytes, Stack size 16 bytes, otagw.o(i.OtaGw_BeginHandoff))
 <BR><BR>[Stack]<UL><LI>Max Depth = 280<LI>Call Chain = OtaGw_BeginHandoff &rArr; HostA2_ShouldHandoffToA1 &rArr; ReadWriteUpgradeFileMsg &rArr; SaveWriteUpgradeFileMsg &rArr; SPI_FLASH_BufferWrite &rArr; FlashPage_Write &rArr; SPI_FLASH_WaitForWriteEnd &rArr; Flash_SPI_ReadWriteByte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFifoStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
-<LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LlcOta_StartPfcSafeRequest
+<BR>[Calls]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LlcOta_StartPfcSafeRequest
 <LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LlcOta_PreHandoffShutdown
 <LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LlcOta_IsRunStateBlockingUpgrade
 <LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_ShouldHandoffToA1
 <LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_ReplyIntoUpgradeMode
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_GetCmdCode
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_HandleRxMessage
 </UL>
@@ -3449,8 +3449,7 @@ Local Symbols
 <P><STRONG><a name="[1ca]"></a>OtaGw_HandleRxMessage</STRONG> (Thumb, 168 bytes, Stack size 112 bytes, otagw.o(i.OtaGw_HandleRxMessage))
 <BR><BR>[Stack]<UL><LI>Max Depth = 432<LI>Call Chain = OtaGw_HandleRxMessage &rArr; HostA2_ReplyInquireHostDevExtFromCan &rArr; HostA2_FillHostExt &rArr; HostA2_RefreshProgStatus &rArr; ReadWriteUpgradeFileMsg &rArr; SaveWriteUpgradeFileMsg &rArr; SPI_FLASH_BufferWrite &rArr; FlashPage_Write &rArr; SPI_FLASH_WaitForWriteEnd &rArr; Flash_SPI_ReadWriteByte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFifoStateUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
-<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_ReplyUpgradeStatusFromCan
+<BR>[Calls]<UL><LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_ReplyUpgradeStatusFromCan
 <LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_ReplyInquireSlaveDevMsgFromCan
 <LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_ReplyInquireHostDevExtFromCan
 <LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_ReplyInquireDevMsgFromCan
@@ -3461,6 +3460,7 @@ Local Symbols
 <LI><a href="#[1cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_GetCmdType
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_GetCmdCode
 <LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_BeginHandoff
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_Poll
 </UL>
@@ -3494,9 +3494,9 @@ Local Symbols
 <P><STRONG><a name="[1d2]"></a>OtaGw_QueuePopPreferB5</STRONG> (Thumb, 210 bytes, Stack size 24 bytes, otagw.o(i.OtaGw_QueuePopPreferB5))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = OtaGw_QueuePopPreferB5 &rArr; OtaGw_QueuePop
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
-<LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_QueuePop
+<BR>[Calls]<UL><LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_QueuePop
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_GetCmdCode
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OtaGw_Poll
 </UL>
@@ -3567,8 +3567,8 @@ Local Symbols
 <P><STRONG><a name="[183]"></a>HostA2_CanSendExt8</STRONG> (Thumb, 50 bytes, Stack size 24 bytes, hostx1gate.o(i.HostA2_CanSendExt8))
 <BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = HostA2_CanSendExt8 &rArr; HostA2_CanSendExtMsg &rArr; CanFdTxQueue_Enqueue &rArr; CanFdTxQueue_Push
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_CanSendExtMsg
+<BR>[Calls]<UL><LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_CanSendExtMsg
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_CanSendStatusReply
 <LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_ReplyIntoUpgradeMode
@@ -3596,8 +3596,8 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[181]"></a>HostA2_DecRevToU16</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, hosta2inquire.o(i.HostA2_DecRevToU16))
-<BR><BR>[Called By]<UL><LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2Inquire_SyncIdentityFromFactory
-<LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2Inquire_Init
+<BR><BR>[Called By]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2Inquire_Init
+<LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2Inquire_SyncIdentityFromFactory
 </UL>
 
 <P><STRONG><a name="[187]"></a>HostA2_FillHostExt</STRONG> (Thumb, 138 bytes, Stack size 24 bytes, hosta2inquire.o(i.HostA2_FillHostExt))
@@ -3628,8 +3628,8 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2FactoryInfo_CopyAsciiField
 </UL>
-<BR>[Called By]<UL><LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2FactoryInfo_LoadFromFlash
-<LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_QueueFactoryInfoDeleteFromCan
+<BR>[Called By]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2_QueueFactoryInfoDeleteFromCan
+<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HostA2FactoryInfo_LoadFromFlash
 </UL>
 
 <P><STRONG><a name="[16c]"></a>HostA2FactoryInfo_ApplyRuntime</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, hosta2factoryinfo.o(i.HostA2FactoryInfo_ApplyRuntime))

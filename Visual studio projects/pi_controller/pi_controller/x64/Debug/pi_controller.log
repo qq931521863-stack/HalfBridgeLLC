@@ -1,21 +1,6 @@
-﻿D:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1129,5): warning MSB8027: 名为 user_sample.c 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\..\..\R02_LLC_APP_V1.1.1_0824\AppUser\user_sample.c, user_sample.c。
-  mathR02.c
-D:\Work\1600W\代码分析\R02_LLC_APP_V1.1.1_0824\AppUser\mathR02.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\Work\1600W\代码分析\R02_LLC_APP_V1.1.1_0824\AppUser\mathR02.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../../../R02_LLC_APP_V1.1.1_0824/AppUser/mathR02.c”)
-  
-D:\Work\1600W\代码分析\R02_LLC_APP_V1.1.1_0824\AppUser\HwConfig.h(9,10): error C1083: 无法打开包括文件: “stm32g4xx_hal.h”: No such file or directory
-  (编译源文件“../../../R02_LLC_APP_V1.1.1_0824/AppUser/mathR02.c”)
-  
-  user_sample.c
-D:\Work\1600W\代码分析\R02_LLC_APP_V1.1.1_0824\AppUser\user_sample.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\Work\1600W\代码分析\R02_LLC_APP_V1.1.1_0824\AppUser\HwConfig.h(9,10): error C1083: 无法打开包括文件: “stm32g4xx_hal.h”: No such file or directory
-  (编译源文件“../../../R02_LLC_APP_V1.1.1_0824/AppUser/user_sample.c”)
-  
-  main.c
-D:\Work\1600W\代码分析\Visual studio projects\pi_controller\pi_controller\main.c(11,9): warning C4005: “Vout”: 宏重定义
-      D:\Work\1600W\代码分析\Visual studio projects\pi_controller\pi_controller\main.c(10,9):
+﻿  main.c
+D:\Work\1600W\代码分析\Visual studio projects\pi_controller\pi_controller\main.c(14,9): warning C4005: “Vout”: 宏重定义
+      D:\Work\1600W\代码分析\Visual studio projects\pi_controller\pi_controller\main.c(13,9):
       参见“Vout”的前一个定义
   
-  State.c
-  正在生成代码...
+  pi_controller.vcxproj -> D:\Work\1600W\代码分析\Visual studio projects\pi_controller\x64\Debug\pi_controller.dll
