@@ -3,12 +3,10 @@
   "WorkspaceRootPath": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\Visual studio projects\\pi_controller\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C1D2D2C6-9976-4B8E-BA6F-790A6249D7BD}|pi_controller\\pi_controller.vcxproj|D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\Visual studio projects\\pi_controller\\pi_controller\\type.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C1D2D2C6-9976-4B8E-BA6F-790A6249D7BD}|pi_controller\\pi_controller.vcxproj|solutionrelative:pi_controller\\type.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C1D2D2C6-9976-4B8E-BA6F-790A6249D7BD}|pi_controller\\pi_controller.vcxproj|D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleSlow.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1D2D2C6-9976-4B8E-BA6F-790A6249D7BD}|pi_controller\\pi_controller.vcxproj|D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\Visual studio projects\\pi_controller\\pi_controller\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{C1D2D2C6-9976-4B8E-BA6F-790A6249D7BD}|pi_controller\\pi_controller.vcxproj|solutionrelative:pi_controller\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C1D2D2C6-9976-4B8E-BA6F-790A6249D7BD}|pi_controller\\pi_controller.vcxproj|D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleFast.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,27 +37,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "type.h",
-              "DocumentMoniker": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\Visual studio projects\\pi_controller\\pi_controller\\type.h",
-              "RelativeDocumentMoniker": "pi_controller\\type.h",
-              "ToolTip": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\Visual studio projects\\pi_controller\\pi_controller\\type.h",
-              "RelativeToolTip": "pi_controller\\type.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-09-11T02:01:07.095Z",
+              "Title": "ConsoleSlow.c",
+              "DocumentMoniker": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleSlow.c",
+              "RelativeDocumentMoniker": "..\\..\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleSlow.c",
+              "ToolTip": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleSlow.c",
+              "RelativeToolTip": "..\\..\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleSlow.c",
+              "ViewState": "AgIAAFwCAAAAAAAAAAAuwG4CAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-09-11T12:44:47.99Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "main.c",
-              "DocumentMoniker": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\Visual studio projects\\pi_controller\\pi_controller\\main.c",
-              "RelativeDocumentMoniker": "pi_controller\\main.c",
-              "ToolTip": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\Visual studio projects\\pi_controller\\pi_controller\\main.c",
-              "RelativeToolTip": "pi_controller\\main.c",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Title": "ConsoleFast.c",
+              "DocumentMoniker": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleFast.c",
+              "RelativeDocumentMoniker": "..\\..\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleFast.c",
+              "ToolTip": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleFast.c",
+              "RelativeToolTip": "..\\..\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleFast.c",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-09-09T03:55:33.336Z",
+              "WhenOpened": "2026-09-11T12:44:24.514Z",
               "EditorCaption": ""
             }
           ]

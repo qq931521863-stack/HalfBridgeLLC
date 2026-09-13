@@ -54,9 +54,9 @@ Plecs {
   ScriptsDialogGeometry "[764 395 446 243]"
   ScriptsDialogSplitterPos "95"
   Schematic {
-    Location      [0, 23; 1536, 870]
-    ZoomFactor    0.691703
-    SliderPosition [94, 164]
+    Location      [0, 24; 1536, 871]
+    ZoomFactor    1.03661
+    SliderPosition [-1, 649]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -3215,7 +3215,7 @@ Plecs {
       Type          Subsystem
       Name          base64 "5oWi546v6YC76L6R"
       Show          on
-      Position      [470, 1030]
+      Position      [605, 1035]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -3351,13 +3351,13 @@ Plecs {
           LabelPosition south
           Parameter {
             Variable      "Filename"
-            Value         ""
+            Value         "llc_slow.dll"
             Show          off
             Evaluate      off
           }
           Parameter {
             Variable      "SampleTime"
-            Value         "0"
+            Value         "1/1e3"
             Show          off
           }
           Parameter {
@@ -3812,7 +3812,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "Tag"
-        Value         "CtrMode"
+        Value         "CtrMode2"
         Show          off
       }
       Parameter {
@@ -3902,7 +3902,7 @@ Plecs {
       Type          Goto
       Name          "Goto11"
       Show          off
-      Position      [625, 955]
+      Position      [760, 960]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -3926,13 +3926,13 @@ Plecs {
       Type          Goto
       Name          "Goto12"
       Show          off
-      Position      [625, 980]
+      Position      [760, 985]
       Direction     right
       Flipped       off
       LabelPosition south
       Parameter {
         Variable      "Tag"
-        Value         "CtrMode"
+        Value         "CtrMode2"
         Show          off
       }
       Parameter {
@@ -3950,7 +3950,7 @@ Plecs {
       Type          Goto
       Name          "Goto13"
       Show          off
-      Position      [625, 1005]
+      Position      [760, 1010]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -3974,7 +3974,7 @@ Plecs {
       Type          Goto
       Name          "Goto14"
       Show          off
-      Position      [625, 1030]
+      Position      [760, 1035]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -3998,7 +3998,7 @@ Plecs {
       Type          Goto
       Name          "Goto15"
       Show          off
-      Position      [625, 1055]
+      Position      [760, 1060]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -4022,7 +4022,7 @@ Plecs {
       Type          Goto
       Name          "Goto16"
       Show          off
-      Position      [625, 1080]
+      Position      [760, 1085]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -4046,13 +4046,13 @@ Plecs {
       Type          From
       Name          "From20"
       Show          off
-      Position      [315, 955]
+      Position      [450, 960]
       Direction     right
       Flipped       off
       LabelPosition south
       Parameter {
         Variable      "Tag"
-        Value         "tag"
+        Value         "Vout"
         Show          off
       }
       Parameter {
@@ -4070,13 +4070,13 @@ Plecs {
       Type          From
       Name          "From21"
       Show          off
-      Position      [315, 975]
+      Position      [450, 980]
       Direction     right
       Flipped       off
       LabelPosition south
       Parameter {
         Variable      "Tag"
-        Value         "tag"
+        Value         "Vout"
         Show          off
       }
       Parameter {
@@ -4094,13 +4094,13 @@ Plecs {
       Type          From
       Name          "From22"
       Show          off
-      Position      [315, 995]
+      Position      [450, 1000]
       Direction     right
       Flipped       off
       LabelPosition south
       Parameter {
         Variable      "Tag"
-        Value         "tag"
+        Value         "Iout"
         Show          off
       }
       Parameter {
@@ -4118,13 +4118,13 @@ Plecs {
       Type          From
       Name          "From23"
       Show          off
-      Position      [315, 1015]
+      Position      [450, 1020]
       Direction     right
       Flipped       off
       LabelPosition south
       Parameter {
         Variable      "Tag"
-        Value         "tag"
+        Value         "CtrMode1"
         Show          off
       }
       Parameter {
@@ -4142,13 +4142,13 @@ Plecs {
       Type          From
       Name          "From24"
       Show          off
-      Position      [315, 1035]
+      Position      [450, 1040]
       Direction     right
       Flipped       off
       LabelPosition south
       Parameter {
         Variable      "Tag"
-        Value         "tag"
+        Value         "preOK"
         Show          off
       }
       Parameter {
@@ -4166,13 +4166,13 @@ Plecs {
       Type          From
       Name          "From25"
       Show          off
-      Position      [315, 1055]
+      Position      [450, 1060]
       Direction     right
       Flipped       off
       LabelPosition south
       Parameter {
         Variable      "Tag"
-        Value         "tag"
+        Value         "xp_ChrgEna"
         Show          off
       }
       Parameter {
@@ -4190,13 +4190,13 @@ Plecs {
       Type          From
       Name          "From26"
       Show          off
-      Position      [315, 1075]
+      Position      [450, 1080]
       Direction     right
       Flipped       off
       LabelPosition south
       Parameter {
         Variable      "Tag"
-        Value         "tag"
+        Value         "HandShake"
         Show          off
       }
       Parameter {
@@ -4214,13 +4214,13 @@ Plecs {
       Type          From
       Name          "From27"
       Show          off
-      Position      [315, 1100]
+      Position      [450, 1105]
       Direction     right
       Flipped       off
       LabelPosition south
       Parameter {
         Variable      "Tag"
-        Value         "tag"
+        Value         "CAN"
         Show          off
       }
       Parameter {
@@ -4231,6 +4231,226 @@ Plecs {
       Parameter {
         Variable      "NoMatchingCounterpartAction"
         Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Constant
+      Name          "Constant1"
+      Show          on
+      Position      [215, 930]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Frame         [-10, -10; 10, 10]
+      Parameter {
+        Variable      "Value"
+        Value         "4"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto17"
+      Show          off
+      Position      [280, 930]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "CtrMode1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Constant
+      Name          "Constant2"
+      Show          on
+      Position      [215, 980]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Frame         [-10, -10; 10, 10]
+      Parameter {
+        Variable      "Value"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto18"
+      Show          off
+      Position      [280, 980]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "preOK"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Constant
+      Name          "Constant3"
+      Show          on
+      Position      [215, 1030]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Frame         [-10, -10; 10, 10]
+      Parameter {
+        Variable      "Value"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Constant
+      Name          "Constant4"
+      Show          on
+      Position      [215, 1080]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Frame         [-10, -10; 10, 10]
+      Parameter {
+        Variable      "Value"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Constant
+      Name          "Constant5"
+      Show          on
+      Position      [215, 1130]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Frame         [-10, -10; 10, 10]
+      Parameter {
+        Variable      "Value"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto19"
+      Show          off
+      Position      [280, 1030]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "xp_ChrgEna"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto20"
+      Show          off
+      Position      [280, 1080]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "HandShake"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          Goto
+      Name          "Goto21"
+      Show          off
+      Position      [280, 1130]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "CAN"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "2"
         Show          off
       }
     }
@@ -5260,6 +5480,41 @@ Plecs {
       DstComponent  base64 "5oWi546v6YC76L6R"
       DstTerminal   9
     }
+    Connection {
+      Type          Signal
+      SrcComponent  "Constant1"
+      SrcTerminal   1
+      DstComponent  "Goto17"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Constant2"
+      SrcTerminal   1
+      DstComponent  "Goto18"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Constant3"
+      SrcTerminal   1
+      DstComponent  "Goto19"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Constant4"
+      SrcTerminal   1
+      DstComponent  "Goto20"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Constant5"
+      SrcTerminal   1
+      DstComponent  "Goto21"
+      DstTerminal   1
+    }
     Annotation {
       Name          "<html><body>\n<p align=\"center\">+</p></body></html>"
       Position      [4425, 1995]
@@ -5285,4 +5540,4 @@ Plecs {
     MaxNumberOfThreads "-1"
   }
 }
-DemoSignature "CiC9OyuQ6F9tGiHHK1WSYe/3iO8q6DO69W4WQrN9wig="
+DemoSignature "vlWi1aqfIdMRMDK8YXho9UbMDdkIu+g0oGeLI0EAGXQ="

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pi_controller", "pi_controller\pi_controller.vcxproj", "{C1D2D2C6-9976-4B8E-BA6F-790A6249D7BD}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "llc_slow", "pi_controller\llc_slow.vcxproj", "{B2E8F4A1-7C3D-4E9F-A012-5D6C7B8A9E01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{C1D2D2C6-9976-4B8E-BA6F-790A6249D7BD}.Release|x64.Build.0 = Release|x64
 		{C1D2D2C6-9976-4B8E-BA6F-790A6249D7BD}.Release|x86.ActiveCfg = Release|Win32
 		{C1D2D2C6-9976-4B8E-BA6F-790A6249D7BD}.Release|x86.Build.0 = Release|Win32
+		{B2E8F4A1-7C3D-4E9F-A012-5D6C7B8A9E01}.Debug|x64.ActiveCfg = Debug|x64
+		{B2E8F4A1-7C3D-4E9F-A012-5D6C7B8A9E01}.Debug|x64.Build.0 = Debug|x64
+		{B2E8F4A1-7C3D-4E9F-A012-5D6C7B8A9E01}.Debug|x86.ActiveCfg = Debug|Win32
+		{B2E8F4A1-7C3D-4E9F-A012-5D6C7B8A9E01}.Debug|x86.Build.0 = Debug|Win32
+		{B2E8F4A1-7C3D-4E9F-A012-5D6C7B8A9E01}.Release|x64.ActiveCfg = Release|x64
+		{B2E8F4A1-7C3D-4E9F-A012-5D6C7B8A9E01}.Release|x64.Build.0 = Release|x64
+		{B2E8F4A1-7C3D-4E9F-A012-5D6C7B8A9E01}.Release|x86.ActiveCfg = Release|Win32
+		{B2E8F4A1-7C3D-4E9F-A012-5D6C7B8A9E01}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

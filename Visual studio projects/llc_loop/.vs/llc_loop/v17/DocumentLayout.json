@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\Visual studio projects\\llc_loop\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2C8F0D47-91AE-4B33-B6E1-0F7C5A9D2E44}|llc_slow.vcxproj|D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\Visual studio projects\\llc_loop\\core\\llc_slow_task.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2C8F0D47-91AE-4B33-B6E1-0F7C5A9D2E44}|llc_slow.vcxproj|solutionrelative:core\\llc_slow_task.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2C8F0D47-91AE-4B33-B6E1-0F7C5A9D2E44}|llc_slow.vcxproj|D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\Visual studio projects\\llc_loop\\adapters\\plecs_slow.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2C8F0D47-91AE-4B33-B6E1-0F7C5A9D2E44}|llc_slow.vcxproj|solutionrelative:adapters\\plecs_slow.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -39,6 +43,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "llc_slow_task.c",
+              "DocumentMoniker": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\Visual studio projects\\llc_loop\\core\\llc_slow_task.c",
+              "RelativeDocumentMoniker": "core\\llc_slow_task.c",
+              "ToolTip": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\Visual studio projects\\llc_loop\\core\\llc_slow_task.c",
+              "RelativeToolTip": "core\\llc_slow_task.c",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-09-11T12:36:01.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "plecs_slow.c",
               "DocumentMoniker": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\Visual studio projects\\llc_loop\\adapters\\plecs_slow.c",
               "RelativeDocumentMoniker": "adapters\\plecs_slow.c",
@@ -46,12 +63,11 @@
               "RelativeToolTip": "adapters\\plecs_slow.c",
               "ViewState": "AgIAADYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-09-11T07:38:44.683Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-11T07:38:44.683Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "plecs_fast.c",
               "DocumentMoniker": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\Visual studio projects\\llc_loop\\adapters\\plecs_fast.c",
               "RelativeDocumentMoniker": "adapters\\plecs_fast.c",
@@ -59,8 +75,7 @@
               "RelativeToolTip": "adapters\\plecs_fast.c",
               "ViewState": "AgIAABsAAAAAAAAAAAAAACoAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-09-11T07:29:20.554Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-11T07:29:20.554Z"
             }
           ]
         }

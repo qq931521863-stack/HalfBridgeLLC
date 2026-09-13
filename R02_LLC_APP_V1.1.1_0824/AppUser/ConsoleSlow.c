@@ -1,16 +1,19 @@
 
 #include "HwConfig.h"
+#ifndef PLECS_DLL
 #include "UpgradeFeatureConfig.h"
 #if OTA_UPGRADE_ENABLE
 #include "OtaGw.h"
 #endif
 #include "CanFdTxQueue.h"
+#endif
 
 DelayMS_t   Delay1ms;
 DataFlow_t  DataFlowFace;
 Driver_t    DriverPwm;
 void HAL_IncTick(void)
-{	
+{
+#ifndef PLECS_DLL
 	static uint16_t uartTime = 0;
 
 	uwTick += uwTickFreq;
@@ -54,10 +57,12 @@ void HAL_IncTick(void)
   CanFd_SysTickCanService();
 	RelayProtect();	
 	AuxProtect();
+#endif
 }
 
 void LEDShow(void)
 {
+#ifndef PLECS_DLL
 	static uint16_t fast,delay = 0;
 	delay++;
 	if(delay >= 320)delay = 0;
@@ -152,13 +157,15 @@ void LEDShow(void)
 		break;
 		default:break;
 	}
-	
+#endif
 }
 
 void UartCom(void)
 {
+#ifndef PLECS_DLL
 	Send_to_Pfc_info();
 	overTime_pfc();
+#endif
 }
 void interrupt_ADC1(void)
 {
@@ -192,8 +199,10 @@ void StateM(void)
 void StateMInit(void)
 {
   starLowIni();
+#ifndef PLECS_DLL
 	if(HAL_GPIO_ReadPin(PFC_OK_GPIO_Port, PFC_OK_Pin))DataFlowFace.PFC_ok = 1;
 	else DataFlowFace.PFC_ok = 0;	
+#endif
 	Ctrl_interFace.CtrMode = NoSelect;
 	PowerIniPidVar();
 
@@ -369,7 +378,7 @@ void ChargeFull(void)
 void StateMErr(void)
 {
   static uint16_t MerrCnt = 0;
-  DischargeOn();
+    DischargeOn();
 	LLC_Disable();
 	RelayOff();	
 	
@@ -510,7 +519,7 @@ void SHRTIMERdrive(void)
 //	{
 //		cnt = hhrtim1.Instance->sMasterRegs.MCNTR;
 //	}
-	
+#ifndef PLECS_DLL
 	hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_C].PERxR = pre;
 	hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].PERxR = pre;
 	hhrtim1.Instance->sMasterRegs.MPER = pre;
@@ -570,39 +579,54 @@ void SHRTIMERdrive(void)
 	if(DriverPwm.DrvL){DrvL_On();}
 	else {DrvL_Off();}		
 	if(DriverPwm.SynDrv){SarH_On();SarL_On();}
-	else {SarH_Off();SarL_Off();DriverPwm.Sr_Dtime = 0;}		
+	else {SarH_Off();SarL_Off();DriverPwm.Sr_Dtime = 0;}
+#else
+	if(DriverPwm.SynDrv == 0) DriverPwm.Sr_Dtime = 0;
+#endif
 	testDuty = DriverPwm.SynDrv;
 }
 
 void LLC_Disable(void)
 {
+#ifndef PLECS_DLL
 	HAL_GPIO_WritePin(LLC_OUT_GPIO_Port, LLC_OUT_Pin, GPIO_PIN_RESET);
+#endif
 	DataFlowFace.LLC_en = 0;
 }
 void LLC_Enable(void)
 {
+#ifndef PLECS_DLL
 	HAL_GPIO_WritePin(LLC_OUT_GPIO_Port, LLC_OUT_Pin, GPIO_PIN_SET);
+#endif
 	DataFlowFace.LLC_en = 1;
 }
 void RelayOn(void)
 {
+#ifndef PLECS_DLL
 	HAL_GPIO_WritePin(RELAY_CTAL_GPIO_Port, RELAY_CTAL_Pin, GPIO_PIN_SET);
+#endif
 	DataFlowFace.RelaySta = 1;
 }
 void RelayOff(void)
 {
+#ifndef PLECS_DLL
 	HAL_GPIO_WritePin(RELAY_CTAL_GPIO_Port, RELAY_CTAL_Pin, GPIO_PIN_RESET);
+#endif
 	DataFlowFace.RelaySta = 0;
 }
 
 void DischargeOn(void)
 {
+#ifndef PLECS_DLL
 	HAL_GPIO_WritePin(VOUT_FD_GPIO_Port, VOUT_FD_Pin, GPIO_PIN_SET);
+#endif
 	DataFlowFace.DisCharge = 1;
 }
 void DischargeOff(void)
 {
+#ifndef PLECS_DLL
 	HAL_GPIO_WritePin(VOUT_FD_GPIO_Port, VOUT_FD_Pin, GPIO_PIN_RESET);
+#endif
 	DataFlowFace.DisCharge = 0;
 }
 const float OutVconst[34]=

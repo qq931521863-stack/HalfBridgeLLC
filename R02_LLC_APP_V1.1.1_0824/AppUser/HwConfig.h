@@ -7,16 +7,22 @@
 #endif
 
 
+#ifdef PLECS_DLL
+#include "plecs_stub.h"
+#else
 #include "stm32g4xx_hal.h"
 #include "main.h"
+#endif
 #include <stdio.h>
 #include "string.h"
 #include "math.h"
 #include "mathR02.h"
+#ifndef PLECS_DLL
 #include "MODBUS_SLAVE.h"
 #include "CAN_Control_2800W.h"
 #include "operateStatus.h"
 #include "ProtectionLLC.h"
+#endif
 
 #define OUTPUT_POW_MAX          1650.0f
 #define OUTPUT_CUR_MAX          30.0f
@@ -76,6 +82,16 @@
 #define COM_FCUR_BASE           ((float)(HW_ADC_REF * HW_FANCUR_GAIN))/4095.0f	
 #define COM_AUX_BASE            ((float)(HW_ADC_REF * HW_AUX_GAIN ))/4095.0f	
 	
+#ifdef PLECS_DLL
+#define DrvH_On()
+#define DrvH_Off()
+#define DrvL_On()
+#define DrvL_Off()
+#define SarH_On()
+#define SarH_Off()
+#define SarL_On()
+#define SarL_Off()
+#else
 #define DrvH_On()   {GPIOB->MODER &= 0XF3FFFFFF; GPIOB->MODER |= 0X08000000;}  //
 #define DrvH_Off()  {GPIOB->MODER &= 0XF3FFFFFF; GPIOB->MODER |= 0X04000000;GPIOB->BRR = (uint32_t)GPIO_PIN_13;}
 #define DrvL_On()   {GPIOB->MODER &= 0XFCFFFFFF; GPIOB->MODER |= 0X02000000;}  //
@@ -85,6 +101,7 @@
 #define SarH_Off()  {GPIOB->MODER &= 0XCFFFFFFF; GPIOB->MODER |= 0X10000000;GPIOB->BRR = (uint32_t)GPIO_PIN_14;}
 #define SarL_On()   {GPIOB->MODER &= 0X3FFFFFFF; GPIOB->MODER |= 0X80000000;}  //
 #define SarL_Off()  {GPIOB->MODER &= 0X3FFFFFFF; GPIOB->MODER |= 0X40000000;GPIOB->BRR = (uint32_t)GPIO_PIN_15;}
+#endif
 #define PI_FLOAT    3.141592653f
 
 typedef struct 

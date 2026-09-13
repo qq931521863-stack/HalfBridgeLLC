@@ -105,22 +105,22 @@ static uint8_t Air_BinaryTableSearch( uint16_t adc_val )
 void ADC0_Sample(void)	
 {
   float adc_temp;
-	
-	//���ֱ����ѹ
+#ifndef PLECS_DLL
 	adc_temp = (float)ADC0_Buffer[0];
 	ADSample_Info.vOut_Rly_adc = (float)adc_temp * COM_VOUT_BASE;	
-	//��ص�ѹ
 	adc_temp = (float)ADC0_Buffer[1];
 	ADSample_Info.vOut_Bat_adc = (float)adc_temp * COM_VOUT_BASE;	
-  //�������
 	adc_temp = (float)ADC0_Buffer[2];
 	ADSample_Info.iOut_Bat_adc = (float)adc_temp * COM_IOUT_BASE;	
-	
+#else
+	(void)adc_temp;
+#endif
 	ADSample_Info.iOut_Bat_FIR = ADSample_Info.iOut_Bat_FIR * 0.999f + ADSample_Info.iOut_Bat_adc * 0.001f;
 	ADSample_Info.vOut_Bat_FIR = ADSample_Info.vOut_Bat_FIR * 0.999f + ADSample_Info.vOut_Bat_adc * 0.001f;
 }	
 void ADC2_Sample(void)	
 {
+#ifndef PLECS_DLL
   float adc_temp;
 	uint16_t temp;
 	
@@ -156,10 +156,12 @@ void ADC2_Sample(void)
   // 12V��Դ
 	adc_temp = (float)ADC0_Buffer[3] * COM_AUX_BASE;
 	ADSample_Info.AuxVolt= ADSample_Info.AuxVolt * 0.9372f + adc_temp *0.0628f;	
+#endif
 }	
 
 void HAL_COMP_SR(void)
 {
+#ifndef PLECS_DLL
 	if(LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_22) != 0UL)
 	{
 		LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_22);
@@ -172,5 +174,6 @@ void HAL_COMP_SR(void)
 	{
 	  LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_29);
 	}
+#endif
 }
 

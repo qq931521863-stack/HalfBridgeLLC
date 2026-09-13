@@ -73,9 +73,11 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;PICONTROLLER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>PLECS_DLL;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;PICONTROLLER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)stub;$(ProjectDir)..\..\..\R02_LLC_APP_V1.1.1_0824\AppUser;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;4101;4189;4018;4456;4100;4204;4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -88,9 +90,11 @@
       <WarningLevel>Level3</WarningLevel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;PICONTROLLER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>PLECS_DLL;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;PICONTROLLER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)stub;$(ProjectDir)..\..\..\R02_LLC_APP_V1.1.1_0824\AppUser;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;4101;4189;4018;4456;4100;4204;4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -103,9 +107,11 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;PICONTROLLER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>PLECS_DLL;_CRT_SECURE_NO_WARNINGS;_DEBUG;PICONTROLLER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)stub;$(ProjectDir)..\..\..\R02_LLC_APP_V1.1.1_0824\AppUser;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;4101;4189;4018;4456;4100;4204;4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -118,9 +124,11 @@
       <WarningLevel>Level3</WarningLevel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;PICONTROLLER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>PLECS_DLL;_CRT_SECURE_NO_WARNINGS;NDEBUG;PICONTROLLER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)stub;$(ProjectDir)..\..\..\R02_LLC_APP_V1.1.1_0824\AppUser;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;4101;4189;4018;4456;4100;4204;4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -132,11 +140,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="DllHeader.h" />
+    <ClInclude Include="stub\plecs_stub.h" />
+    <ClInclude Include="..\..\..\R02_LLC_APP_V1.1.1_0824\AppUser\HwConfig.h" />
+    <ClInclude Include="..\..\..\R02_LLC_APP_V1.1.1_0824\AppUser\mathR02.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HwConfig.h" />
     <ClCompile Include="main.c" />
-    <ClCompile Include="type.h" />
+    <ClCompile Include="stub\plecs_stub.c" />
+    <ClCompile Include="..\..\..\R02_LLC_APP_V1.1.1_0824\AppUser\mathR02.c" />
+    <ClCompile Include="..\..\..\R02_LLC_APP_V1.1.1_0824\AppUser\ConsoleFast.c" />
+    <ClCompile Include="..\..\..\R02_LLC_APP_V1.1.1_0824\AppUser\ConsoleSlow.c" />
+    <ClCompile Include="..\..\..\R02_LLC_APP_V1.1.1_0824\AppUser\user_sample.c" />
+    <ClCompile Include="..\..\..\R02_LLC_APP_V1.1.1_0824\AppUser\Sr_Handle.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

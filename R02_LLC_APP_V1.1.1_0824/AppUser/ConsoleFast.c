@@ -6,9 +6,12 @@ void HandleFast(void)
 {
 	static float vtemp = 0;
 	float adc_temp,err = 0,temp = 0;	
+#ifndef PLECS_DLL
 	if(HAL_GPIO_ReadPin(PFC_OK_GPIO_Port, PFC_OK_Pin))DataFlowFace.PFC_ok = 1;
 	else DataFlowFace.PFC_ok = 0;
+#endif
 	SampleLpfHandle();
+#ifndef PLECS_DLL
   	SwOCP();  
 //	HwProtect();
 	if(HwprotectData.OvFault == 0)
@@ -59,6 +62,12 @@ void HandleFast(void)
 	{
 		DataFlowFace.FaultSta.bit.Out_ov = 1;	
 	}
+#else
+	(void)vtemp;
+	(void)adc_temp;
+	(void)err;
+	(void)temp;
+#endif
 	if(DataFlowFace.FaultSta.all)
 	{
 		DischargeOn();
