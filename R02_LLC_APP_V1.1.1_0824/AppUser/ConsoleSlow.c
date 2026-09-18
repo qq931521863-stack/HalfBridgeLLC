@@ -466,7 +466,7 @@ void PwmClose(void)
 //}
 void SHRTIMERdrive(void)
 {
-	uint16_t preA,pre,half,temp,bemp,duty,cnt;	
+	uint16_t preA,pre,half,temp,bemp,duty = 0,cnt;	
 	float time1;
 	preA = (uint16_t)(SHRTIMER_PLV / DriverPwm.Plv);
 	pre = preA & 0xfffc;
@@ -582,6 +582,81 @@ void SHRTIMERdrive(void)
 	else {SarH_Off();SarL_Off();DriverPwm.Sr_Dtime = 0;}
 #else
 	if(DriverPwm.SynDrv == 0) DriverPwm.Sr_Dtime = 0;
+	{
+		uint16_t tc1_on, tc1_off, tc2_on, tc2_off;
+		uint16_t td1_on = 0, td1_off = 0, td3_on = 0, td3_off = 0;
+		float inv = 0.0f;
+
+		if(Ctrl_interFace.CtrMode == OvLoadPFM)
+		{
+			tc1_on  = LLC_DEADTIME;
+			tc1_off = half - LLC_DEADTIME;
+			tc2_on  = half + LLC_DEADTIME;
+			tc2_off = pre - LLC_DEADTIME;
+		}
+		else
+		{
+			tc1_on  = temp - duty;
+			tc1_off = temp + duty;
+			tc2_on  = bemp - duty;
+			tc2_off = bemp + duty;
+		}
+		if(pre > 0)
+		{
+			inv = 1.0f / (float)pre;
+			PlecsPwmWin.PwmOn1  = (float)tc1_on  * inv;
+			PlecsPwmWin.PwmOff1 = (float)tc1_off * inv;
+			PlecsPwmWin.PwmOn2  = (float)tc2_on  * inv;
+			PlecsPwmWin.PwmOff2 = (float)tc2_off * inv;
+		}
+		else
+		{
+			PlecsPwmWin.PwmOn1  = 0.0f;
+			PlecsPwmWin.PwmOff1 = 0.0f;
+			PlecsPwmWin.PwmOn2  = 0.0f;
+			PlecsPwmWin.PwmOff2 = 0.0f;
+		}
+
+		if(DriverPwm.SynDrv == 0)
+		{
+			PlecsSrWin.SrOn1 = 0.0f;
+			PlecsSrWin.SrOff1 = 0.0f;
+			PlecsSrWin.SrOn2 = 0.0f;
+			PlecsSrWin.SrOff2 = 0.0f;
+			PlecsSrWin.SrA_s = 0.0f;
+			PlecsSrWin.SrB_s = 0.0f;
+			PlecsSrWin.SrD_s = 0.0f;
+		}
+		else
+		{
+			if(Ctrl_interFace.CtrMode == OvLoadPFM)
+			{
+				td1_on  = half + temp;
+				td1_off = half + bemp;
+				td3_on  = temp;
+				td3_off = bemp;
+			}
+			else
+			{
+				time1 = bemp - duty + DriverPwm.Sr_Atime;
+				td1_on  = (uint16_t)time1;
+				td1_off = bemp + duty;
+				time1 = temp - duty + DriverPwm.Sr_Atime;
+				td3_on  = (uint16_t)time1;
+				td3_off = (uint16_t)(time1 + DriverPwm.DrvDtime);
+			}
+			if(pre > 0)
+			{
+				PlecsSrWin.SrOn1  = (float)td3_on  * inv;
+				PlecsSrWin.SrOff1 = (float)td3_off * inv;
+				PlecsSrWin.SrOn2  = (float)td1_on  * inv;
+				PlecsSrWin.SrOff2 = (float)td1_off * inv;
+			}
+			PlecsSrWin.SrA_s = (float)DriverPwm.Sr_Atime / (float)SHRTIMER_PLV;
+			PlecsSrWin.SrB_s = (float)DriverPwm.Sr_Btime / (float)SHRTIMER_PLV;
+			PlecsSrWin.SrD_s = DriverPwm.Sr_Dtime / (float)SHRTIMER_PLV;
+		}
+	}
 #endif
 	testDuty = DriverPwm.SynDrv;
 }

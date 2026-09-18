@@ -3,10 +3,10 @@
   "WorkspaceRootPath": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\Visual studio projects\\pi_controller\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C1D2D2C6-9976-4B8E-BA6F-790A6249D7BD}|pi_controller\\pi_controller.vcxproj|D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleSlow.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C1D2D2C6-9976-4B8E-BA6F-790A6249D7BD}|pi_controller\\pi_controller.vcxproj|D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleFast.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1D2D2C6-9976-4B8E-BA6F-790A6249D7BD}|pi_controller\\pi_controller.vcxproj|D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleFast.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{C1D2D2C6-9976-4B8E-BA6F-790A6249D7BD}|pi_controller\\pi_controller.vcxproj|D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleSlow.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -16,7 +16,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -36,26 +36,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ConsoleSlow.c",
               "DocumentMoniker": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleSlow.c",
               "RelativeDocumentMoniker": "..\\..\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleSlow.c",
               "ToolTip": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleSlow.c",
               "RelativeToolTip": "..\\..\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleSlow.c",
-              "ViewState": "AgIAAD4CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABgBAAAAAAAAAAAAAHkBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2026-09-11T12:44:47.99Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ConsoleFast.c",
               "DocumentMoniker": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleFast.c",
               "RelativeDocumentMoniker": "..\\..\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleFast.c",
               "ToolTip": "D:\\Work\\1600W\\\u4EE3\u7801\u5206\u6790\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleFast.c",
               "RelativeToolTip": "..\\..\\R02_LLC_APP_V1.1.1_0824\\AppUser\\ConsoleFast.c",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAD8AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2026-09-11T12:44:24.514Z",
               "EditorCaption": ""

@@ -83,6 +83,26 @@ typedef struct {
 
 extern pfc_DataFlow_t pfc_DataFlowFace;
 
+typedef struct {
+	float SrOn1;
+	float SrOff1;
+	float SrOn2;
+	float SrOff2;
+	float SrA_s;
+	float SrB_s;
+	float SrD_s;
+} PlecsSrWin_t;
+
+typedef struct {
+	float PwmOn1;
+	float PwmOff1;
+	float PwmOn2;
+	float PwmOff2;
+} PlecsPwmWin_t;
+
+extern PlecsSrWin_t PlecsSrWin;
+extern PlecsPwmWin_t PlecsPwmWin;
+
 #ifdef __cplusplus
 }
 #endif

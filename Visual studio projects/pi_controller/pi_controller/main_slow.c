@@ -104,12 +104,23 @@ DLLEXPORT void plecsOutput(struct SimulationState* aState)
 	else if (gSys_State.xp_HandShake == 2)
 	{
 		gCAN_DATA.sPMS_ChrgMsg0_Data.PMS_ChrgEna = gSys_State.xp_ChrgEna;
-		gSys_State.xp_CVmode = 1;
+		gCAN_DATA.sPMS_ChrgMsg0_Data.PMS_CVModeReq = 1;
+		gSys_State.xpRx_CVmode = 1;
+		gSys_State.xp_CVmode = 2;
 	}
 
+	/* PLECS only: map CAN bits to slow-loop states. Keil uses operateStatus. */
 	if (gSys_State.xp_ChrgEna == 1)
 	{
 		DataFlowFace.RunState = Charging;
+	}
+	else if (gSys_State.xp_HandShake == 0)
+	{
+		DataFlowFace.RunState = Wakeup;
+	}
+	else
+	{
+		DataFlowFace.RunState = Stadby;
 	}
 
 	if (aState->time != s_last_time)

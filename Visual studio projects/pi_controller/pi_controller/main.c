@@ -16,6 +16,17 @@
 #define OUT_DRVL        aState->outputs[3]
 #define OUT_PLV         aState->outputs[4]
 #define OUT_CTRMODE     aState->outputs[5]
+#define OUT_SRON1       aState->outputs[6]
+#define OUT_SROFF1      aState->outputs[7]
+#define OUT_SRON2       aState->outputs[8]
+#define OUT_SROFF2      aState->outputs[9]
+#define OUT_SRA         aState->outputs[10]
+#define OUT_SRB         aState->outputs[11]
+#define OUT_SRD         aState->outputs[12]
+#define OUT_PWMON1      aState->outputs[13]
+#define OUT_PWMOFF1     aState->outputs[14]
+#define OUT_PWMON2      aState->outputs[15]
+#define OUT_PWMOFF2     aState->outputs[16]
 
 static double s_last_time = -1.0;
 
@@ -38,7 +49,7 @@ static void WriteCanFromPhysical(float volt_v, float curr_a)
 DLLEXPORT void plecsSetSizes(struct SimulationSizes* aSizes)
 {
 	aSizes->numInputs = 8;
-	aSizes->numOutputs = 6;
+	aSizes->numOutputs = 17;
 	aSizes->numStates = 0;
 	aSizes->numParameters = 0;
 }
@@ -58,6 +69,8 @@ DLLEXPORT void plecsStart(struct SimulationState* aState)
 	memset(&HwOtpStr, 0, sizeof(HwOtpStr));
 	memset(&pfc_DataFlowFace, 0, sizeof(pfc_DataFlowFace));
 	memset(&Delay1ms, 0, sizeof(Delay1ms));
+	memset(&PlecsSrWin, 0, sizeof(PlecsSrWin));
+	memset(&PlecsPwmWin, 0, sizeof(PlecsPwmWin));
 
 	PowerIniPidVar();
 	pfc_DataFlowFace.ACinVolRmsFir = 220.0f;
@@ -76,6 +89,17 @@ DLLEXPORT void plecsOutput(struct SimulationState* aState)
 		OUT_DRVL = 0.0;
 		OUT_PLV = DriverPwm.Plv;
 		OUT_CTRMODE = (double)Ctrl_interFace.CtrMode;
+		OUT_SRON1 = 0.0;
+		OUT_SROFF1 = 0.0;
+		OUT_SRON2 = 0.0;
+		OUT_SROFF2 = 0.0;
+		OUT_SRA = 0.0;
+		OUT_SRB = 0.0;
+		OUT_SRD = 0.0;
+		OUT_PWMON1 = 0.0;
+		OUT_PWMOFF1 = 0.0;
+		OUT_PWMON2 = 0.0;
+		OUT_PWMOFF2 = 0.0;
 		return;
 	}
 
@@ -116,4 +140,15 @@ DLLEXPORT void plecsOutput(struct SimulationState* aState)
 	OUT_DRVL = DriverPwm.DrvL;
 	OUT_PLV = DriverPwm.Plv;
 	OUT_CTRMODE = (double)Ctrl_interFace.CtrMode;
+	OUT_SRON1 = PlecsSrWin.SrOn1;
+	OUT_SROFF1 = PlecsSrWin.SrOff1;
+	OUT_SRON2 = PlecsSrWin.SrOn2;
+	OUT_SROFF2 = PlecsSrWin.SrOff2;
+	OUT_SRA = PlecsSrWin.SrA_s;
+	OUT_SRB = PlecsSrWin.SrB_s;
+	OUT_SRD = PlecsSrWin.SrD_s;
+	OUT_PWMON1 = PlecsPwmWin.PwmOn1;
+	OUT_PWMOFF1 = PlecsPwmWin.PwmOff1;
+	OUT_PWMON2 = PlecsPwmWin.PwmOn2;
+	OUT_PWMOFF2 = PlecsPwmWin.PwmOff2;
 }

@@ -1,9 +1,0 @@
-xpllc474_v0.1\hostprogstatusinit.o: ..\common\HostProgStatusInit.c
-xpllc474_v0.1\hostprogstatusinit.o: ../AppUser/UpgradeFeatureConfig.h
-xpllc474_v0.1\hostprogstatusinit.o: ..\common\HostProgStatusInit.h
-xpllc474_v0.1\hostprogstatusinit.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-xpllc474_v0.1\hostprogstatusinit.o: ../User/UpgradeMsgSaveFunctionDf.h
-xpllc474_v0.1\hostprogstatusinit.o: ../common/HostFlashMemoryMap.h
-xpllc474_v0.1\hostprogstatusinit.o: ../common/HostBootState.h
-xpllc474_v0.1\hostprogstatusinit.o: ..\common\HostSlotValidate.h
-xpllc474_v0.1\hostprogstatusinit.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

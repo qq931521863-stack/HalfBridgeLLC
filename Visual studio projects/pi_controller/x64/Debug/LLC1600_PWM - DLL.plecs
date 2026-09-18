@@ -54,9 +54,9 @@ Plecs {
   ScriptsDialogGeometry "[764 395 446 243]"
   ScriptsDialogSplitterPos "95"
   Schematic {
-    Location      [0, 24; 1536, 871]
-    ZoomFactor    1.03661
-    SliderPosition [-1, 649]
+    Location      [0, 23; 1536, 870]
+    ZoomFactor    0.691704
+    SliderPosition [56, 285]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -1430,7 +1430,7 @@ Plecs {
         Direction     right
       }
       Schematic {
-        Location      [0, 23; 1536, 870]
+        Location      [0, 24; 1536, 871]
         ZoomFactor    0.999998
         SliderPosition [0, 0]
         ShowBrowser   off
@@ -3298,7 +3298,7 @@ Plecs {
         Direction     left
       }
       Schematic {
-        Location      [769, 30; 1535, 413]
+        Location      [492, 74; 1258, 642]
         ZoomFactor    1.14437
         SliderPosition [0, 0]
         ShowBrowser   off
@@ -3307,7 +3307,7 @@ Plecs {
           Type          Input
           Name          "vOut_Rly_adc"
           Show          on
-          Position      [90, 35]
+          Position      [85, 120]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -3326,7 +3326,7 @@ Plecs {
           Type          Output
           Name          "CtrMode1"
           Show          on
-          Position      [510, 35]
+          Position      [505, 120]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -3345,7 +3345,7 @@ Plecs {
           Type          Dll
           Name          "DLL"
           Show          on
-          Position      [300, 70]
+          Position      [295, 155]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -3357,12 +3357,12 @@ Plecs {
           }
           Parameter {
             Variable      "SampleTime"
-            Value         "1/1e3"
+            Value         "1/5e3"
             Show          off
           }
           Parameter {
             Variable      "OutputDelay"
-            Value         "0"
+            Value         "1e-9"
             Show          off
           }
           Parameter {
@@ -3375,7 +3375,7 @@ Plecs {
           Type          SignalMux
           Name          "Mux"
           Show          off
-          Position      [220, 70]
+          Position      [215, 155]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -3389,7 +3389,7 @@ Plecs {
           Type          SignalDemux
           Name          "Demux"
           Show          off
-          Position      [375, 70]
+          Position      [370, 155]
           Direction     right
           Flipped       on
           LabelPosition south
@@ -3403,7 +3403,7 @@ Plecs {
           Type          Output
           Name          "Volt_Ref"
           Show          on
-          Position      [510, 70]
+          Position      [505, 155]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -3422,7 +3422,7 @@ Plecs {
           Type          Input
           Name          "iOut_Bat_adc"
           Show          on
-          Position      [90, 95]
+          Position      [85, 180]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -3441,7 +3441,7 @@ Plecs {
           Type          Input
           Name          "CtrMode"
           Show          on
-          Position      [90, 125]
+          Position      [85, 210]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -3460,7 +3460,7 @@ Plecs {
           Type          Input
           Name          "preOK"
           Show          on
-          Position      [90, 155]
+          Position      [85, 240]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -3479,7 +3479,7 @@ Plecs {
           Type          Input
           Name          "xp_ChrgEna"
           Show          on
-          Position      [90, 185]
+          Position      [85, 270]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -3498,7 +3498,7 @@ Plecs {
           Type          Input
           Name          "xp_HandShake"
           Show          on
-          Position      [90, 215]
+          Position      [85, 300]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -3517,7 +3517,7 @@ Plecs {
           Type          Input
           Name          "CAN"
           Show          on
-          Position      [90, 245]
+          Position      [85, 330]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -3536,7 +3536,7 @@ Plecs {
           Type          Output
           Name          "CurrentMax"
           Show          on
-          Position      [510, 110]
+          Position      [505, 195]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -3555,7 +3555,7 @@ Plecs {
           Type          Output
           Name          "xp_HandShake1"
           Show          on
-          Position      [510, 155]
+          Position      [505, 240]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -3574,7 +3574,7 @@ Plecs {
           Type          Output
           Name          "RelaySta"
           Show          on
-          Position      [510, 195]
+          Position      [505, 280]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -3593,7 +3593,7 @@ Plecs {
           Type          Output
           Name          "DisCharge"
           Show          on
-          Position      [510, 230]
+          Position      [505, 315]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -3612,7 +3612,7 @@ Plecs {
           Type          Input
           Name          "vOut_Bat_adc"
           Show          on
-          Position      [90, 65]
+          Position      [85, 150]
           Direction     right
           Flipped       off
           LabelPosition south
@@ -3645,7 +3645,7 @@ Plecs {
           Type          Signal
           SrcComponent  "vOut_Bat_adc"
           SrcTerminal   1
-          Points        [125, 65; 125, 45]
+          Points        [120, 150; 120, 130]
           DstComponent  "Mux"
           DstTerminal   3
         }
@@ -3653,7 +3653,7 @@ Plecs {
           Type          Signal
           SrcComponent  "Demux"
           SrcTerminal   2
-          Points        [465, 45; 465, 35]
+          Points        [460, 130; 460, 120]
           DstComponent  "CtrMode1"
           DstTerminal   1
         }
@@ -3661,7 +3661,7 @@ Plecs {
           Type          Signal
           SrcComponent  "Demux"
           SrcTerminal   3
-          Points        [465, 55; 465, 70]
+          Points        [460, 140; 460, 155]
           DstComponent  "Volt_Ref"
           DstTerminal   1
         }
@@ -3676,7 +3676,7 @@ Plecs {
           Type          Signal
           SrcComponent  "iOut_Bat_adc"
           SrcTerminal   1
-          Points        [135, 95; 135, 55]
+          Points        [130, 180; 130, 140]
           DstComponent  "Mux"
           DstTerminal   4
         }
@@ -3684,7 +3684,7 @@ Plecs {
           Type          Signal
           SrcComponent  "CtrMode"
           SrcTerminal   1
-          Points        [145, 125; 145, 65]
+          Points        [140, 210; 140, 150]
           DstComponent  "Mux"
           DstTerminal   5
         }
@@ -3692,7 +3692,7 @@ Plecs {
           Type          Signal
           SrcComponent  "preOK"
           SrcTerminal   1
-          Points        [155, 155; 155, 75]
+          Points        [150, 240; 150, 160]
           DstComponent  "Mux"
           DstTerminal   6
         }
@@ -3700,7 +3700,7 @@ Plecs {
           Type          Signal
           SrcComponent  "xp_ChrgEna"
           SrcTerminal   1
-          Points        [165, 185; 165, 85]
+          Points        [160, 270; 160, 170]
           DstComponent  "Mux"
           DstTerminal   7
         }
@@ -3708,7 +3708,7 @@ Plecs {
           Type          Signal
           SrcComponent  "xp_HandShake"
           SrcTerminal   1
-          Points        [175, 215; 175, 95]
+          Points        [170, 300; 170, 180]
           DstComponent  "Mux"
           DstTerminal   8
         }
@@ -3716,7 +3716,7 @@ Plecs {
           Type          Signal
           SrcComponent  "CAN"
           SrcTerminal   1
-          Points        [185, 245; 185, 105]
+          Points        [180, 330; 180, 190]
           DstComponent  "Mux"
           DstTerminal   9
         }
@@ -3724,7 +3724,7 @@ Plecs {
           Type          Signal
           SrcComponent  "Demux"
           SrcTerminal   4
-          Points        [460, 65; 460, 110]
+          Points        [455, 150; 455, 195]
           DstComponent  "CurrentMax"
           DstTerminal   1
         }
@@ -3732,7 +3732,7 @@ Plecs {
           Type          Signal
           SrcComponent  "Demux"
           SrcTerminal   5
-          Points        [455, 75; 455, 155]
+          Points        [450, 160; 450, 240]
           DstComponent  "xp_HandShake1"
           DstTerminal   1
         }
@@ -3740,7 +3740,7 @@ Plecs {
           Type          Signal
           SrcComponent  "Demux"
           SrcTerminal   6
-          Points        [450, 85; 450, 195]
+          Points        [445, 170; 445, 280]
           DstComponent  "RelaySta"
           DstTerminal   1
         }
@@ -3748,7 +3748,7 @@ Plecs {
           Type          Signal
           SrcComponent  "Demux"
           SrcTerminal   7
-          Points        [445, 95; 445, 230]
+          Points        [440, 180; 440, 315]
           DstComponent  "DisCharge"
           DstTerminal   1
         }
@@ -5540,4 +5540,4 @@ Plecs {
     MaxNumberOfThreads "-1"
   }
 }
-DemoSignature "vlWi1aqfIdMRMDK8YXho9UbMDdkIu+g0oGeLI0EAGXQ="
+DemoSignature "HAJ6Iiu9zhcDIQRRMakDvaro0qrJUthoaNXm/kLkurM="
