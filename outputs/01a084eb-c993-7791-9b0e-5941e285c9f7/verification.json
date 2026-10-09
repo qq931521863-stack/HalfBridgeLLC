@@ -1,0 +1,12 @@
+{
+  "checks": {
+    "tasks": 76,
+    "stages": 12,
+    "mustKnow": 27,
+    "firstSuggestion": "S01-01",
+    "passed": 0,
+    "startHours": 70.83333333333333,
+    "allSourcesExist": true
+  },
+  "errorScan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}"
+}
