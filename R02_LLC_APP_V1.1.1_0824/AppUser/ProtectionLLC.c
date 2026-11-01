@@ -268,8 +268,7 @@ uint16_t OTP_Compare(uint8_t level)
 		{
 			d |= 1 << i;
 		}
-	}
-	
+	}	
 	if(u)
 	{
 		n = 1;
@@ -286,7 +285,7 @@ uint16_t OTP_Compare(uint8_t level)
 void OTP_Protection(void)
 {	
 	static uint16_t RelayNum = 0;
-	uint8_t i = 0;
+//	uint8_t i = 0;
 	if(DataFlowFace.RelaySta)
 	{
 		RelayNum++;

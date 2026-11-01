@@ -1374,7 +1374,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOC, VOUT_FD_Pin|LED_OUT2_Pin|LED_OUT1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, RELAY_CTAL_Pin|SPI1_CS_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, RELAY_CTAL_Pin|SPI1_CS_Pin|GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LED_OUT3_GPIO_Port, LED_OUT3_Pin, GPIO_PIN_RESET);
@@ -1389,12 +1389,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : RELAY_CTAL_Pin SPI1_CS_Pin */
-  GPIO_InitStruct.Pin = RELAY_CTAL_Pin|SPI1_CS_Pin;
+  /*Configure GPIO pins : RELAY_CTAL_Pin SPI1_CS_Pin，PB14/PB15 为同步整流，保持输出低 */
+  GPIO_InitStruct.Pin = RELAY_CTAL_Pin|SPI1_CS_Pin|GPIO_PIN_14|GPIO_PIN_15;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  HAL_GPIO_WritePin(GPIOB, RELAY_CTAL_Pin|SPI1_CS_Pin|GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : LED_OUT3_Pin */
   GPIO_InitStruct.Pin = LED_OUT3_Pin;

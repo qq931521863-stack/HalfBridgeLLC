@@ -80,7 +80,11 @@
 #define COM_IOUT_BASE           ((float)(HW_ADC_REF * HW_IOUT_GAIN))/4095.0f
 #define COM_VREF_BASE           ((float)(HW_ADC_REF * HW_VREF_GAIN))/4095.0f	
 #define COM_FCUR_BASE           ((float)(HW_ADC_REF * HW_FANCUR_GAIN))/4095.0f	
-#define COM_AUX_BASE            ((float)(HW_ADC_REF * HW_AUX_GAIN ))/4095.0f	
+#define COM_AUX_BASE            ((float)(HW_ADC_REF * HW_AUX_GAIN ))/4095.0f
+
+/* 副边同步管关闭。0 时 Sar*_On 与 Off 相同，引脚维持 GPIO 低。
+   比较值在 SHRTIMERdrive() 里已固定为关断窄脉冲，只改本宏不会恢复发波。 */
+#define LLC_SR_ENABLE           0
 	
 #ifdef PLECS_DLL
 #define DrvH_On()
@@ -97,10 +101,15 @@
 #define DrvL_On()   {GPIOB->MODER &= 0XFCFFFFFF; GPIOB->MODER |= 0X02000000;}  //
 #define DrvL_Off()  {GPIOB->MODER &= 0XFCFFFFFF; GPIOB->MODER |= 0X01000000;GPIOB->BRR = (uint32_t)GPIO_PIN_12;}
 
-#define SarH_On()   {GPIOB->MODER &= 0XCFFFFFFF; GPIOB->MODER |= 0X20000000;}  //
 #define SarH_Off()  {GPIOB->MODER &= 0XCFFFFFFF; GPIOB->MODER |= 0X10000000;GPIOB->BRR = (uint32_t)GPIO_PIN_14;}
-#define SarL_On()   {GPIOB->MODER &= 0X3FFFFFFF; GPIOB->MODER |= 0X80000000;}  //
 #define SarL_Off()  {GPIOB->MODER &= 0X3FFFFFFF; GPIOB->MODER |= 0X40000000;GPIOB->BRR = (uint32_t)GPIO_PIN_15;}
+#if LLC_SR_ENABLE
+#define SarH_On()   {GPIOB->MODER &= 0XCFFFFFFF; GPIOB->MODER |= 0X20000000;}
+#define SarL_On()   {GPIOB->MODER &= 0X3FFFFFFF; GPIOB->MODER |= 0X80000000;}
+#else
+#define SarH_On()   SarH_Off()
+#define SarL_On()   SarL_Off()
+#endif
 #endif
 #define PI_FLOAT    3.141592653f
 

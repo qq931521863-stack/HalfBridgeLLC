@@ -18,11 +18,11 @@ Chrgr_ChrgMsg0_Data sChrgMsg0;
 /*********************************版*本*号**********************************************/
 /***************************************************************************************/
 /***************************************************************************************/
-const char Set_Chrgr_AppRevs[3] = {'1','1','1'};
+const char Set_Chrgr_AppRevs[3] = {'1','1','8'};
 const char Set_Chrgr_BootLoadRevs[3] = {'B','.','1'};
 const char Set_Chrgr_HardWareRevs[3] = {'H','.','2'};
-const char Set_Chrgr_PartNumberRevs1[8] = {'P','7','0','1','0','0','2','R'};
-const char Set_Chrgr_PartNumberRevs2[6] = {'B','1','0','2','0','0'};
+const char Set_Chrgr_PartNumberRevs1[8] = {'P','7','0','1','0','0','4','R'}; //P701004RB10100
+const char Set_Chrgr_PartNumberRevs2[6] = {'B','1','0','1','0','0'};
 
 void configCANFD(void){
 	FDCAN_FilterTypeDef sFilterConfig;

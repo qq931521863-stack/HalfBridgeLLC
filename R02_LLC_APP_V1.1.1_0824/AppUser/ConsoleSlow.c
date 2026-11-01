@@ -466,125 +466,61 @@ void PwmClose(void)
 //}
 void SHRTIMERdrive(void)
 {
-	uint16_t preA,pre,half,temp,bemp,duty = 0,cnt;	
-	float time1;
+	uint16_t preA,pre,half,temp = 0,bemp = 0,duty = 0;
 	preA = (uint16_t)(SHRTIMER_PLV / DriverPwm.Plv);
 	pre = preA & 0xfffc;
-	half = pre >> 1;		
+	half = pre >> 1;
 
-	if(Ctrl_interFace.CtrMode == OvLoadPFM)  //psm
-	{
-	  time1 = half - (LLC_DEADTIME * 2.0f) -  DriverPwm.Sr_Atime - DriverPwm.Sr_Btime;
-	  DriverPwm.Sr_Dtime = DriverPwm.Sr_Dtime * 0.999f + time1 * 0.001f;
-	  if(DriverPwm.Sr_Dtime > time1)DriverPwm.Sr_Dtime = time1;	
-	  DriverPwm.DrvDtime = (uint16_t)DriverPwm.Sr_Dtime;
-	  temp = LLC_DEADTIME + DriverPwm.Sr_Atime;
-	  bemp = temp + DriverPwm.DrvDtime;			
-	}else 
+	/* 同步整流关闭。原边定时器 C 照常更新；副边只留窄脉冲，引脚保持 GPIO 低。 */
+	DriverPwm.SynDrv = 0;
+	DriverPwm.Sr_Atime = 0;
+	DriverPwm.Sr_Btime = 0;
+	DriverPwm.Sr_Dtime = 0;
+	DriverPwm.DrvDtime = 0;
+
+	if(Ctrl_interFace.CtrMode != OvLoadPFM)
 	{
 		temp = pre >> 2;
 		bemp = pre - temp;
-		time1 = ((float)half) * DriverPwm.Duty;		
-		duty = (uint16_t)(time1);	
-    if((Ctrl_interFace.CtrMode == ConCurPWM)||(Ctrl_interFace.CtrMode == PwmHold))
-		{
-			if(DriverPwm.SynDrv && DriverPwm.DrvH)
-			{
-        DriverPwm.Sr_Atime = 200.0f;	//0.68ns * 200		
-				time1 = time1 * 2.0f - DriverPwm.Sr_Atime;  //同步管开通时间
-				if(time1 < 150.0f)
-				{
-					time1 = 0;
-					DriverPwm.SynDrv = 0;
-					DriverPwm.Sr_Dtime = 0;
-				}				
-			}else
-			{
-				time1 = 0;
-				DriverPwm.SynDrv = 0;
-				DriverPwm.Sr_Dtime = 0;
-			}
-		}else
-		{
-			time1 = 0;
-			DriverPwm.SynDrv = 0;
-			DriverPwm.Sr_Dtime = 0;	
-		}		
-		DriverPwm.Sr_Dtime = DriverPwm.Sr_Dtime * 0.999f + time1 * 0.001f;
-		if(DriverPwm.Sr_Dtime > time1)DriverPwm.Sr_Dtime = time1;	
-		DriverPwm.DrvDtime = (uint16_t)DriverPwm.Sr_Dtime;		
-	}	
-//	cnt = hhrtim1.Instance->sMasterRegs.MCNTR;	
-//	while( pre < cnt + 200)
-//	{
-//		cnt = hhrtim1.Instance->sMasterRegs.MCNTR;
-//	}
+		duty = (uint16_t)(((float)half) * DriverPwm.Duty);
+	}
+
 #ifndef PLECS_DLL
 	hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_C].PERxR = pre;
 	hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].PERxR = pre;
 	hhrtim1.Instance->sMasterRegs.MPER = pre;
 	hhrtim1.Instance->sMasterRegs.MCMP1R = pre;
-  if(Ctrl_interFace.CtrMode == OvLoadPFM)
-	{		
+	if(Ctrl_interFace.CtrMode == OvLoadPFM)
+	{
 		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_C].CMP1xR = LLC_DEADTIME;
-		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_C].CMP2xR = half - LLC_DEADTIME;	
+		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_C].CMP2xR = half - LLC_DEADTIME;
 		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_C].CMP3xR = half + LLC_DEADTIME;
-		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_C].CMP4xR = pre - LLC_DEADTIME;	
-		
-		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP1xR = half + temp;			
-		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP2xR = half + bemp;			
-		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP3xR = temp;			
-		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP4xR = bemp;	   	
-		if(DriverPwm.SynDrv == 0)
-		{
-			hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP1xR = half + LLC_DEADTIME + 200;			
-			hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP2xR = half + LLC_DEADTIME + 210;			
-			hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP3xR = LLC_DEADTIME + 200;			
-			hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP4xR = LLC_DEADTIME + 210;				
-		}else
-		{
-			hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP1xR = half + temp;			
-			hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP2xR = half + bemp;			
-			hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP3xR = temp;			
-			hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP4xR = bemp;	
-		}
-		
-	}else 
-	{			
+		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_C].CMP4xR = pre - LLC_DEADTIME;
+		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP1xR = half + LLC_DEADTIME + 200;
+		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP2xR = half + LLC_DEADTIME + 210;
+		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP3xR = LLC_DEADTIME + 200;
+		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP4xR = LLC_DEADTIME + 210;
+	}else
+	{
 		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_C].CMP1xR = temp - duty;
-		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_C].CMP2xR = temp + duty;		
-		
+		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_C].CMP2xR = temp + duty;
 		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_C].CMP3xR = bemp - duty;
-		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_C].CMP4xR = bemp + duty;		
-		
-		if(DriverPwm.SynDrv == 0)
-		{
-			hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP1xR = bemp - 1;
-			hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP2xR = bemp + 1;			
-			hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP3xR = temp - 1;			
-			hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP4xR = temp + 1;				
-		}else
-		{
-			time1 = bemp - duty + DriverPwm.Sr_Atime;
-			hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP1xR = time1;
-			hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP2xR = bemp + duty;			
-			time1 = temp - duty + DriverPwm.Sr_Atime;
-			hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP3xR = time1;				
-			hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP4xR = time1 + DriverPwm.DrvDtime;	
-		}	
-	}	
-	
+		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_C].CMP4xR = bemp + duty;
+		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP1xR = bemp - 1;
+		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP2xR = bemp + 1;
+		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP3xR = temp - 1;
+		hhrtim1.Instance->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_D].CMP4xR = temp + 1;
+	}
+
 	if(DriverPwm.DrvH){DrvH_On();}
 	else {DrvH_Off();}
 	if(DriverPwm.DrvL){DrvL_On();}
-	else {DrvL_Off();}		
-	if(DriverPwm.SynDrv){SarH_On();SarL_On();}
-	else {SarH_Off();SarL_Off();DriverPwm.Sr_Dtime = 0;}
+	else {DrvL_Off();}
+	SarH_Off();
+	SarL_Off();
 #else
-	if(DriverPwm.SynDrv == 0) DriverPwm.Sr_Dtime = 0;
 	{
 		uint16_t tc1_on, tc1_off, tc2_on, tc2_off;
-		uint16_t td1_on = 0, td1_off = 0, td3_on = 0, td3_off = 0;
 		float inv = 0.0f;
 
 		if(Ctrl_interFace.CtrMode == OvLoadPFM)
@@ -616,46 +552,13 @@ void SHRTIMERdrive(void)
 			PlecsPwmWin.PwmOn2  = 0.0f;
 			PlecsPwmWin.PwmOff2 = 0.0f;
 		}
-
-		if(DriverPwm.SynDrv == 0)
-		{
-			PlecsSrWin.SrOn1 = 0.0f;
-			PlecsSrWin.SrOff1 = 0.0f;
-			PlecsSrWin.SrOn2 = 0.0f;
-			PlecsSrWin.SrOff2 = 0.0f;
-			PlecsSrWin.SrA_s = 0.0f;
-			PlecsSrWin.SrB_s = 0.0f;
-			PlecsSrWin.SrD_s = 0.0f;
-		}
-		else
-		{
-			if(Ctrl_interFace.CtrMode == OvLoadPFM)
-			{
-				td1_on  = half + temp;
-				td1_off = half + bemp;
-				td3_on  = temp;
-				td3_off = bemp;
-			}
-			else
-			{
-				time1 = bemp - duty + DriverPwm.Sr_Atime;
-				td1_on  = (uint16_t)time1;
-				td1_off = bemp + duty;
-				time1 = temp - duty + DriverPwm.Sr_Atime;
-				td3_on  = (uint16_t)time1;
-				td3_off = (uint16_t)(time1 + DriverPwm.DrvDtime);
-			}
-			if(pre > 0)
-			{
-				PlecsSrWin.SrOn1  = (float)td3_on  * inv;
-				PlecsSrWin.SrOff1 = (float)td3_off * inv;
-				PlecsSrWin.SrOn2  = (float)td1_on  * inv;
-				PlecsSrWin.SrOff2 = (float)td1_off * inv;
-			}
-			PlecsSrWin.SrA_s = (float)DriverPwm.Sr_Atime / (float)SHRTIMER_PLV;
-			PlecsSrWin.SrB_s = (float)DriverPwm.Sr_Btime / (float)SHRTIMER_PLV;
-			PlecsSrWin.SrD_s = DriverPwm.Sr_Dtime / (float)SHRTIMER_PLV;
-		}
+		PlecsSrWin.SrOn1 = 0.0f;
+		PlecsSrWin.SrOff1 = 0.0f;
+		PlecsSrWin.SrOn2 = 0.0f;
+		PlecsSrWin.SrOff2 = 0.0f;
+		PlecsSrWin.SrA_s = 0.0f;
+		PlecsSrWin.SrB_s = 0.0f;
+		PlecsSrWin.SrD_s = 0.0f;
 	}
 #endif
 	testDuty = DriverPwm.SynDrv;

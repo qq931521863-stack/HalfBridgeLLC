@@ -55,16 +55,16 @@ Plecs {
   ScriptsDialogGeometry "[764 395 461 243]"
   ScriptsDialogSplitterPos "95"
   Schematic {
-    Location      [2400, 23; 4320, 991]
-    ZoomFactor    0.691704
-    SliderPosition [226, 369]
+    Location      [1920, 23; 3840, 991]
+    ZoomFactor    0.604443
+    SliderPosition [0, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
       Type          Transformer
       Name          "Tr3"
       Show          on
-      Position      [1470, 475]
+      Position      [1155, 270]
       Direction     right
       Flipped       on
       LabelPosition south
@@ -98,7 +98,7 @@ Plecs {
       Type          MosfetWithDiode
       Name          "FETD21"
       Show          on
-      Position      [975, 580]
+      Position      [660, 375]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -132,7 +132,7 @@ Plecs {
       Type          Capacitor
       Name          "C13"
       Show          off
-      Position      [825, 450]
+      Position      [510, 245]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -151,7 +151,7 @@ Plecs {
       Type          Resistor
       Name          "R11"
       Show          on
-      Position      [825, 545]
+      Position      [510, 340]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -165,7 +165,7 @@ Plecs {
       Type          Capacitor
       Name          "C14"
       Show          off
-      Position      [2020, 535]
+      Position      [1705, 330]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -184,7 +184,7 @@ Plecs {
       Type          Resistor
       Name          "R12"
       Show          on
-      Position      [2020, 615]
+      Position      [1705, 410]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -198,7 +198,7 @@ Plecs {
       Type          Ammeter
       Name          "Am4"
       Show          on
-      Position      [1200, 445]
+      Position      [885, 240]
       Direction     left
       Flipped       off
       LabelPosition south
@@ -207,7 +207,7 @@ Plecs {
       Type          Ammeter
       Name          "Am6"
       Show          on
-      Position      [1680, 440]
+      Position      [1365, 235]
       Direction     left
       Flipped       off
       LabelPosition south
@@ -216,15 +216,15 @@ Plecs {
       Type          Scope
       Name          "Scope5"
       Show          on
-      Position      [2555, 400]
+      Position      [2240, 195]
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 26; 1536, 935]
+      Location      [2400, 23; 4320, 1012]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAYQAAAGsPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAABRAAAGsAAAAP0A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGcA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABnAP///wAAAAMAAAYAAAAAlfw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAABgAAAABPAP///wAABgAAAALZAAAA"
+"///wAAAGcA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABnAP///wAAAAMAAAeAAAAAlfw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAB4AAAABPAP///wAAB4AAAAMpAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -238,7 +238,7 @@ Plecs {
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    ""
@@ -320,7 +320,37 @@ Plecs {
           AutoScale     1
           MinValue      0
           MaxValue      1
-          Signals       {}
+          Signals       {"PriDriverA", "PriDriverB"}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {"PirResonanceCurrent", "PriExcitationCurrent"}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {"SecCurrentA", "SecCurrentB"}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {"OutVolt"}
           Untangle      0
           KeepBaseline  off
           BaselineValue 0
@@ -340,37 +370,7 @@ Plecs {
           AutoScale     1
           MinValue      0
           MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
-        }
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
+          Signals       {"OutCurrent"}
           Untangle      0
           KeepBaseline  off
           BaselineValue 0
@@ -381,7 +381,7 @@ Plecs {
       Type          SignalMux
       Name          "Mux12"
       Show          off
-      Position      [2455, 355]
+      Position      [2140, 150]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -395,7 +395,7 @@ Plecs {
       Type          Voltmeter
       Name          "Vm15"
       Show          off
-      Position      [2145, 615]
+      Position      [1830, 410]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -404,7 +404,7 @@ Plecs {
       Type          Capacitor
       Name          "C17"
       Show          off
-      Position      [1860, 605]
+      Position      [1545, 400]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -423,7 +423,7 @@ Plecs {
       Type          Capacitor
       Name          "C18"
       Show          off
-      Position      [1715, 605]
+      Position      [1400, 400]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -442,7 +442,7 @@ Plecs {
       Type          MosfetWithDiode
       Name          "FETD22"
       Show          on
-      Position      [975, 385]
+      Position      [660, 180]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -476,7 +476,7 @@ Plecs {
       Type          MosfetWithDiode
       Name          "FETD23"
       Show          on
-      Position      [1785, 550]
+      Position      [1470, 345]
       Direction     up
       Flipped       off
       LabelPosition north
@@ -510,7 +510,7 @@ Plecs {
       Type          MosfetWithDiode
       Name          "FETD24"
       Show          on
-      Position      [1640, 580]
+      Position      [1325, 375]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -544,7 +544,7 @@ Plecs {
       Type          DCVoltageSource
       Name          "V_dc2"
       Show          on
-      Position      [770, 495]
+      Position      [455, 290]
       Direction     down
       Flipped       on
       LabelPosition east
@@ -558,7 +558,7 @@ Plecs {
       Type          Resistor
       Name          "R16"
       Show          on
-      Position      [2215, 570]
+      Position      [1900, 365]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -572,7 +572,7 @@ Plecs {
       Type          Resistor
       Name          "R20"
       Show          on
-      Position      [1530, 510]
+      Position      [1215, 305]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -586,7 +586,7 @@ Plecs {
       Type          Resistor
       Name          "R21"
       Show          on
-      Position      [1530, 440]
+      Position      [1215, 235]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -600,7 +600,7 @@ Plecs {
       Type          Capacitor
       Name          "C20"
       Show          off
-      Position      [890, 505]
+      Position      [575, 300]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -619,7 +619,7 @@ Plecs {
       Type          Resistor
       Name          "R22"
       Show          on
-      Position      [890, 545]
+      Position      [575, 340]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -633,7 +633,7 @@ Plecs {
       Type          Capacitor
       Name          "C21"
       Show          off
-      Position      [890, 335]
+      Position      [575, 130]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -652,7 +652,7 @@ Plecs {
       Type          Resistor
       Name          "R23"
       Show          on
-      Position      [890, 415]
+      Position      [575, 210]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -666,7 +666,7 @@ Plecs {
       Type          Ammeter
       Name          "Am5"
       Show          on
-      Position      [1370, 540]
+      Position      [1055, 335]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -675,7 +675,7 @@ Plecs {
       Type          SignalMux
       Name          "Mux13"
       Show          off
-      Position      [1475, 385]
+      Position      [1160, 180]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -689,7 +689,7 @@ Plecs {
       Type          Ammeter
       Name          "Am8"
       Show          on
-      Position      [1435, 580]
+      Position      [1120, 375]
       Direction     left
       Flipped       on
       LabelPosition south
@@ -698,7 +698,7 @@ Plecs {
       Type          Inductor
       Name          "L7"
       Show          on
-      Position      [1370, 485]
+      Position      [1055, 280]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -717,7 +717,7 @@ Plecs {
       Type          Ammeter
       Name          "Am7"
       Show          on
-      Position      [2215, 710]
+      Position      [1900, 505]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -726,7 +726,7 @@ Plecs {
       Type          Capacitor
       Name          "C15"
       Show          off
-      Position      [2115, 525]
+      Position      [1800, 320]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -745,7 +745,7 @@ Plecs {
       Type          Resistor
       Name          "R13"
       Show          on
-      Position      [2115, 635]
+      Position      [1800, 430]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -759,7 +759,7 @@ Plecs {
       Type          Capacitor
       Name          "C24"
       Show          off
-      Position      [1095, 445]
+      Position      [780, 240]
       Direction     right
       Flipped       on
       LabelPosition south
@@ -778,7 +778,7 @@ Plecs {
       Type          Resistor
       Name          "R32"
       Show          on
-      Position      [1715, 550]
+      Position      [1400, 345]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -792,7 +792,7 @@ Plecs {
       Type          Resistor
       Name          "R33"
       Show          on
-      Position      [1860, 525]
+      Position      [1545, 320]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -806,7 +806,7 @@ Plecs {
       Type          SignalMux
       Name          "Mux14"
       Show          off
-      Position      [1980, 395]
+      Position      [1665, 190]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -820,7 +820,7 @@ Plecs {
       Type          Ammeter
       Name          "Am9"
       Show          on
-      Position      [1595, 510]
+      Position      [1280, 305]
       Direction     left
       Flipped       off
       LabelPosition south
@@ -829,7 +829,7 @@ Plecs {
       Type          Voltmeter
       Name          "Vm18"
       Show          off
-      Position      [1030, 550]
+      Position      [715, 345]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -838,7 +838,7 @@ Plecs {
       Type          Voltmeter
       Name          "Vm20"
       Show          off
-      Position      [1400, 510]
+      Position      [1085, 305]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -847,7 +847,7 @@ Plecs {
       Type          Voltmeter
       Name          "Vm22"
       Show          off
-      Position      [1370, 410]
+      Position      [1055, 205]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -856,7 +856,7 @@ Plecs {
       Type          Inductor
       Name          "L14"
       Show          on
-      Position      [1300, 445]
+      Position      [985, 240]
       Direction     left
       Flipped       off
       LabelPosition north
@@ -875,7 +875,7 @@ Plecs {
       Type          Voltmeter
       Name          "Vm23"
       Show          off
-      Position      [1010, 375]
+      Position      [695, 170]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -884,7 +884,7 @@ Plecs {
       Type          Voltmeter
       Name          "Vm16"
       Show          off
-      Position      [1910, 625]
+      Position      [1595, 420]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -893,7 +893,7 @@ Plecs {
       Type          Ammeter
       Name          "Am11"
       Show          on
-      Position      [975, 330]
+      Position      [660, 125]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -902,7 +902,7 @@ Plecs {
       Type          Ammeter
       Name          "Am12"
       Show          on
-      Position      [975, 640]
+      Position      [660, 435]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -911,7 +911,7 @@ Plecs {
       Type          Voltmeter
       Name          "Vm24"
       Show          off
-      Position      [1000, 505]
+      Position      [685, 300]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -920,7 +920,7 @@ Plecs {
       Type          Ammeter
       Name          "Am13"
       Show          on
-      Position      [890, 365]
+      Position      [575, 160]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -929,7 +929,7 @@ Plecs {
       Type          Ammeter
       Name          "Am14"
       Show          on
-      Position      [890, 610]
+      Position      [575, 405]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -938,7 +938,7 @@ Plecs {
       Type          Ammeter
       Name          "Am15"
       Show          on
-      Position      [1640, 475]
+      Position      [1325, 270]
       Direction     left
       Flipped       off
       LabelPosition south
@@ -947,7 +947,7 @@ Plecs {
       Type          Inductor
       Name          "L15"
       Show          on
-      Position      [2060, 475]
+      Position      [1745, 270]
       Direction     left
       Flipped       off
       LabelPosition north
@@ -966,7 +966,7 @@ Plecs {
       Type          Ammeter
       Name          "Am10"
       Show          on
-      Position      [1785, 615]
+      Position      [1470, 410]
       Direction     up
       Flipped       on
       LabelPosition west
@@ -975,7 +975,7 @@ Plecs {
       Type          Ammeter
       Name          "Am16"
       Show          on
-      Position      [1640, 645]
+      Position      [1325, 440]
       Direction     up
       Flipped       on
       LabelPosition west
@@ -984,7 +984,7 @@ Plecs {
       Type          Voltmeter
       Name          "Vm19"
       Show          off
-      Position      [1945, 605]
+      Position      [1630, 400]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -993,7 +993,7 @@ Plecs {
       Type          Voltmeter
       Name          "Vm21"
       Show          off
-      Position      [1985, 675]
+      Position      [1670, 470]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -1002,7 +1002,7 @@ Plecs {
       Type          Scope
       Name          "Scope15"
       Show          on
-      Position      [2070, 670]
+      Position      [1755, 465]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1081,7 +1081,7 @@ Plecs {
       Type          Resistor
       Name          "R24"
       Show          on
-      Position      [2265, 475]
+      Position      [1950, 270]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1095,7 +1095,7 @@ Plecs {
       Type          Capacitor
       Name          "C16"
       Show          off
-      Position      [2395, 585]
+      Position      [2080, 380]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -1114,7 +1114,7 @@ Plecs {
       Type          Voltmeter
       Name          "Vm25"
       Show          off
-      Position      [2465, 615]
+      Position      [2150, 410]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -1123,7 +1123,7 @@ Plecs {
       Type          Scope
       Name          "Scope"
       Show          on
-      Position      [1185, 285]
+      Position      [870, 80]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -1310,7 +1310,7 @@ Plecs {
       Type          Goto
       Name          "Goto"
       Show          off
-      Position      [1505, 560]
+      Position      [1190, 355]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -1334,7 +1334,7 @@ Plecs {
       Type          Subsystem
       Name          base64 "5b+r546v6YC76L6R"
       Show          on
-      Position      [1575, 1230]
+      Position      [1260, 1025]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -2229,7 +2229,7 @@ Plecs {
       Type          From
       Name          "From"
       Show          off
-      Position      [1910, 1145]
+      Position      [1595, 940]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2253,7 +2253,7 @@ Plecs {
       Type          Goto
       Name          "Goto3"
       Show          off
-      Position      [2255, 730]
+      Position      [1940, 525]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2277,7 +2277,7 @@ Plecs {
       Type          Goto
       Name          "Goto4"
       Show          off
-      Position      [2515, 615]
+      Position      [2200, 410]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2301,7 +2301,7 @@ Plecs {
       Type          From
       Name          "From1"
       Show          off
-      Position      [1400, 1025]
+      Position      [1085, 820]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2325,7 +2325,7 @@ Plecs {
       Type          From
       Name          "From3"
       Show          off
-      Position      [1400, 1110]
+      Position      [1085, 905]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2349,7 +2349,7 @@ Plecs {
       Type          Scope
       Name          "Scope1"
       Show          on
-      Position      [2610, 1065]
+      Position      [2295, 860]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -2514,7 +2514,7 @@ Plecs {
       Type          From
       Name          "From4"
       Show          off
-      Position      [2325, 995]
+      Position      [2010, 790]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2538,7 +2538,7 @@ Plecs {
       Type          From
       Name          "From5"
       Show          off
-      Position      [2325, 1015]
+      Position      [2010, 810]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2562,7 +2562,7 @@ Plecs {
       Type          From
       Name          "From6"
       Show          off
-      Position      [2325, 1035]
+      Position      [2010, 830]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2586,7 +2586,7 @@ Plecs {
       Type          From
       Name          "From7"
       Show          off
-      Position      [2325, 1055]
+      Position      [2010, 850]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2610,7 +2610,7 @@ Plecs {
       Type          Constant
       Name          "Constant"
       Show          on
-      Position      [1385, 1155]
+      Position      [1070, 950]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2630,7 +2630,7 @@ Plecs {
       Type          Goto
       Name          "Goto1"
       Show          off
-      Position      [1755, 1010]
+      Position      [1440, 805]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2654,7 +2654,7 @@ Plecs {
       Type          Goto
       Name          "Goto2"
       Show          off
-      Position      [1755, 1070]
+      Position      [1440, 865]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2678,7 +2678,7 @@ Plecs {
       Type          Goto
       Name          "Goto5"
       Show          off
-      Position      [1755, 1130]
+      Position      [1440, 925]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2702,7 +2702,7 @@ Plecs {
       Type          Goto
       Name          "Goto6"
       Show          off
-      Position      [1755, 1150]
+      Position      [1440, 945]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2726,7 +2726,7 @@ Plecs {
       Type          From
       Name          "From10"
       Show          off
-      Position      [1910, 1125]
+      Position      [1595, 920]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2750,7 +2750,7 @@ Plecs {
       Type          From
       Name          "From11"
       Show          off
-      Position      [2325, 1090]
+      Position      [2010, 885]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2774,7 +2774,7 @@ Plecs {
       Type          From
       Name          "From12"
       Show          off
-      Position      [1910, 1100]
+      Position      [1595, 895]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -2798,7 +2798,7 @@ Plecs {
       Type          Subsystem
       Name          "PWM control"
       Show          on
-      Position      [2065, 1275]
+      Position      [1750, 1070]
       Direction     up
       Flipped       off
       LabelPosition none
@@ -4980,7 +4980,7 @@ Plecs {
       Type          Goto
       Name          "Goto7"
       Show          off
-      Position      [2210, 1105]
+      Position      [1895, 900]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5004,7 +5004,7 @@ Plecs {
       Type          Goto
       Name          "Goto8"
       Show          off
-      Position      [2210, 1130]
+      Position      [1895, 925]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5028,7 +5028,7 @@ Plecs {
       Type          From
       Name          "From9"
       Show          off
-      Position      [2395, 370]
+      Position      [2080, 165]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5052,7 +5052,7 @@ Plecs {
       Type          From
       Name          "From13"
       Show          off
-      Position      [2395, 345]
+      Position      [2080, 140]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5076,7 +5076,7 @@ Plecs {
       Type          From
       Name          "From14"
       Show          off
-      Position      [935, 385]
+      Position      [620, 180]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5100,7 +5100,7 @@ Plecs {
       Type          From
       Name          "From15"
       Show          off
-      Position      [935, 580]
+      Position      [620, 375]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5124,7 +5124,7 @@ Plecs {
       Type          Goto
       Name          "Goto9"
       Show          off
-      Position      [1755, 1040]
+      Position      [1440, 835]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5148,7 +5148,7 @@ Plecs {
       Type          Goto
       Name          "Goto10"
       Show          off
-      Position      [1755, 1105]
+      Position      [1440, 900]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5172,7 +5172,7 @@ Plecs {
       Type          Constant
       Name          "Constant2"
       Show          on
-      Position      [490, 1140]
+      Position      [350, 830]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5192,7 +5192,7 @@ Plecs {
       Type          Goto
       Name          "Goto18"
       Show          off
-      Position      [555, 1140]
+      Position      [415, 830]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5216,7 +5216,7 @@ Plecs {
       Type          Constant
       Name          "Constant3"
       Show          on
-      Position      [490, 1190]
+      Position      [350, 880]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5236,7 +5236,7 @@ Plecs {
       Type          Constant
       Name          "Constant4"
       Show          on
-      Position      [490, 1240]
+      Position      [350, 930]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5256,7 +5256,7 @@ Plecs {
       Type          Goto
       Name          "Goto19"
       Show          off
-      Position      [555, 1190]
+      Position      [415, 880]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5280,7 +5280,7 @@ Plecs {
       Type          Goto
       Name          "Goto20"
       Show          off
-      Position      [555, 1240]
+      Position      [415, 930]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5304,7 +5304,7 @@ Plecs {
       Type          Constant
       Name          "Constant5"
       Show          on
-      Position      [490, 1300]
+      Position      [350, 990]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5324,7 +5324,7 @@ Plecs {
       Type          Goto
       Name          "Goto11"
       Show          off
-      Position      [555, 1300]
+      Position      [415, 990]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5348,15 +5348,15 @@ Plecs {
       Type          Scope
       Name          "Scope2"
       Show          on
-      Position      [1370, 870]
+      Position      [1055, 665]
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 26; 1536, 905]
+      Location      [2400, 23; 4320, 1012]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAASUA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
 "///wAAAGcA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABnAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABPAP///wAABgAAAANUAAAA"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABPAP///wAAB4AAAAPCAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -5372,7 +5372,7 @@ Plecs {
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "1"
+      Open          "0"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -5536,7 +5536,7 @@ Plecs {
       Type          From
       Name          "From20"
       Show          off
-      Position      [1060, 865]
+      Position      [745, 660]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5560,7 +5560,7 @@ Plecs {
       Type          From
       Name          "From21"
       Show          off
-      Position      [1060, 890]
+      Position      [745, 685]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5584,7 +5584,7 @@ Plecs {
       Type          SignalMux
       Name          "Mux1"
       Show          off
-      Position      [2385, 1190]
+      Position      [2070, 985]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5598,7 +5598,7 @@ Plecs {
       Type          From
       Name          "From22"
       Show          off
-      Position      [2325, 1170]
+      Position      [2010, 965]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5622,7 +5622,7 @@ Plecs {
       Type          From
       Name          "From23"
       Show          off
-      Position      [2325, 1205]
+      Position      [2010, 1000]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5646,7 +5646,7 @@ Plecs {
       Type          From
       Name          "From24"
       Show          off
-      Position      [1910, 1085]
+      Position      [1595, 880]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5670,7 +5670,7 @@ Plecs {
       Type          From
       Name          "From25"
       Show          off
-      Position      [1910, 1170]
+      Position      [1595, 965]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5694,7 +5694,7 @@ Plecs {
       Type          Goto
       Name          "Goto12"
       Show          off
-      Position      [2210, 1155]
+      Position      [1895, 950]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5718,7 +5718,7 @@ Plecs {
       Type          Goto
       Name          "Goto13"
       Show          off
-      Position      [2210, 1175]
+      Position      [1895, 970]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5742,7 +5742,7 @@ Plecs {
       Type          From
       Name          "From26"
       Show          off
-      Position      [1740, 580]
+      Position      [1425, 375]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5766,7 +5766,7 @@ Plecs {
       Type          From
       Name          "From27"
       Show          off
-      Position      [1595, 580]
+      Position      [1280, 375]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -5790,15 +5790,15 @@ Plecs {
       Type          Scope
       Name          "Scope3"
       Show          on
-      Position      [1940, 1325]
+      Position      [1625, 1120]
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 24; 1536, 944]
+      Location      [2400, 23; 4320, 1012]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAASEA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAGMA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABjAP///wAAAAMAAAAAAAAAAPw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABEAP///wAABgAAAAN5AAAA"
+"G0AQQByAGUAYQAAAAAA/////wAAASUA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGcA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABnAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABPAP///wAAB4AAAAPCAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
@@ -5977,7 +5977,7 @@ Plecs {
       Type          From
       Name          "From29"
       Show          off
-      Position      [1060, 845]
+      Position      [745, 640]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6001,7 +6001,7 @@ Plecs {
       Type          From
       Name          "From30"
       Show          off
-      Position      [1060, 910]
+      Position      [745, 705]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6025,7 +6025,7 @@ Plecs {
       Type          Subsystem
       Name          base64 "5oWi546v6YC76L6R"
       Show          on
-      Position      [1045, 1090]
+      Position      [730, 885]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -6568,7 +6568,7 @@ Plecs {
       Type          Goto
       Name          "Goto22"
       Show          off
-      Position      [1200, 1115]
+      Position      [885, 910]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6592,7 +6592,7 @@ Plecs {
       Type          Goto
       Name          "Goto23"
       Show          off
-      Position      [1200, 1140]
+      Position      [885, 935]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6616,7 +6616,7 @@ Plecs {
       Type          From
       Name          "From31"
       Show          off
-      Position      [890, 1015]
+      Position      [575, 810]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6640,7 +6640,7 @@ Plecs {
       Type          From
       Name          "From32"
       Show          off
-      Position      [890, 1035]
+      Position      [575, 830]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6664,7 +6664,7 @@ Plecs {
       Type          From
       Name          "From33"
       Show          off
-      Position      [890, 1055]
+      Position      [575, 850]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6688,7 +6688,7 @@ Plecs {
       Type          From
       Name          "From34"
       Show          off
-      Position      [890, 1075]
+      Position      [575, 870]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6712,7 +6712,7 @@ Plecs {
       Type          From
       Name          "From35"
       Show          off
-      Position      [890, 1095]
+      Position      [575, 890]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6736,7 +6736,7 @@ Plecs {
       Type          From
       Name          "From36"
       Show          off
-      Position      [890, 1115]
+      Position      [575, 910]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6760,7 +6760,7 @@ Plecs {
       Type          From
       Name          "From37"
       Show          off
-      Position      [890, 1135]
+      Position      [575, 930]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6784,7 +6784,7 @@ Plecs {
       Type          From
       Name          "From38"
       Show          off
-      Position      [890, 1160]
+      Position      [575, 955]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6808,7 +6808,7 @@ Plecs {
       Type          Goto
       Name          "Goto15"
       Show          off
-      Position      [555, 1025]
+      Position      [415, 715]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6832,7 +6832,7 @@ Plecs {
       Type          Constant
       Name          "Constant8"
       Show          on
-      Position      [490, 1080]
+      Position      [350, 770]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6852,7 +6852,7 @@ Plecs {
       Type          Goto
       Name          "Goto16"
       Show          off
-      Position      [545, 1080]
+      Position      [405, 770]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6876,7 +6876,7 @@ Plecs {
       Type          Constant
       Name          "Constant9"
       Show          on
-      Position      [490, 1365]
+      Position      [350, 1055]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6896,7 +6896,7 @@ Plecs {
       Type          Goto
       Name          "Goto21"
       Show          off
-      Position      [555, 1365]
+      Position      [415, 1055]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -6920,7 +6920,7 @@ Plecs {
       Type          Scope
       Name          "Scope4"
       Show          on
-      Position      [1260, 1285]
+      Position      [945, 1080]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -6999,7 +6999,7 @@ Plecs {
       Type          From
       Name          "From19"
       Show          off
-      Position      [1165, 1270]
+      Position      [850, 1065]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -7023,7 +7023,7 @@ Plecs {
       Type          From
       Name          "From39"
       Show          off
-      Position      [1165, 1305]
+      Position      [850, 1100]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -7047,7 +7047,7 @@ Plecs {
       Type          From
       Name          "From17"
       Show          off
-      Position      [1300, 1410]
+      Position      [985, 1205]
       Direction     left
       Flipped       off
       LabelPosition north
@@ -7071,7 +7071,7 @@ Plecs {
       Type          Goto
       Name          "Goto14"
       Show          off
-      Position      [1130, 1410]
+      Position      [815, 1205]
       Direction     left
       Flipped       off
       LabelPosition north
@@ -7096,7 +7096,7 @@ Plecs {
       SrcComponent  "Components/Control/Delays/Transport Delay"
       Name          "Transport Delay"
       Show          on
-      Position      [1210, 1410]
+      Position      [895, 1205]
       Direction     down
       Flipped       off
       LabelPosition north
@@ -7146,7 +7146,7 @@ Plecs {
       Type          Voltmeter
       Name          "Vm1"
       Show          on
-      Position      [2355, 635]
+      Position      [2040, 430]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -7155,7 +7155,7 @@ Plecs {
       Type          Constant
       Name          "Constant10"
       Show          on
-      Position      [490, 1025]
+      Position      [350, 715]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -7175,7 +7175,7 @@ Plecs {
       Type          SignalMux
       Name          "Mux2"
       Show          off
-      Position      [1125, 805]
+      Position      [810, 600]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -7189,7 +7189,7 @@ Plecs {
       Type          From
       Name          "From18"
       Show          off
-      Position      [1060, 800]
+      Position      [745, 595]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -7213,7 +7213,7 @@ Plecs {
       Type          From
       Name          "From28"
       Show          off
-      Position      [1060, 825]
+      Position      [745, 620]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -7237,7 +7237,7 @@ Plecs {
       Type          From
       Name          "From40"
       Show          off
-      Position      [740, 1705]
+      Position      [450, 1415]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -7261,7 +7261,7 @@ Plecs {
       Type          Gain
       Name          "Gain"
       Show          on
-      Position      [1220, 1595]
+      Position      [930, 1305]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -7295,7 +7295,7 @@ Plecs {
       Type          Sum
       Name          "Sum"
       Show          off
-      Position      [1315, 1565]
+      Position      [1025, 1275]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -7324,7 +7324,7 @@ Plecs {
       Type          From
       Name          "From41"
       Show          off
-      Position      [1210, 1555]
+      Position      [920, 1265]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -7348,7 +7348,7 @@ Plecs {
       Type          Goto
       Name          "Goto17"
       Show          off
-      Position      [1380, 1565]
+      Position      [1090, 1275]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -7372,7 +7372,7 @@ Plecs {
       Type          RelationalOperator
       Name          "Relational\nOperator"
       Show          on
-      Position      [860, 1710]
+      Position      [570, 1420]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -7386,7 +7386,7 @@ Plecs {
       Type          Constant
       Name          "Constant1"
       Show          on
-      Position      [740, 1755]
+      Position      [450, 1465]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -7407,7 +7407,7 @@ Plecs {
       SrcComponent  "Components/Control/Delays/Transport Delay"
       Name          "Transport Delay1"
       Show          on
-      Position      [970, 1710]
+      Position      [680, 1420]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -7457,7 +7457,7 @@ Plecs {
       Type          LogicalOperator
       Name          "Logical\nOperator"
       Show          on
-      Position      [1150, 1595]
+      Position      [860, 1305]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -7476,7 +7476,7 @@ Plecs {
       Type          LogicalOperator
       Name          "Logical\nOperator1"
       Show          on
-      Position      [1035, 1710]
+      Position      [745, 1420]
       Direction     up
       Flipped       off
       LabelPosition south
@@ -7495,7 +7495,7 @@ Plecs {
       Type          RelationalOperator
       Name          "Relational\nOperator1"
       Show          on
-      Position      [1365, 1725]
+      Position      [1270, 1355]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -7509,7 +7509,7 @@ Plecs {
       Type          Constant
       Name          "Constant6"
       Show          on
-      Position      [1245, 1755]
+      Position      [1150, 1385]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -7529,7 +7529,7 @@ Plecs {
       Type          From
       Name          "From42"
       Show          off
-      Position      [1245, 1690]
+      Position      [1150, 1320]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -7553,7 +7553,7 @@ Plecs {
       Type          SignalSwitch
       Name          "Switch"
       Show          on
-      Position      [1480, 1815]
+      Position      [1385, 1445]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -7572,7 +7572,7 @@ Plecs {
       Type          From
       Name          "From43"
       Show          off
-      Position      [1260, 1810]
+      Position      [1165, 1440]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -7596,7 +7596,7 @@ Plecs {
       Type          From
       Name          "From44"
       Show          off
-      Position      [1260, 1845]
+      Position      [1165, 1475]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -7620,7 +7620,7 @@ Plecs {
       Type          Goto
       Name          "Goto24"
       Show          off
-      Position      [1565, 1815]
+      Position      [1470, 1445]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -7644,7 +7644,7 @@ Plecs {
       Type          From
       Name          "From45"
       Show          off
-      Position      [1400, 1080]
+      Position      [1085, 875]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -7668,7 +7668,7 @@ Plecs {
       Type          DCVoltageSource
       Name          "V_dc"
       Show          on
-      Position      [2215, 650]
+      Position      [1900, 445]
       Direction     down
       Flipped       on
       LabelPosition east
@@ -7682,13 +7682,205 @@ Plecs {
       Type          From
       Name          "From2"
       Show          off
-      Position      [1225, 1065]
+      Position      [910, 860]
       Direction     right
       Flipped       off
       LabelPosition south
       Parameter {
         Variable      "Tag"
         Value         "CurrentMax"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Scope
+      Name          "Scope6"
+      Show          on
+      Position      [1415, 110]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Location      [2400, 23; 4320, 1012]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAANUA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGcA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABnAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABPAP///wAAB4AAAAPCAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":191,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
+"AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+"AAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAA"
+"AAAAAAAA="
+      Axes          "5"
+      TimeRange     "0.0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    "Time / s"
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency / Hz"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          From
+      Name          "From8"
+      Show          off
+      Position      [1320, 75]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "Vout"
+        Show          off
+      }
+      Parameter {
+        Variable      "Visibility"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "NoMatchingCounterpartAction"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          From
+      Name          "From16"
+      Show          off
+      Position      [1320, 95]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Tag"
+        Value         "Iout"
         Show          off
       }
       Parameter {
@@ -7713,27 +7905,27 @@ Plecs {
       Type          Wire
       SrcComponent  "R12"
       SrcTerminal   2
-      Points        [2020, 750]
+      Points        [1705, 545]
       Branch {
-        Points        [2115, 750]
+        Points        [1800, 545]
         Branch {
-          Points        [2145, 750]
+          Points        [1830, 545]
           Branch {
-            Points        [2215, 750]
+            Points        [1900, 545]
             Branch {
               DstComponent  "Am7"
               DstTerminal   2
             }
             Branch {
-              Points        [2355, 750]
+              Points        [2040, 545]
               Branch {
-                Points        [2395, 750]
+                Points        [2080, 545]
                 Branch {
                   DstComponent  "C16"
                   DstTerminal   2
                 }
                 Branch {
-                  Points        [2465, 750]
+                  Points        [2150, 545]
                   DstComponent  "Vm25"
                   DstTerminal   2
                 }
@@ -7755,19 +7947,19 @@ Plecs {
         }
       }
       Branch {
-        Points        [1985, 750]
+        Points        [1670, 545]
         Branch {
-          Points        [1945, 750]
+          Points        [1630, 545]
           Branch {
-            Points        [1910, 750]
+            Points        [1595, 545]
             Branch {
-              Points        [1860, 750]
+              Points        [1545, 545]
               Branch {
-                Points        [1785, 750]
+                Points        [1470, 545]
                 Branch {
-                  Points        [1715, 750]
+                  Points        [1400, 545]
                   Branch {
-                    Points        [1640, 750]
+                    Points        [1325, 545]
                     DstComponent  "Am16"
                     DstTerminal   1
                   }
@@ -7813,31 +8005,31 @@ Plecs {
       Type          Wire
       SrcComponent  "V_dc2"
       SrcTerminal   2
-      Points        [770, 685; 825, 685]
+      Points        [455, 480; 510, 480]
       Branch {
-        Points        [890, 685]
+        Points        [575, 480]
         Branch {
-          Points        [975, 685]
+          Points        [660, 480]
           Branch {
             DstComponent  "Am12"
             DstTerminal   2
           }
           Branch {
-            Points        [1000, 685]
+            Points        [685, 480]
             Branch {
-              Points        [1030, 685]
+              Points        [715, 480]
               Branch {
                 DstComponent  "Vm18"
                 DstTerminal   2
               }
               Branch {
-                Points        [1370, 685; 1370, 580]
+                Points        [1055, 480; 1055, 375]
                 Branch {
                   DstComponent  "Am5"
                   DstTerminal   2
                 }
                 Branch {
-                  Points        [1400, 580]
+                  Points        [1085, 375]
                   Branch {
                     DstComponent  "Am8"
                     DstTerminal   2
@@ -7869,17 +8061,17 @@ Plecs {
       Type          Wire
       SrcComponent  "C13"
       SrcTerminal   1
-      Points        [825, 300]
+      Points        [510, 95]
       Branch {
-        Points        [890, 300]
+        Points        [575, 95]
         Branch {
-          Points        [975, 300]
+          Points        [660, 95]
           Branch {
             DstComponent  "Am11"
             DstTerminal   1
           }
           Branch {
-            Points        [1010, 300]
+            Points        [695, 95]
             DstComponent  "Vm23"
             DstTerminal   1
           }
@@ -7890,7 +8082,7 @@ Plecs {
         }
       }
       Branch {
-        Points        [770, 300]
+        Points        [455, 95]
         DstComponent  "V_dc2"
         DstTerminal   1
       }
@@ -7906,29 +8098,29 @@ Plecs {
       Type          Wire
       SrcComponent  "FETD21"
       SrcTerminal   1
-      Points        [975, 480]
+      Points        [660, 275]
       Branch {
-        Points        [890, 480]
+        Points        [575, 275]
         DstComponent  "C20"
         DstTerminal   1
       }
       Branch {
-        Points        [975, 445]
+        Points        [660, 240]
         Branch {
           DstComponent  "FETD22"
           DstTerminal   2
         }
         Branch {
-          Points        [890, 445]
+          Points        [575, 240]
           DstComponent  "R23"
           DstTerminal   2
         }
         Branch {
-          Points        [1000, 445]
+          Points        [685, 240]
           Branch {
-            Points        [1010, 445]
+            Points        [695, 240]
             Branch {
-              Points        [1030, 445]
+              Points        [715, 240]
               Branch {
                 DstComponent  "Vm18"
                 DstTerminal   1
@@ -7954,9 +8146,9 @@ Plecs {
       Type          Wire
       SrcComponent  "C14"
       SrcTerminal   1
-      Points        [2020, 475]
+      Points        [1705, 270]
       Branch {
-        Points        [1910, 475]
+        Points        [1595, 270]
         Branch {
           DstComponent  "Vm16"
           DstTerminal   1
@@ -7975,7 +8167,7 @@ Plecs {
       Type          Wire
       SrcComponent  "Tr3"
       SrcTerminal   2
-      Points        [1460, 580]
+      Points        [1145, 375]
       DstComponent  "Am8"
       DstTerminal   1
     }
@@ -8011,15 +8203,15 @@ Plecs {
       Type          Wire
       SrcComponent  "Am6"
       SrcTerminal   2
-      Points        [1785, 440]
+      Points        [1470, 235]
       Branch {
-        Points        [1860, 440]
+        Points        [1545, 235]
         Branch {
           DstComponent  "R33"
           DstTerminal   1
         }
         Branch {
-          Points        [1945, 440]
+          Points        [1630, 235]
           DstComponent  "Vm19"
           DstTerminal   1
         }
@@ -8033,15 +8225,15 @@ Plecs {
       Type          Wire
       SrcComponent  "Am9"
       SrcTerminal   2
-      Points        [1640, 510]
+      Points        [1325, 305]
       Branch {
-        Points        [1715, 510]
+        Points        [1400, 305]
         Branch {
           DstComponent  "R32"
           DstTerminal   1
         }
         Branch {
-          Points        [1985, 510]
+          Points        [1670, 305]
           DstComponent  "Vm21"
           DstTerminal   1
         }
@@ -8069,15 +8261,15 @@ Plecs {
       Type          Wire
       SrcComponent  "L7"
       SrcTerminal   1
-      Points        [1370, 445]
+      Points        [1055, 240]
       Branch {
         DstComponent  "L14"
         DstTerminal   2
       }
       Branch {
-        Points        [1400, 445]
+        Points        [1085, 240]
         Branch {
-          Points        [1460, 445]
+          Points        [1145, 240]
           DstComponent  "Tr3"
           DstTerminal   1
         }
@@ -8095,13 +8287,13 @@ Plecs {
       Type          Wire
       SrcComponent  "Am4"
       SrcTerminal   2
-      Points        [1245, 445]
+      Points        [930, 240]
       Branch {
         DstComponent  "L14"
         DstTerminal   1
       }
       Branch {
-        Points        [1245, 345; 1370, 345]
+        Points        [930, 140; 1055, 140]
         DstComponent  "Vm22"
         DstTerminal   1
       }
@@ -8117,9 +8309,9 @@ Plecs {
       Type          Wire
       SrcComponent  "Tr3"
       SrcTerminal   4
-      Points        [1485, 470; 1485, 475]
+      Points        [1170, 265; 1170, 270]
       Branch {
-        Points        [1475, 475; 1475, 480]
+        Points        [1160, 270; 1160, 275]
         DstComponent  "Tr3"
         DstTerminal   5
       }
@@ -8167,15 +8359,15 @@ Plecs {
       Type          Wire
       SrcComponent  "C15"
       SrcTerminal   1
-      Points        [2115, 475]
+      Points        [1800, 270]
       Branch {
-        Points        [2145, 475]
+        Points        [1830, 270]
         Branch {
           DstComponent  "Vm15"
           DstTerminal   1
         }
         Branch {
-          Points        [2215, 475]
+          Points        [1900, 270]
           Branch {
             DstComponent  "R24"
             DstTerminal   2
@@ -8209,7 +8401,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Am10"
       SrcTerminal   3
-      Points        [1820, 615; 1820, 390]
+      Points        [1505, 410; 1505, 185]
       DstComponent  "Mux14"
       DstTerminal   2
     }
@@ -8217,7 +8409,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Am16"
       SrcTerminal   3
-      Points        [1840, 645; 1840, 400]
+      Points        [1525, 440; 1525, 195]
       DstComponent  "Mux14"
       DstTerminal   3
     }
@@ -8225,7 +8417,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Vm19"
       SrcTerminal   3
-      Points        [2000, 605; 2000, 665]
+      Points        [1685, 400; 1685, 460]
       DstComponent  "Scope15"
       DstTerminal   1
     }
@@ -8240,9 +8432,9 @@ Plecs {
       Type          Wire
       SrcComponent  "C16"
       SrcTerminal   1
-      Points        [2395, 475]
+      Points        [2080, 270]
       Branch {
-        Points        [2355, 475]
+        Points        [2040, 270]
         Branch {
           DstComponent  "R24"
           DstTerminal   1
@@ -8253,7 +8445,7 @@ Plecs {
         }
       }
       Branch {
-        Points        [2465, 475]
+        Points        [2150, 270]
         DstComponent  "Vm25"
         DstTerminal   1
       }
@@ -8262,7 +8454,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Vm15"
       SrcTerminal   3
-      Points        [2170, 615; 2170, 405]
+      Points        [1855, 410; 1855, 200]
       DstComponent  "Scope5"
       DstTerminal   4
     }
@@ -8284,7 +8476,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Am5"
       SrcTerminal   3
-      Points        [1425, 540; 1425, 390]
+      Points        [1110, 335; 1110, 185]
       DstComponent  "Mux13"
       DstTerminal   3
     }
@@ -8292,7 +8484,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Am4"
       SrcTerminal   3
-      Points        [1200, 380]
+      Points        [885, 175]
       DstComponent  "Mux13"
       DstTerminal   2
     }
@@ -8314,7 +8506,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Vm23"
       SrcTerminal   3
-      Points        [1105, 375; 1105, 275]
+      Points        [790, 170; 790, 70]
       DstComponent  "Scope"
       DstTerminal   3
     }
@@ -8322,7 +8514,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Vm24"
       SrcTerminal   3
-      Points        [1115, 505; 1115, 285]
+      Points        [800, 300; 800, 80]
       DstComponent  "Scope"
       DstTerminal   4
     }
@@ -8330,7 +8522,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Vm18"
       SrcTerminal   3
-      Points        [1125, 550; 1125, 295]
+      Points        [810, 345; 810, 90]
       DstComponent  "Scope"
       DstTerminal   5
     }
@@ -8338,7 +8530,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Am11"
       SrcTerminal   3
-      Points        [1085, 330; 1085, 265]
+      Points        [770, 125; 770, 60]
       DstComponent  "Scope"
       DstTerminal   2
     }
@@ -8346,7 +8538,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Am13"
       SrcTerminal   3
-      Points        [1095, 365; 1095, 255]
+      Points        [780, 160; 780, 50]
       DstComponent  "Scope"
       DstTerminal   1
     }
@@ -8354,7 +8546,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Am14"
       SrcTerminal   3
-      Points        [1135, 610; 1135, 305]
+      Points        [820, 405; 820, 100]
       DstComponent  "Scope"
       DstTerminal   6
     }
@@ -8362,7 +8554,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Am12"
       SrcTerminal   3
-      Points        [1145, 640; 1145, 315]
+      Points        [830, 435; 830, 110]
       DstComponent  "Scope"
       DstTerminal   7
     }
@@ -8370,7 +8562,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Am8"
       SrcTerminal   3
-      Points        [1435, 560]
+      Points        [1120, 355]
       DstComponent  "Goto"
       DstTerminal   1
     }
@@ -8399,9 +8591,9 @@ Plecs {
       Type          Signal
       SrcComponent  "Am7"
       SrcTerminal   3
-      Points        [2235, 710]
+      Points        [1920, 505]
       Branch {
-        Points        [2315, 710; 2315, 425]
+        Points        [2000, 505; 2000, 220]
         DstComponent  "Scope5"
         DstTerminal   6
       }
@@ -8414,9 +8606,9 @@ Plecs {
       Type          Signal
       SrcComponent  "Vm25"
       SrcTerminal   3
-      Points        [2480, 615]
+      Points        [2165, 410]
       Branch {
-        Points        [2480, 415]
+        Points        [2165, 210]
         DstComponent  "Scope5"
         DstTerminal   5
       }
@@ -8429,7 +8621,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From4"
       SrcTerminal   1
-      Points        [2495, 995; 2495, 1040]
+      Points        [2180, 790; 2180, 835]
       DstComponent  "Scope1"
       DstTerminal   1
     }
@@ -8437,7 +8629,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From5"
       SrcTerminal   1
-      Points        [2480, 1015; 2480, 1050]
+      Points        [2165, 810; 2165, 845]
       DstComponent  "Scope1"
       DstTerminal   2
     }
@@ -8445,7 +8637,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From6"
       SrcTerminal   1
-      Points        [2465, 1035; 2465, 1060]
+      Points        [2150, 830; 2150, 855]
       DstComponent  "Scope1"
       DstTerminal   3
     }
@@ -8453,7 +8645,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From7"
       SrcTerminal   1
-      Points        [2445, 1055; 2445, 1070]
+      Points        [2130, 850; 2130, 865]
       DstComponent  "Scope1"
       DstTerminal   4
     }
@@ -8496,7 +8688,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Mux12"
       SrcTerminal   1
-      Points        [2495, 355; 2495, 375]
+      Points        [2180, 150; 2180, 170]
       DstComponent  "Scope5"
       DstTerminal   1
     }
@@ -8504,7 +8696,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From13"
       SrcTerminal   1
-      Points        [2425, 345; 2425, 350]
+      Points        [2110, 140; 2110, 145]
       DstComponent  "Mux12"
       DstTerminal   2
     }
@@ -8512,7 +8704,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From9"
       SrcTerminal   1
-      Points        [2425, 370; 2425, 360]
+      Points        [2110, 165; 2110, 155]
       DstComponent  "Mux12"
       DstTerminal   3
     }
@@ -8604,7 +8796,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From21"
       SrcTerminal   1
-      Points        [1115, 890; 1115, 870]
+      Points        [800, 685; 800, 665]
       DstComponent  "Scope2"
       DstTerminal   4
     }
@@ -8612,7 +8804,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From20"
       SrcTerminal   1
-      Points        [1070, 865; 1070, 860]
+      Points        [755, 660; 755, 655]
       DstComponent  "Scope2"
       DstTerminal   3
     }
@@ -8620,7 +8812,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From22"
       SrcTerminal   1
-      Points        [2335, 1170; 2335, 1185]
+      Points        [2020, 965; 2020, 980]
       DstComponent  "Mux1"
       DstTerminal   2
     }
@@ -8628,7 +8820,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From23"
       SrcTerminal   1
-      Points        [2335, 1205; 2335, 1195]
+      Points        [2020, 1000; 2020, 990]
       DstComponent  "Mux1"
       DstTerminal   3
     }
@@ -8636,7 +8828,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Mux1"
       SrcTerminal   1
-      Points        [2465, 1190; 2465, 1090]
+      Points        [2150, 985; 2150, 885]
       DstComponent  "Scope1"
       DstTerminal   6
     }
@@ -8672,7 +8864,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From26"
       SrcTerminal   1
-      Points        [1750, 580]
+      Points        [1435, 375]
       DstComponent  "FETD23"
       DstTerminal   3
     }
@@ -8687,7 +8879,7 @@ Plecs {
       Type          Signal
       SrcComponent  base64 "5b+r546v6YC76L6R"
       SrcTerminal   19
-      Points        [1725, 1250; 1725, 1335]
+      Points        [1410, 1045; 1410, 1130]
       DstComponent  "Scope3"
       DstTerminal   5
     }
@@ -8695,7 +8887,7 @@ Plecs {
       Type          Signal
       SrcComponent  base64 "5b+r546v6YC76L6R"
       SrcTerminal   20
-      Points        [1710, 1270; 1710, 1345]
+      Points        [1395, 1065; 1395, 1140]
       DstComponent  "Scope3"
       DstTerminal   6
     }
@@ -8703,7 +8895,7 @@ Plecs {
       Type          Signal
       SrcComponent  base64 "5b+r546v6YC76L6R"
       SrcTerminal   21
-      Points        [1695, 1295; 1695, 1355]
+      Points        [1380, 1090; 1380, 1150]
       DstComponent  "Scope3"
       DstTerminal   7
     }
@@ -8711,7 +8903,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From29"
       SrcTerminal   1
-      Points        [1135, 845; 1135, 850]
+      Points        [820, 640; 820, 645]
       DstComponent  "Scope2"
       DstTerminal   2
     }
@@ -8719,7 +8911,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From30"
       SrcTerminal   1
-      Points        [1135, 910; 1135, 880]
+      Points        [820, 705; 820, 675]
       DstComponent  "Scope2"
       DstTerminal   5
     }
@@ -8727,14 +8919,14 @@ Plecs {
       Type          Signal
       SrcComponent  base64 "5b+r546v6YC76L6R"
       SrcTerminal   15
-      Points        [1785, 1175]
+      Points        [1470, 970]
       Branch {
-        Points        [1785, 1295]
+        Points        [1470, 1090]
         DstComponent  "Scope3"
         DstTerminal   1
       }
       Branch {
-        Points        [1830, 1175; 1830, 1210]
+        Points        [1515, 970; 1515, 1005]
         DstComponent  "PWM control"
         DstTerminal   10
       }
@@ -8743,9 +8935,9 @@ Plecs {
       Type          Signal
       SrcComponent  base64 "5b+r546v6YC76L6R"
       SrcTerminal   16
-      Points        [1770, 1195; 1770, 1225]
+      Points        [1455, 990; 1455, 1020]
       Branch {
-        Points        [1770, 1305]
+        Points        [1455, 1100]
         DstComponent  "Scope3"
         DstTerminal   2
       }
@@ -8758,9 +8950,9 @@ Plecs {
       Type          Signal
       SrcComponent  base64 "5b+r546v6YC76L6R"
       SrcTerminal   17
-      Points        [1755, 1215; 1755, 1245]
+      Points        [1440, 1010; 1440, 1040]
       Branch {
-        Points        [1755, 1315]
+        Points        [1440, 1110]
         DstComponent  "Scope3"
         DstTerminal   3
       }
@@ -8773,9 +8965,9 @@ Plecs {
       Type          Signal
       SrcComponent  base64 "5b+r546v6YC76L6R"
       SrcTerminal   18
-      Points        [1740, 1235; 1740, 1260]
+      Points        [1425, 1030; 1425, 1055]
       Branch {
-        Points        [1740, 1325]
+        Points        [1425, 1120]
         DstComponent  "Scope3"
         DstTerminal   4
       }
@@ -8872,7 +9064,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From19"
       SrcTerminal   1
-      Points        [1205, 1270; 1205, 1280]
+      Points        [890, 1065; 890, 1075]
       DstComponent  "Scope4"
       DstTerminal   1
     }
@@ -8880,7 +9072,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From39"
       SrcTerminal   1
-      Points        [1205, 1305; 1205, 1290]
+      Points        [890, 1100; 890, 1085]
       DstComponent  "Scope4"
       DstTerminal   2
     }
@@ -8916,7 +9108,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From28"
       SrcTerminal   1
-      Points        [1090, 825; 1090, 810]
+      Points        [775, 620; 775, 605]
       DstComponent  "Mux2"
       DstTerminal   3
     }
@@ -8924,7 +9116,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Mux2"
       SrcTerminal   1
-      Points        [1155, 805; 1155, 840]
+      Points        [840, 600; 840, 635]
       DstComponent  "Scope2"
       DstTerminal   1
     }
@@ -8939,7 +9131,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Gain"
       SrcTerminal   2
-      Points        [1315, 1595]
+      Points        [1025, 1305]
       DstComponent  "Sum"
       DstTerminal   3
     }
@@ -8947,7 +9139,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From41"
       SrcTerminal   1
-      Points        [1250, 1555; 1250, 1565]
+      Points        [960, 1265; 960, 1275]
       DstComponent  "Sum"
       DstTerminal   2
     }
@@ -8962,7 +9154,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Constant1"
       SrcTerminal   1
-      Points        [795, 1755; 795, 1715]
+      Points        [505, 1465; 505, 1425]
       DstComponent  "Relational\nOperator"
       DstTerminal   2
     }
@@ -8970,13 +9162,13 @@ Plecs {
       Type          Signal
       SrcComponent  "Relational\nOperator"
       SrcTerminal   3
-      Points        [915, 1710]
+      Points        [625, 1420]
       Branch {
         DstComponent  "Transport Delay1"
         DstTerminal   2
       }
       Branch {
-        Points        [915, 1590]
+        Points        [625, 1300]
         DstComponent  "Logical\nOperator"
         DstTerminal   2
       }
@@ -8985,7 +9177,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Logical\nOperator1"
       SrcTerminal   1
-      Points        [1085, 1710; 1085, 1600]
+      Points        [795, 1420; 795, 1310]
       DstComponent  "Logical\nOperator"
       DstTerminal   3
     }
@@ -9007,7 +9199,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Constant6"
       SrcTerminal   1
-      Points        [1285, 1755; 1285, 1730]
+      Points        [1190, 1385; 1190, 1360]
       DstComponent  "Relational\nOperator1"
       DstTerminal   2
     }
@@ -9015,7 +9207,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From42"
       SrcTerminal   1
-      Points        [1285, 1690; 1285, 1720]
+      Points        [1190, 1320; 1190, 1350]
       DstComponent  "Relational\nOperator1"
       DstTerminal   1
     }
@@ -9030,7 +9222,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From44"
       SrcTerminal   1
-      Points        [1430, 1845; 1430, 1820]
+      Points        [1335, 1475; 1335, 1450]
       DstComponent  "Switch"
       DstTerminal   3
     }
@@ -9038,7 +9230,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Relational\nOperator1"
       SrcTerminal   3
-      Points        [1480, 1725]
+      Points        [1385, 1355]
       DstComponent  "Switch"
       DstTerminal   4
     }
@@ -9053,7 +9245,7 @@ Plecs {
       Type          Signal
       SrcComponent  base64 "5b+r546v6YC76L6R"
       SrcTerminal   22
-      Points        [1690, 1395; 1690, 1400]
+      Points        [1375, 1190; 1375, 1195]
       DstComponent  "PWM control"
       DstTerminal   14
     }
@@ -9061,7 +9253,7 @@ Plecs {
       Type          Signal
       SrcComponent  base64 "5b+r546v6YC76L6R"
       SrcTerminal   23
-      Points        [1685, 1410; 1685, 1415]
+      Points        [1370, 1205; 1370, 1210]
       DstComponent  "PWM control"
       DstTerminal   16
     }
@@ -9069,7 +9261,7 @@ Plecs {
       Type          Signal
       SrcComponent  base64 "5b+r546v6YC76L6R"
       SrcTerminal   24
-      Points        [1680, 1425; 1680, 1430]
+      Points        [1365, 1220; 1365, 1225]
       DstComponent  "PWM control"
       DstTerminal   15
     }
@@ -9077,7 +9269,7 @@ Plecs {
       Type          Signal
       SrcComponent  base64 "5b+r546v6YC76L6R"
       SrcTerminal   25
-      Points        [1675, 1440; 1675, 1450]
+      Points        [1360, 1235; 1360, 1245]
       DstComponent  "PWM control"
       DstTerminal   17
     }
@@ -9113,9 +9305,9 @@ Plecs {
       Type          Signal
       SrcComponent  base64 "5oWi546v6YC76L6R"
       SrcTerminal   2
-      Points        [1170, 1040]
+      Points        [855, 835]
       Branch {
-        Points        [1170, 890]
+        Points        [855, 685]
         DstComponent  "Scope2"
         DstTerminal   6
       }
@@ -9128,7 +9320,7 @@ Plecs {
       Type          Signal
       SrcComponent  base64 "5oWi546v6YC76L6R"
       SrcTerminal   11
-      Points        [1305, 1090; 1305, 1135]
+      Points        [990, 885; 990, 930]
       DstComponent  base64 "5b+r546v6YC76L6R"
       DstTerminal   10
     }
@@ -9136,7 +9328,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From11"
       SrcTerminal   1
-      Points        [2385, 1090; 2385, 1080]
+      Points        [2070, 885; 2070, 875]
       DstComponent  "Scope1"
       DstTerminal   5
     }
@@ -9144,16 +9336,56 @@ Plecs {
       Type          Signal
       SrcComponent  "From2"
       SrcTerminal   1
-      Points        [1265, 1065]
+      Points        [950, 860]
       Branch {
         DstComponent  base64 "5b+r546v6YC76L6R"
         DstTerminal   9
       }
       Branch {
-        Points        [1265, 900]
+        Points        [950, 695]
         DstComponent  "Scope2"
         DstTerminal   7
       }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Am6"
+      SrcTerminal   3
+      Points        [1365, 130]
+      DstComponent  "Scope6"
+      DstTerminal   5
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Am15"
+      SrcTerminal   3
+      Points        [1325, 120]
+      DstComponent  "Scope6"
+      DstTerminal   4
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Am9"
+      SrcTerminal   3
+      Points        [1280, 110]
+      DstComponent  "Scope6"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From8"
+      SrcTerminal   1
+      Points        [1360, 75; 1360, 90]
+      DstComponent  "Scope6"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "From16"
+      SrcTerminal   1
+      Points        [1355, 95; 1355, 100]
+      DstComponent  "Scope6"
+      DstTerminal   2
     }
     Annotation {
       Name          "<html><body>\n<p align=\"center\">+</p></body></html>"
@@ -9180,4 +9412,4 @@ Plecs {
     MaxNumberOfThreads "-1"
   }
 }
-DemoSignature "n8nmVZtMvv2OEcXqDmEtLgZ2jfxb/dHYp7/8ryx3BGs="
+DemoSignature "rvRy5XpXOJaGz6r/8Lztbr3IRsZ4lMpN0trVfwHqHeM="

@@ -142,32 +142,6 @@ void RefRampPfmCurr(void)
 		Ctrl_interFace.CurrentMax, REF_RAMP_STEP);
 }
 
-/**
- * @brief PWM 同步管按输出电流开通（原 SHRTIMERdrive 的 delaySr）
- *        >4A 连续 1000 拍开通；已开通后 <2A 关闭
- */
-static void PwmSyncDrvUpdate(void)
-{
-	static uint16_t delaySr = 0;
-
-	if(DriverPwm.SynDrv == 0)
-	{
-		if(ADSample_Info.iOut_Bat_adc > 4.0f)
-		{
-			delaySr++;
-			if(delaySr >= 1000)
-			{
-				delaySr = 1000;
-				DriverPwm.SynDrv = 1;
-			}
-		}else delaySr = 0;
-	}else
-	{
-		delaySr = 0;
-		if(ADSample_Info.iOut_Bat_adc < 2.0f)DriverPwm.SynDrv = 0;
-	}
-}
-
 /** 空闲关波。故障/PFC 未就绪时放电与继电器已由 HandleFast 配好 */
 void ConIdleHandle(void)
 {
@@ -209,7 +183,6 @@ void ConPwmHoldHandle(void)
 			}
 		}
 	}
-	PwmSyncDrvUpdate();
 }
 
 /**
@@ -275,16 +248,7 @@ void ConPfmHandle(void)
 				Ctrl_interFace.flvOut = POW_MIN_PLV;
 				piStructInter.integral = PID_MIN_PLV;
 			}
-			if(mathTimeHandle() == 0)
-			{
-				DriverPwm.SynDrv = 0;
-			}
-			DriveSet(1, 1, DriverPwm.SynDrv, Ctrl_interFace.flvOut, 0.5f);
-			if(ADSample_Info.iOut_Bat_adc < 4.0f)
-			{
-				DriverPwm.Sr_Dtime = 0;
-				DriverPwm.SynDrv = 0;
-			}
+			DriveSet(1, 1, 0, Ctrl_interFace.flvOut, 0.5f);
 		}else
 		{
 			Ctrl_interFace.time = 0;
@@ -501,7 +465,6 @@ void ConCurrHandle(void)
 		Ctrl_interFace.Curr_REF = 0;
 		RequestMode(PwmHold);
 		DriveSet(0, 1, 0, 80000.0f, 0.02f);
-		PwmSyncDrvUpdate();
 		return;
 	}
 
@@ -548,7 +511,6 @@ void ConCurrHandle(void)
 			Ctrl_interFace.Curr_REF = 0;
 		}
 	}
-	PwmSyncDrvUpdate();
 }
 
 /** 有握手预充：抬压吸合继电器后，按电池电压进 PWM 或直接 Transition */

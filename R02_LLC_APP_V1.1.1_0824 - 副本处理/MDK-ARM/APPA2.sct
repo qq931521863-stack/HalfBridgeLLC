@@ -1,0 +1,13 @@
+; APPA2 @ 0x08022000, 100KB — v4.0 256KB 单 Bank 4KB 页（G474RCT6 DBANK=0）
+
+LR_IROM1 0x08022000 0x00019000  {
+  ER_IROM1 0x08022000 0x00019000  {
+   *.o (RESET, +First)
+   *(InRoot$$Sections)
+   .ANY (+RO)
+   .ANY (+XO)
+  }
+  RW_IRAM1 0x20000000 0x00020000  {
+   .ANY (+RW +ZI)
+  }
+}
